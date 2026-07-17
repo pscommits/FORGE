@@ -1,0 +1,11 @@
+SHIFT LOG — SL-2024-08-25-C
+Unit: Crude Distillation Unit (100)
+Date: 2024-08-25 | Shift: C (22:00-06:00)
+Shift Supervisor: Arun Khan (EMP-0021)
+
+LOG ENTRIES:
+- Handover note: 100-V-105 under maintenance per N/A, isolation confirmed in place.
+- Handover note: 100-P-107 under maintenance per N/A, isolation confirmed in place.
+- Routine rounds completed, no abnormalities observed on 100-V-109.
+
+End of shift handover completed to incoming supervisor.

@@ -1,0 +1,15 @@
+From: Ashok Menon <ashok.menon@prpc-refinery.co.in>
+To: Suresh Jadhav <suresh.jadhav@prpc-refinery.co.in>
+Date: 2025-09-29
+Subject: Follow-up required — INC-2024-010 (500-V-508)
+Message-ID: <EML-2025-018@prpc-refinery.co.in>
+
+Hi Suresh,
+
+Regarding INC-2024-010 on 500-V-508 (Clarifier) dated 2024-06-11 — severity was logged as Low. Can you confirm whether the corrective work order has been raised and whether this stays internal?
+
+Please close the loop before the next HSE review meeting.
+
+Thanks,
+Ashok Menon
+Maintenance Engineer, PRPC

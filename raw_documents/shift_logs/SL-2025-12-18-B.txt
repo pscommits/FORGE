@@ -1,0 +1,11 @@
+SHIFT LOG — SL-2025-12-18-B
+Unit: Hydrocracker Unit (200)
+Date: 2025-12-18 | Shift: B (14:00-22:00)
+Shift Supervisor: Arun Khan (EMP-0021)
+
+LOG ENTRIES:
+- Routine rounds completed, no abnormalities observed on 200-V-210.
+- All safety walkarounds completed for HCU without incident.
+- Field operator reported unusual noise near 200-PSV-207; inspection engineer notified.
+
+End of shift handover completed to incoming supervisor.

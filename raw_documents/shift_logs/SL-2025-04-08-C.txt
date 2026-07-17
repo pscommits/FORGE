@@ -1,0 +1,11 @@
+SHIFT LOG — SL-2025-04-08-C
+Unit: Crude Distillation Unit (100)
+Date: 2025-04-08 | Shift: C (22:00-06:00)
+Shift Supervisor: Shalini Shaikh (EMP-0019)
+
+LOG ENTRIES:
+- Routine rounds completed, no abnormalities observed on 100-F-104.
+- Minor fluctuation noted on 100-E-102 parameters, logged for engineering review.
+- All safety walkarounds completed for CDU without incident.
+
+End of shift handover completed to incoming supervisor.
