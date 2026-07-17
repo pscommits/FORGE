@@ -1,0 +1,3737 @@
+{
+  "plant": {
+    "name": "Panchganga Refinery & Petrochemicals Complex (PRPC)",
+    "location": "Raigad District, Maharashtra, India",
+    "capacity_mmtpa": 6.0
+  },
+  "units": [
+    {
+      "unit_id": "100",
+      "name": "Crude Distillation Unit",
+      "short": "CDU"
+    },
+    {
+      "unit_id": "200",
+      "name": "Hydrocracker Unit",
+      "short": "HCU"
+    },
+    {
+      "unit_id": "300",
+      "name": "Utilities & Offsites",
+      "short": "UTIL"
+    },
+    {
+      "unit_id": "400",
+      "name": "Tank Farm / Storage",
+      "short": "TF"
+    },
+    {
+      "unit_id": "500",
+      "name": "Effluent Treatment Plant",
+      "short": "ETP"
+    }
+  ],
+  "equipment": [
+    {
+      "tag": "100-P-101",
+      "name": "Centrifugal Pump",
+      "type_code": "P",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "BHEL",
+      "install_date": "2018-01-24",
+      "design_pressure_barg": 52.0,
+      "design_temp_c": 138.2,
+      "criticality": "Medium",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-100-001",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "100-E-102",
+      "name": "Heat Exchanger",
+      "type_code": "E",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Emerson Process Management",
+      "install_date": "2000-07-02",
+      "design_pressure_barg": 8.8,
+      "design_temp_c": 136.2,
+      "criticality": "Medium",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-100-003",
+      "governing_sp": "SP-002"
+    },
+    {
+      "tag": "100-D-103",
+      "name": "Distillation Column",
+      "type_code": "D",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Forbes Marshall",
+      "install_date": "2015-12-21",
+      "design_pressure_barg": 127.3,
+      "design_temp_c": 224.6,
+      "criticality": "Medium",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-100-001",
+      "governing_sp": "SP-004"
+    },
+    {
+      "tag": "100-F-104",
+      "name": "Fired Heater",
+      "type_code": "F",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Triveni Turbines",
+      "install_date": "1998-03-23",
+      "design_pressure_barg": 78.1,
+      "design_temp_c": 162.3,
+      "criticality": "High",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-100-001",
+      "governing_sp": "SP-009"
+    },
+    {
+      "tag": "100-V-105",
+      "name": "Knock-out Drum",
+      "type_code": "V",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "BHEL",
+      "install_date": "2001-07-04",
+      "design_pressure_barg": 66.9,
+      "design_temp_c": 191.3,
+      "criticality": "High",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-100-001",
+      "governing_sp": "SP-003"
+    },
+    {
+      "tag": "100-PSV-106",
+      "name": "Pressure Safety Valve",
+      "type_code": "PSV",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Sulzer India",
+      "install_date": "2012-02-13",
+      "design_pressure_barg": 17.4,
+      "design_temp_c": 169.0,
+      "criticality": "Medium",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-100-001",
+      "governing_sp": "SP-007"
+    },
+    {
+      "tag": "100-P-107",
+      "name": "Reflux Pump",
+      "type_code": "P",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Forbes Marshall",
+      "install_date": "2016-12-03",
+      "design_pressure_barg": 11.6,
+      "design_temp_c": 140.3,
+      "criticality": "High",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-100-002",
+      "governing_sp": "SP-010"
+    },
+    {
+      "tag": "100-E-108",
+      "name": "Preheat Train Exchanger",
+      "type_code": "E",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Mather+Platt",
+      "install_date": "2005-02-13",
+      "design_pressure_barg": 52.6,
+      "design_temp_c": 319.7,
+      "criticality": "High",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-100-002",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "100-V-109",
+      "name": "Flash Drum",
+      "type_code": "V",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Forbes Marshall",
+      "install_date": "2009-11-09",
+      "design_pressure_barg": 127.4,
+      "design_temp_c": 340.8,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-100-001",
+      "governing_sp": "SP-004"
+    },
+    {
+      "tag": "100-PSV-110",
+      "name": "Column Relief Valve",
+      "type_code": "PSV",
+      "unit_id": "100",
+      "unit_name": "Crude Distillation Unit",
+      "unit_short": "CDU",
+      "manufacturer": "Godrej & Boyce",
+      "install_date": "2015-04-06",
+      "design_pressure_barg": 85.1,
+      "design_temp_c": 158.8,
+      "criticality": "Low",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-100-002",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "200-R-201",
+      "name": "Hydrocracking Reactor",
+      "type_code": "R",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "Fluor Daniel India",
+      "install_date": "2005-06-27",
+      "design_pressure_barg": 139.1,
+      "design_temp_c": 64.6,
+      "criticality": "Low",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-200-006",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "200-C-202",
+      "name": "Recycle Gas Compressor",
+      "type_code": "C",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "L&T Valves",
+      "install_date": "2010-02-07",
+      "design_pressure_barg": 164.7,
+      "design_temp_c": 289.6,
+      "criticality": "Medium",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-200-004",
+      "governing_sp": "SP-004"
+    },
+    {
+      "tag": "200-P-203",
+      "name": "Charge Pump",
+      "type_code": "P",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "Ingersoll Rand",
+      "install_date": "2018-07-21",
+      "design_pressure_barg": 84.5,
+      "design_temp_c": 156.5,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-200-005",
+      "governing_sp": "SP-010"
+    },
+    {
+      "tag": "200-E-204",
+      "name": "Feed/Effluent Exchanger",
+      "type_code": "E",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "L&T Valves",
+      "install_date": "2015-12-19",
+      "design_pressure_barg": 79.1,
+      "design_temp_c": 296.8,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-200-006",
+      "governing_sp": "SP-004"
+    },
+    {
+      "tag": "200-V-205",
+      "name": "High Pressure Separator",
+      "type_code": "V",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "Ingersoll Rand",
+      "install_date": "2014-02-25",
+      "design_pressure_barg": 11.8,
+      "design_temp_c": 88.2,
+      "criticality": "Medium",
+      "material_of_construction": "Low Alloy Steel (Cr-Mo)",
+      "governing_sop": "SOP-200-005",
+      "governing_sp": "SP-002"
+    },
+    {
+      "tag": "200-F-206",
+      "name": "Reactor Feed Heater",
+      "type_code": "F",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "BHEL",
+      "install_date": "2017-07-13",
+      "design_pressure_barg": 108.7,
+      "design_temp_c": 245.9,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-200-006",
+      "governing_sp": "SP-004"
+    },
+    {
+      "tag": "200-PSV-207",
+      "name": "Reactor Relief Valve",
+      "type_code": "PSV",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "Fluor Daniel India",
+      "install_date": "1998-12-04",
+      "design_pressure_barg": 123.8,
+      "design_temp_c": 276.3,
+      "criticality": "High",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-200-006",
+      "governing_sp": "SP-003"
+    },
+    {
+      "tag": "200-P-208",
+      "name": "Product Pump",
+      "type_code": "P",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "L&T Valves",
+      "install_date": "2001-07-06",
+      "design_pressure_barg": 83.6,
+      "design_temp_c": 459.7,
+      "criticality": "Low",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-200-005",
+      "governing_sp": "SP-003"
+    },
+    {
+      "tag": "200-C-209",
+      "name": "Makeup Gas Compressor",
+      "type_code": "C",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "Triveni Turbines",
+      "install_date": "2014-03-17",
+      "design_pressure_barg": 164.6,
+      "design_temp_c": 423.0,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-200-004",
+      "governing_sp": "SP-001"
+    },
+    {
+      "tag": "200-V-210",
+      "name": "Low Pressure Separator",
+      "type_code": "V",
+      "unit_id": "200",
+      "unit_name": "Hydrocracker Unit",
+      "unit_short": "HCU",
+      "manufacturer": "Forbes Marshall",
+      "install_date": "2017-03-12",
+      "design_pressure_barg": 138.1,
+      "design_temp_c": 277.3,
+      "criticality": "Medium",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-200-004",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "300-BLR-301",
+      "name": "Package Boiler",
+      "type_code": "BLR",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Emerson Process Management",
+      "install_date": "1998-06-16",
+      "design_pressure_barg": 6.9,
+      "design_temp_c": 448.8,
+      "criticality": "Low",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-300-009",
+      "governing_sp": "SP-010"
+    },
+    {
+      "tag": "300-TUR-302",
+      "name": "Steam Turbine Generator",
+      "type_code": "TUR",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Kirloskar Brothers Ltd",
+      "install_date": "2005-04-19",
+      "design_pressure_barg": 170.6,
+      "design_temp_c": 77.7,
+      "criticality": "Medium",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-300-008",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "300-C-303",
+      "name": "Instrument Air Compressor",
+      "type_code": "C",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Triveni Turbines",
+      "install_date": "2015-03-05",
+      "design_pressure_barg": 119.9,
+      "design_temp_c": 456.6,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-300-007",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "300-CT-304",
+      "name": "Induced Draft Cooling Tower",
+      "type_code": "CT",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Grundfos India",
+      "install_date": "2017-04-18",
+      "design_pressure_barg": 136.8,
+      "design_temp_c": 343.5,
+      "criticality": "Medium",
+      "material_of_construction": "Low Alloy Steel (Cr-Mo)",
+      "governing_sop": "SOP-300-009",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "300-P-305",
+      "name": "Boiler Feed Water Pump",
+      "type_code": "P",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Fluor Daniel India",
+      "install_date": "2019-06-15",
+      "design_pressure_barg": 162.3,
+      "design_temp_c": 238.7,
+      "criticality": "High",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-300-009",
+      "governing_sp": "SP-007"
+    },
+    {
+      "tag": "300-MTR-306",
+      "name": "Cooling Water Pump Motor",
+      "type_code": "MTR",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Kirloskar Brothers Ltd",
+      "install_date": "2008-10-18",
+      "design_pressure_barg": 44.1,
+      "design_temp_c": 136.9,
+      "criticality": "High",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-300-008",
+      "governing_sp": "SP-009"
+    },
+    {
+      "tag": "300-V-307",
+      "name": "Deaerator",
+      "type_code": "V",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "BHEL",
+      "install_date": "2005-01-28",
+      "design_pressure_barg": 61.8,
+      "design_temp_c": 266.2,
+      "criticality": "High",
+      "material_of_construction": "Low Alloy Steel (Cr-Mo)",
+      "governing_sop": "SOP-300-009",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "300-PSV-308",
+      "name": "Boiler Safety Valve",
+      "type_code": "PSV",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Sulzer India",
+      "install_date": "2004-03-24",
+      "design_pressure_barg": 168.6,
+      "design_temp_c": 291.3,
+      "criticality": "Medium",
+      "material_of_construction": "Low Alloy Steel (Cr-Mo)",
+      "governing_sop": "SOP-300-008",
+      "governing_sp": "SP-002"
+    },
+    {
+      "tag": "300-P-309",
+      "name": "Firewater Pump",
+      "type_code": "P",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Forbes Marshall",
+      "install_date": "2011-02-04",
+      "design_pressure_barg": 119.8,
+      "design_temp_c": 195.9,
+      "criticality": "Medium",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-300-009",
+      "governing_sp": "SP-001"
+    },
+    {
+      "tag": "300-C-310",
+      "name": "Nitrogen Generation Compressor",
+      "type_code": "C",
+      "unit_id": "300",
+      "unit_name": "Utilities & Offsites",
+      "unit_short": "UTIL",
+      "manufacturer": "Fluor Daniel India",
+      "install_date": "2019-11-04",
+      "design_pressure_barg": 14.2,
+      "design_temp_c": 360.4,
+      "criticality": "Low",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-300-008",
+      "governing_sp": "SP-006"
+    },
+    {
+      "tag": "400-T-401",
+      "name": "Crude Storage Tank",
+      "type_code": "T",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Forbes Marshall",
+      "install_date": "2005-04-18",
+      "design_pressure_barg": 82.7,
+      "design_temp_c": 225.6,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-400-012",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "400-T-402",
+      "name": "Naphtha Storage Tank",
+      "type_code": "T",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Ingersoll Rand",
+      "install_date": "2000-09-04",
+      "design_pressure_barg": 12.4,
+      "design_temp_c": 479.7,
+      "criticality": "Low",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-400-010",
+      "governing_sp": "SP-002"
+    },
+    {
+      "tag": "400-T-403",
+      "name": "Diesel Storage Tank",
+      "type_code": "T",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Thermax Ltd",
+      "install_date": "2005-07-16",
+      "design_pressure_barg": 88.5,
+      "design_temp_c": 420.4,
+      "criticality": "Low",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-400-010",
+      "governing_sp": "SP-010"
+    },
+    {
+      "tag": "400-T-404",
+      "name": "LPG Bullet",
+      "type_code": "T",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Kirloskar Brothers Ltd",
+      "install_date": "2010-07-09",
+      "design_pressure_barg": 167.0,
+      "design_temp_c": 385.5,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-400-012",
+      "governing_sp": "SP-001"
+    },
+    {
+      "tag": "400-P-405",
+      "name": "Tank Transfer Pump",
+      "type_code": "P",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Godrej & Boyce",
+      "install_date": "2019-08-05",
+      "design_pressure_barg": 37.0,
+      "design_temp_c": 135.8,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-400-012",
+      "governing_sp": "SP-005"
+    },
+    {
+      "tag": "400-P-406",
+      "name": "Product Loading Pump",
+      "type_code": "P",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Godrej & Boyce",
+      "install_date": "1999-06-02",
+      "design_pressure_barg": 12.4,
+      "design_temp_c": 249.8,
+      "criticality": "Low",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-400-012",
+      "governing_sp": "SP-001"
+    },
+    {
+      "tag": "400-PSV-407",
+      "name": "Tank Vent Relief Valve",
+      "type_code": "PSV",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Kirloskar Brothers Ltd",
+      "install_date": "2003-09-03",
+      "design_pressure_barg": 153.8,
+      "design_temp_c": 70.1,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-400-010",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "400-T-408",
+      "name": "Slop Oil Tank",
+      "type_code": "T",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "BHEL",
+      "install_date": "2010-10-08",
+      "design_pressure_barg": 105.7,
+      "design_temp_c": 57.5,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-400-012",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "400-T-409",
+      "name": "ATF Storage Tank",
+      "type_code": "T",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Sulzer India",
+      "install_date": "2016-06-09",
+      "design_pressure_barg": 39.6,
+      "design_temp_c": 355.1,
+      "criticality": "High",
+      "material_of_construction": "Low Alloy Steel (Cr-Mo)",
+      "governing_sop": "SOP-400-011",
+      "governing_sp": "SP-003"
+    },
+    {
+      "tag": "400-P-410",
+      "name": "Blending Pump",
+      "type_code": "P",
+      "unit_id": "400",
+      "unit_name": "Tank Farm / Storage",
+      "unit_short": "TF",
+      "manufacturer": "Fluor Daniel India",
+      "install_date": "2002-11-10",
+      "design_pressure_barg": 84.2,
+      "design_temp_c": 448.8,
+      "criticality": "Low",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-400-012",
+      "governing_sp": "SP-007"
+    },
+    {
+      "tag": "500-AGT-501",
+      "name": "Flocculation Agitator",
+      "type_code": "AGT",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Emerson Process Management",
+      "install_date": "2012-10-04",
+      "design_pressure_barg": 16.4,
+      "design_temp_c": 133.8,
+      "criticality": "High",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-500-015",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "500-P-502",
+      "name": "Effluent Transfer Pump",
+      "type_code": "P",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Cameron (Schlumberger)",
+      "install_date": "2000-04-12",
+      "design_pressure_barg": 53.8,
+      "design_temp_c": 232.8,
+      "criticality": "Medium",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-500-013",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "500-V-503",
+      "name": "Oil-Water Separator",
+      "type_code": "V",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Triveni Turbines",
+      "install_date": "2017-11-17",
+      "design_pressure_barg": 4.9,
+      "design_temp_c": 399.5,
+      "criticality": "High",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-500-014",
+      "governing_sp": "SP-007"
+    },
+    {
+      "tag": "500-AGT-504",
+      "name": "Aeration Tank Mixer",
+      "type_code": "AGT",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "L&T Valves",
+      "install_date": "2002-02-04",
+      "design_pressure_barg": 134.5,
+      "design_temp_c": 108.4,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-500-014",
+      "governing_sp": "SP-006"
+    },
+    {
+      "tag": "500-P-505",
+      "name": "Sludge Recirculation Pump",
+      "type_code": "P",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Cummins India",
+      "install_date": "2020-04-22",
+      "design_pressure_barg": 115.4,
+      "design_temp_c": 156.2,
+      "criticality": "Medium",
+      "material_of_construction": "Carbon Steel",
+      "governing_sop": "SOP-500-015",
+      "governing_sp": "SP-002"
+    },
+    {
+      "tag": "500-V-506",
+      "name": "Equalization Tank",
+      "type_code": "V",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Fluor Daniel India",
+      "install_date": "2000-07-27",
+      "design_pressure_barg": 52.3,
+      "design_temp_c": 41.6,
+      "criticality": "Medium",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-500-013",
+      "governing_sp": "SP-006"
+    },
+    {
+      "tag": "500-P-507",
+      "name": "Dosing Pump - Chemical",
+      "type_code": "P",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Godrej & Boyce",
+      "install_date": "2003-08-18",
+      "design_pressure_barg": 128.1,
+      "design_temp_c": 286.8,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-500-014",
+      "governing_sp": "SP-008"
+    },
+    {
+      "tag": "500-V-508",
+      "name": "Clarifier",
+      "type_code": "V",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Kirloskar Brothers Ltd",
+      "install_date": "2015-06-19",
+      "design_pressure_barg": 101.0,
+      "design_temp_c": 229.1,
+      "criticality": "High",
+      "material_of_construction": "Duplex Stainless Steel",
+      "governing_sop": "SOP-500-014",
+      "governing_sp": "SP-007"
+    },
+    {
+      "tag": "500-P-509",
+      "name": "Backwash Pump",
+      "type_code": "P",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Cameron (Schlumberger)",
+      "install_date": "1999-06-07",
+      "design_pressure_barg": 123.9,
+      "design_temp_c": 333.5,
+      "criticality": "High",
+      "material_of_construction": "Cast Iron",
+      "governing_sop": "SOP-500-015",
+      "governing_sp": "SP-001"
+    },
+    {
+      "tag": "500-V-510",
+      "name": "Sludge Thickener",
+      "type_code": "V",
+      "unit_id": "500",
+      "unit_name": "Effluent Treatment Plant",
+      "unit_short": "ETP",
+      "manufacturer": "Emerson Process Management",
+      "install_date": "2011-12-05",
+      "design_pressure_barg": 166.9,
+      "design_temp_c": 144.2,
+      "criticality": "High",
+      "material_of_construction": "Stainless Steel 316L",
+      "governing_sop": "SOP-500-014",
+      "governing_sp": "SP-002"
+    }
+  ],
+  "personnel": [
+    {
+      "emp_id": "EMP-0001",
+      "name": "Meera Sharma",
+      "role": "Plant Manager",
+      "unit_id": "000",
+      "join_date": "2015-07-26",
+      "certifications": [
+        "Working at Height"
+      ],
+      "email": "meera.sharma@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0002",
+      "name": "Arun Menon",
+      "role": "Process Engineer",
+      "unit_id": "400",
+      "join_date": "2008-01-28",
+      "certifications": [
+        "H2S Awareness"
+      ],
+      "email": "arun.menon@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0003",
+      "name": "Farhan Nair",
+      "role": "Process Engineer",
+      "unit_id": "300",
+      "join_date": "2019-05-27",
+      "certifications": [
+        "H2S Awareness"
+      ],
+      "email": "farhan.nair@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0004",
+      "name": "Nitin Nair",
+      "role": "Process Engineer",
+      "unit_id": "400",
+      "join_date": "2011-06-09",
+      "certifications": [
+        "Working at Height"
+      ],
+      "email": "nitin.nair@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0005",
+      "name": "Sanjay Menon",
+      "role": "Process Engineer",
+      "unit_id": "500",
+      "join_date": "2017-06-01",
+      "certifications": [
+        "Working at Height",
+        "Confined Space Entry"
+      ],
+      "email": "sanjay.menon@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0006",
+      "name": "Ashok Menon",
+      "role": "Maintenance Engineer",
+      "unit_id": "100",
+      "join_date": "2013-02-20",
+      "certifications": [
+        "Confined Space Entry"
+      ],
+      "email": "ashok.menon@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0007",
+      "name": "Swati Pillai",
+      "role": "Maintenance Engineer",
+      "unit_id": "500",
+      "join_date": "2024-02-13",
+      "certifications": [
+        "H2S Awareness",
+        "RBI Level II",
+        "First Aid"
+      ],
+      "email": "swati.pillai@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0008",
+      "name": "Vivek Menon",
+      "role": "Maintenance Engineer",
+      "unit_id": "100",
+      "join_date": "2018-09-26",
+      "certifications": [
+        "Working at Height"
+      ],
+      "email": "vivek.menon@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0009",
+      "name": "Tanvir Shaikh",
+      "role": "Maintenance Engineer",
+      "unit_id": "400",
+      "join_date": "2016-02-22",
+      "certifications": [
+        "Working at Height",
+        "H2S Awareness",
+        "RBI Level I"
+      ],
+      "email": "tanvir.shaikh@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0010",
+      "name": "Sunita Jadhav",
+      "role": "Maintenance Engineer",
+      "unit_id": "500",
+      "join_date": "2014-05-22",
+      "certifications": [
+        "Working at Height",
+        "PESO Competency Certificate"
+      ],
+      "email": "sunita.jadhav@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0011",
+      "name": "Meera Chavan",
+      "role": "Reliability Engineer",
+      "unit_id": "200",
+      "join_date": "2022-04-14",
+      "certifications": [
+        "Working at Height",
+        "RBI Level II"
+      ],
+      "email": "meera.chavan@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0012",
+      "name": "Pooja Shaikh",
+      "role": "Reliability Engineer",
+      "unit_id": "400",
+      "join_date": "2014-09-27",
+      "certifications": [
+        "RBI Level I",
+        "Confined Space Entry",
+        "Working at Height"
+      ],
+      "email": "pooja.shaikh@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0013",
+      "name": "Rajesh Gaikwad",
+      "role": "Reliability Engineer",
+      "unit_id": "500",
+      "join_date": "2023-11-11",
+      "certifications": [
+        "RBI Level I",
+        "First Aid"
+      ],
+      "email": "rajesh.gaikwad@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0014",
+      "name": "Shalini Naik",
+      "role": "Inspection Engineer",
+      "unit_id": "100",
+      "join_date": "2010-05-17",
+      "certifications": [
+        "Working at Height",
+        "RBI Level I",
+        "RBI Level II"
+      ],
+      "email": "shalini.naik@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0015",
+      "name": "Sunita Patil",
+      "role": "Inspection Engineer",
+      "unit_id": "200",
+      "join_date": "2012-03-01",
+      "certifications": [
+        "Working at Height",
+        "RBI Level II"
+      ],
+      "email": "sunita.patil@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0016",
+      "name": "Anil Nair",
+      "role": "Inspection Engineer",
+      "unit_id": "500",
+      "join_date": "2018-04-23",
+      "certifications": [
+        "Confined Space Entry",
+        "PESO Competency Certificate",
+        "RBI Level II"
+      ],
+      "email": "anil.nair@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0017",
+      "name": "Pooja Bhosale",
+      "role": "Inspection Engineer",
+      "unit_id": "400",
+      "join_date": "2008-04-06",
+      "certifications": [
+        "RBI Level I",
+        "H2S Awareness",
+        "RBI Level I"
+      ],
+      "email": "pooja.bhosale@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0018",
+      "name": "Yusuf Naik",
+      "role": "Shift Supervisor",
+      "unit_id": "100",
+      "join_date": "2012-08-05",
+      "certifications": [
+        "Confined Space Entry"
+      ],
+      "email": "yusuf.naik@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0019",
+      "name": "Shalini Shaikh",
+      "role": "Shift Supervisor",
+      "unit_id": "500",
+      "join_date": "2019-12-17",
+      "certifications": [
+        "Confined Space Entry",
+        "H2S Awareness",
+        "RBI Level II"
+      ],
+      "email": "shalini.shaikh@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0020",
+      "name": "Swati More",
+      "role": "Shift Supervisor",
+      "unit_id": "400",
+      "join_date": "2020-05-25",
+      "certifications": [
+        "RBI Level I",
+        "Working at Height"
+      ],
+      "email": "swati.more@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0021",
+      "name": "Arun Khan",
+      "role": "Shift Supervisor",
+      "unit_id": "200",
+      "join_date": "2020-05-15",
+      "certifications": [
+        "H2S Awareness",
+        "Confined Space Entry"
+      ],
+      "email": "arun.khan@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0022",
+      "name": "Sanjay Ansari",
+      "role": "Shift Supervisor",
+      "unit_id": "300",
+      "join_date": "2015-09-03",
+      "certifications": [
+        "RBI Level I",
+        "RBI Level II"
+      ],
+      "email": "sanjay.ansari@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0023",
+      "name": "Ramesh Kulkarni",
+      "role": "Panel Operator",
+      "unit_id": "200",
+      "join_date": "2009-02-14",
+      "certifications": [
+        "First Aid"
+      ],
+      "email": "ramesh.kulkarni@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0024",
+      "name": "Tanvir Naik",
+      "role": "Panel Operator",
+      "unit_id": "400",
+      "join_date": "2018-10-23",
+      "certifications": [
+        "PESO Competency Certificate",
+        "RBI Level I"
+      ],
+      "email": "tanvir.naik@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0025",
+      "name": "Suresh Kadam",
+      "role": "Panel Operator",
+      "unit_id": "300",
+      "join_date": "2016-07-28",
+      "certifications": [
+        "First Aid",
+        "PESO Competency Certificate"
+      ],
+      "email": "suresh.kadam@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0026",
+      "name": "Meera More",
+      "role": "Panel Operator",
+      "unit_id": "400",
+      "join_date": "2012-04-09",
+      "certifications": [
+        "Working at Height",
+        "Confined Space Entry",
+        "H2S Awareness"
+      ],
+      "email": "meera.more@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0027",
+      "name": "Swati Bhosale",
+      "role": "Panel Operator",
+      "unit_id": "400",
+      "join_date": "2015-12-06",
+      "certifications": [
+        "First Aid"
+      ],
+      "email": "swati.bhosale@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0028",
+      "name": "Shalini Kulkarni",
+      "role": "Field Operator",
+      "unit_id": "500",
+      "join_date": "2023-11-01",
+      "certifications": [
+        "Confined Space Entry",
+        "PESO Competency Certificate",
+        "First Aid"
+      ],
+      "email": "shalini.kulkarni@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0029",
+      "name": "Deepak Khan",
+      "role": "Field Operator",
+      "unit_id": "100",
+      "join_date": "2010-05-13",
+      "certifications": [
+        "RBI Level I",
+        "First Aid"
+      ],
+      "email": "deepak.khan@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0030",
+      "name": "Priya Iyer",
+      "role": "Field Operator",
+      "unit_id": "300",
+      "join_date": "2017-07-09",
+      "certifications": [
+        "RBI Level II",
+        "H2S Awareness"
+      ],
+      "email": "priya.iyer@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0031",
+      "name": "Deepak Bhosale",
+      "role": "Field Operator",
+      "unit_id": "100",
+      "join_date": "2022-06-08",
+      "certifications": [
+        "Working at Height"
+      ],
+      "email": "deepak.bhosale@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0032",
+      "name": "Sanjay Khan",
+      "role": "Field Operator",
+      "unit_id": "200",
+      "join_date": "2005-04-27",
+      "certifications": [
+        "H2S Awareness"
+      ],
+      "email": "sanjay.khan@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0033",
+      "name": "Suresh Jadhav",
+      "role": "Field Operator",
+      "unit_id": "400",
+      "join_date": "2009-11-04",
+      "certifications": [
+        "RBI Level I"
+      ],
+      "email": "suresh.jadhav@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0034",
+      "name": "Sunil Naik",
+      "role": "HSE Officer",
+      "unit_id": "500",
+      "join_date": "2024-12-23",
+      "certifications": [
+        "RBI Level II",
+        "H2S Awareness",
+        "RBI Level I"
+      ],
+      "email": "sunil.naik@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0035",
+      "name": "Ashok Joshi",
+      "role": "HSE Officer",
+      "unit_id": "300",
+      "join_date": "2005-10-22",
+      "certifications": [
+        "PESO Competency Certificate",
+        "Confined Space Entry"
+      ],
+      "email": "ashok.joshi@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0036",
+      "name": "Pooja Rao",
+      "role": "HSE Officer",
+      "unit_id": "100",
+      "join_date": "2012-12-25",
+      "certifications": [
+        "RBI Level I",
+        "PESO Competency Certificate",
+        "Confined Space Entry"
+      ],
+      "email": "pooja.rao@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0037",
+      "name": "Ravi Shaikh",
+      "role": "Instrumentation Engineer",
+      "unit_id": "300",
+      "join_date": "2006-09-14",
+      "certifications": [
+        "H2S Awareness",
+        "PESO Competency Certificate",
+        "Confined Space Entry"
+      ],
+      "email": "ravi.shaikh@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0038",
+      "name": "Neha Patil",
+      "role": "Instrumentation Engineer",
+      "unit_id": "400",
+      "join_date": "2018-02-14",
+      "certifications": [
+        "Working at Height",
+        "RBI Level II",
+        "PESO Competency Certificate"
+      ],
+      "email": "neha.patil@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0039",
+      "name": "Neha Khan",
+      "role": "Instrumentation Engineer",
+      "unit_id": "200",
+      "join_date": "2018-12-17",
+      "certifications": [
+        "Working at Height",
+        "RBI Level I"
+      ],
+      "email": "neha.khan@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0040",
+      "name": "Ganesh Jadhav",
+      "role": "Electrical Engineer",
+      "unit_id": "500",
+      "join_date": "2018-05-11",
+      "certifications": [
+        "H2S Awareness",
+        "First Aid",
+        "Working at Height"
+      ],
+      "email": "ganesh.jadhav@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0041",
+      "name": "Arun Patil",
+      "role": "Electrical Engineer",
+      "unit_id": "500",
+      "join_date": "2019-10-22",
+      "certifications": [
+        "First Aid",
+        "RBI Level I"
+      ],
+      "email": "arun.patil@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0042",
+      "name": "Pooja Chavan",
+      "role": "Contract Technician",
+      "unit_id": "200",
+      "join_date": "2015-08-07",
+      "certifications": [
+        "First Aid"
+      ],
+      "email": "pooja.chavan@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0043",
+      "name": "Anjali Menon",
+      "role": "Contract Technician",
+      "unit_id": "500",
+      "join_date": "2013-01-17",
+      "certifications": [
+        "RBI Level II",
+        "Confined Space Entry"
+      ],
+      "email": "anjali.menon@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0044",
+      "name": "Vivek Patil",
+      "role": "Contract Technician",
+      "unit_id": "400",
+      "join_date": "2018-09-25",
+      "certifications": [
+        "Working at Height"
+      ],
+      "email": "vivek.patil@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0045",
+      "name": "Arun Ansari",
+      "role": "Contract Technician",
+      "unit_id": "400",
+      "join_date": "2020-01-03",
+      "certifications": [
+        "Working at Height",
+        "H2S Awareness"
+      ],
+      "email": "arun.ansari@prpc-refinery.co.in"
+    },
+    {
+      "emp_id": "EMP-0046",
+      "name": "Mahesh Nair",
+      "role": "Contract Technician",
+      "unit_id": "500",
+      "join_date": "2014-06-16",
+      "certifications": [
+        "Working at Height",
+        "RBI Level I"
+      ],
+      "email": "mahesh.nair@prpc-refinery.co.in"
+    }
+  ],
+  "sops": [
+    {
+      "sop_id": "SOP-100-001",
+      "title": "Crude Charge Pump Startup and Shutdown",
+      "unit_id": "100",
+      "version": "Rev 3",
+      "effective_date": "2024-12-18",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-100-002",
+      "title": "Atmospheric Distillation Column Operation",
+      "unit_id": "100",
+      "version": "Rev 3",
+      "effective_date": "2024-12-15",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-100-003",
+      "title": "Fired Heater Safe Startup Procedure",
+      "unit_id": "100",
+      "version": "Rev 3",
+      "effective_date": "2024-05-08",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-200-004",
+      "title": "Hydrocracker Reactor Loading and Catalyst Activation",
+      "unit_id": "200",
+      "version": "Rev 1",
+      "effective_date": "2025-04-11",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-200-005",
+      "title": "Recycle Gas Compressor Operating Envelope",
+      "unit_id": "200",
+      "version": "Rev 1",
+      "effective_date": "2025-09-25",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-200-006",
+      "title": "High Pressure Separator Level Control",
+      "unit_id": "200",
+      "version": "Rev 2",
+      "effective_date": "2023-04-24",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-300-007",
+      "title": "Package Boiler Startup and Water Treatment",
+      "unit_id": "300",
+      "version": "Rev 4",
+      "effective_date": "2024-12-19",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-300-008",
+      "title": "Steam Turbine Generator Synchronization",
+      "unit_id": "300",
+      "version": "Rev 3",
+      "effective_date": "2023-04-10",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-300-009",
+      "title": "Cooling Tower Water Chemistry Control",
+      "unit_id": "300",
+      "version": "Rev 2",
+      "effective_date": "2024-03-10",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-400-010",
+      "title": "Tank Gauging and Inventory Reconciliation",
+      "unit_id": "400",
+      "version": "Rev 1",
+      "effective_date": "2025-09-05",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-400-011",
+      "title": "Product Loading Arm Operation",
+      "unit_id": "400",
+      "version": "Rev 3",
+      "effective_date": "2023-01-18",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-400-012",
+      "title": "LPG Bullet Pressure Monitoring",
+      "unit_id": "400",
+      "version": "Rev 3",
+      "effective_date": "2025-03-21",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-500-013",
+      "title": "Effluent Aeration Tank DO Control",
+      "unit_id": "500",
+      "version": "Rev 4",
+      "effective_date": "2023-01-19",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-500-014",
+      "title": "Oil-Water Separator Skimming Procedure",
+      "unit_id": "500",
+      "version": "Rev 3",
+      "effective_date": "2024-08-15",
+      "owner_role": "Process Engineer"
+    },
+    {
+      "sop_id": "SOP-500-015",
+      "title": "Sludge Dewatering and Disposal",
+      "unit_id": "500",
+      "version": "Rev 3",
+      "effective_date": "2023-01-09",
+      "owner_role": "Process Engineer"
+    }
+  ],
+  "safety_procedures": [
+    {
+      "sp_id": "SP-001",
+      "title": "Lockout-Tagout (LOTO) for Rotating Equipment",
+      "version": "Rev 2",
+      "effective_date": "2023-02-13",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-002",
+      "title": "Hot Work Permit and Fire Watch",
+      "version": "Rev 2",
+      "effective_date": "2023-10-21",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-003",
+      "title": "Confined Space Entry - Vessels and Tanks",
+      "version": "Rev 3",
+      "effective_date": "2023-03-05",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-004",
+      "title": "H2S Detection and Emergency Response",
+      "version": "Rev 3",
+      "effective_date": "2024-02-08",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-005",
+      "title": "Working at Height on Structures and Columns",
+      "version": "Rev 1",
+      "effective_date": "2025-07-20",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-006",
+      "title": "Pressure Safety Valve Isolation and Testing",
+      "version": "Rev 3",
+      "effective_date": "2025-04-25",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-007",
+      "title": "Emergency Shutdown (ESD) Activation Protocol",
+      "version": "Rev 3",
+      "effective_date": "2024-08-15",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-008",
+      "title": "Chemical Handling and Spill Response - ETP",
+      "version": "Rev 2",
+      "effective_date": "2025-07-10",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-009",
+      "title": "Crane and Heavy Lift Operations",
+      "version": "Rev 3",
+      "effective_date": "2025-01-20",
+      "owner_role": "HSE Officer"
+    },
+    {
+      "sp_id": "SP-010",
+      "title": "Fire and Gas Detection System Testing",
+      "version": "Rev 3",
+      "effective_date": "2023-04-21",
+      "owner_role": "HSE Officer"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "INC-2025-001",
+      "date": "2025-02-26",
+      "equipment_tag": "300-BLR-301",
+      "unit_id": "300",
+      "type": "Vibration Trip",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0015",
+      "description_seed": 9431,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-002",
+      "date": "2025-07-18",
+      "equipment_tag": "100-P-101",
+      "unit_id": "100",
+      "type": "Minor Leak",
+      "severity": "Medium",
+      "investigator_emp_id": "EMP-0035",
+      "description_seed": 9494,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2026-003",
+      "date": "2026-05-15",
+      "equipment_tag": "300-CT-304",
+      "unit_id": "300",
+      "type": "Seal Failure",
+      "severity": "Medium",
+      "investigator_emp_id": "EMP-0036",
+      "description_seed": 1845,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-004",
+      "date": "2025-10-15",
+      "equipment_tag": "200-E-204",
+      "unit_id": "200",
+      "type": "Fire Incident",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0015",
+      "description_seed": 8178,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2024-005",
+      "date": "2024-08-03",
+      "equipment_tag": "500-P-505",
+      "unit_id": "500",
+      "type": "Minor Leak",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0034",
+      "description_seed": 3594,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2024-006",
+      "date": "2024-04-15",
+      "equipment_tag": "200-V-210",
+      "unit_id": "200",
+      "type": "Near Miss",
+      "severity": "Medium",
+      "investigator_emp_id": "EMP-0035",
+      "description_seed": 4681,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2024-007",
+      "date": "2024-07-30",
+      "equipment_tag": "100-E-108",
+      "unit_id": "100",
+      "type": "Process Upset",
+      "severity": "Medium",
+      "investigator_emp_id": "EMP-0034",
+      "description_seed": 9165,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-008",
+      "date": "2025-09-04",
+      "equipment_tag": "500-V-506",
+      "unit_id": "500",
+      "type": "Vibration Trip",
+      "severity": "High",
+      "investigator_emp_id": "EMP-0015",
+      "description_seed": 8905,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-009",
+      "date": "2025-10-17",
+      "equipment_tag": "200-F-206",
+      "unit_id": "200",
+      "type": "Minor Leak",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0034",
+      "description_seed": 9327,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2024-010",
+      "date": "2024-06-11",
+      "equipment_tag": "500-V-508",
+      "unit_id": "500",
+      "type": "Vibration Trip",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0013",
+      "description_seed": 6568,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2024-011",
+      "date": "2024-04-03",
+      "equipment_tag": "400-T-403",
+      "unit_id": "400",
+      "type": "Fire Incident",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0015",
+      "description_seed": 9022,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-012",
+      "date": "2025-10-04",
+      "equipment_tag": "100-PSV-110",
+      "unit_id": "100",
+      "type": "Relief Valve Lift",
+      "severity": "Medium",
+      "investigator_emp_id": "EMP-0034",
+      "description_seed": 9903,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-013",
+      "date": "2025-02-24",
+      "equipment_tag": "300-P-305",
+      "unit_id": "300",
+      "type": "Minor Leak",
+      "severity": "High",
+      "investigator_emp_id": "EMP-0034",
+      "description_seed": 7274,
+      "regulatory_reportable": true
+    },
+    {
+      "incident_id": "INC-2024-014",
+      "date": "2024-05-15",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "type": "Seal Failure",
+      "severity": "Low",
+      "investigator_emp_id": "EMP-0017",
+      "description_seed": 7246,
+      "regulatory_reportable": false
+    },
+    {
+      "incident_id": "INC-2025-015",
+      "date": "2025-08-21",
+      "equipment_tag": "300-P-305",
+      "unit_id": "300",
+      "type": "Process Upset",
+      "severity": "Critical",
+      "investigator_emp_id": "EMP-0013",
+      "description_seed": 9229,
+      "regulatory_reportable": false
+    }
+  ],
+  "work_orders": [
+    {
+      "wo_id": "WO-2024-0001",
+      "date": "2024-07-12",
+      "equipment_tag": "300-TUR-302",
+      "unit_id": "300",
+      "type": "Shutdown/Turnaround",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 21.1,
+      "status": "Closed",
+      "cost_inr": 484123,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0002",
+      "date": "2024-08-26",
+      "equipment_tag": "100-P-101",
+      "unit_id": "100",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0043",
+      "linked_incident_id": null,
+      "downtime_hours": 31.4,
+      "status": "Closed",
+      "cost_inr": 497296,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0003",
+      "date": "2025-12-30",
+      "equipment_tag": "200-PSV-207",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": null,
+      "downtime_hours": 31.2,
+      "status": "In Progress",
+      "cost_inr": 712115,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0004",
+      "date": "2025-02-19",
+      "equipment_tag": "400-P-405",
+      "unit_id": "400",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0038",
+      "linked_incident_id": null,
+      "downtime_hours": 42.6,
+      "status": "Closed",
+      "cost_inr": 572296,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0005",
+      "date": "2024-06-10",
+      "equipment_tag": "100-D-103",
+      "unit_id": "100",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 306338,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0006",
+      "date": "2024-07-02",
+      "equipment_tag": "200-V-205",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0043",
+      "linked_incident_id": null,
+      "downtime_hours": 4.7,
+      "status": "Closed",
+      "cost_inr": 110389,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2026-0007",
+      "date": "2026-03-12",
+      "equipment_tag": "300-P-309",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0008",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 345131,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0008",
+      "date": "2025-04-03",
+      "equipment_tag": "100-F-104",
+      "unit_id": "100",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0010",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 561968,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2026-0009",
+      "date": "2026-02-28",
+      "equipment_tag": "300-V-307",
+      "unit_id": "300",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 8.2,
+      "status": "Closed",
+      "cost_inr": 406126,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0010",
+      "date": "2024-12-03",
+      "equipment_tag": "400-P-410",
+      "unit_id": "400",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 28.0,
+      "status": "Closed",
+      "cost_inr": 673891,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0011",
+      "date": "2024-12-18",
+      "equipment_tag": "200-PSV-207",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0039",
+      "linked_incident_id": null,
+      "downtime_hours": 43.1,
+      "status": "Closed",
+      "cost_inr": 306603,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0012",
+      "date": "2024-09-09",
+      "equipment_tag": "500-AGT-504",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0040",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 621113,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0013",
+      "date": "2025-06-09",
+      "equipment_tag": "200-V-210",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": "INC-2024-006",
+      "downtime_hours": 9.6,
+      "status": "Closed",
+      "cost_inr": 511680,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0014",
+      "date": "2025-04-26",
+      "equipment_tag": "100-P-107",
+      "unit_id": "100",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0009",
+      "linked_incident_id": null,
+      "downtime_hours": 27.6,
+      "status": "In Progress",
+      "cost_inr": 314571,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0015",
+      "date": "2026-02-04",
+      "equipment_tag": "100-E-102",
+      "unit_id": "100",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 724112,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0016",
+      "date": "2024-05-21",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "type": "Shutdown/Turnaround",
+      "assigned_emp_id": "EMP-0043",
+      "linked_incident_id": null,
+      "downtime_hours": 35.8,
+      "status": "In Progress",
+      "cost_inr": 305096,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0017",
+      "date": "2024-11-22",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0044",
+      "linked_incident_id": "INC-2024-014",
+      "downtime_hours": 29.8,
+      "status": "Closed",
+      "cost_inr": 760948,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0018",
+      "date": "2026-02-27",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 30.2,
+      "status": "In Progress",
+      "cost_inr": 682737,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0019",
+      "date": "2026-06-17",
+      "equipment_tag": "100-D-103",
+      "unit_id": "100",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0010",
+      "linked_incident_id": null,
+      "downtime_hours": 27.8,
+      "status": "Closed",
+      "cost_inr": 99511,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2026-0020",
+      "date": "2026-05-06",
+      "equipment_tag": "200-C-209",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": null,
+      "downtime_hours": 9.6,
+      "status": "In Progress",
+      "cost_inr": 388629,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0021",
+      "date": "2025-01-05",
+      "equipment_tag": "400-T-404",
+      "unit_id": "400",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0040",
+      "linked_incident_id": null,
+      "downtime_hours": 12.3,
+      "status": "In Progress",
+      "cost_inr": 510254,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0022",
+      "date": "2025-03-13",
+      "equipment_tag": "200-C-209",
+      "unit_id": "200",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0043",
+      "linked_incident_id": null,
+      "downtime_hours": 22.5,
+      "status": "Closed",
+      "cost_inr": 795785,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0023",
+      "date": "2026-02-22",
+      "equipment_tag": "200-V-205",
+      "unit_id": "200",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 47.0,
+      "status": "In Progress",
+      "cost_inr": 848671,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0024",
+      "date": "2024-07-02",
+      "equipment_tag": "400-P-406",
+      "unit_id": "400",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": null,
+      "downtime_hours": 0.7,
+      "status": "Closed",
+      "cost_inr": 481877,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2026-0025",
+      "date": "2026-05-07",
+      "equipment_tag": "300-CT-304",
+      "unit_id": "300",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 28.1,
+      "status": "In Progress",
+      "cost_inr": 394518,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0026",
+      "date": "2024-11-26",
+      "equipment_tag": "100-P-107",
+      "unit_id": "100",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 29.7,
+      "status": "In Progress",
+      "cost_inr": 348939,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0027",
+      "date": "2026-01-24",
+      "equipment_tag": "400-P-410",
+      "unit_id": "400",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0009",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 740132,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0028",
+      "date": "2025-05-24",
+      "equipment_tag": "200-V-210",
+      "unit_id": "200",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 44019,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0029",
+      "date": "2024-07-28",
+      "equipment_tag": "200-V-210",
+      "unit_id": "200",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0039",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 147254,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0030",
+      "date": "2025-04-15",
+      "equipment_tag": "300-P-305",
+      "unit_id": "300",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0039",
+      "linked_incident_id": null,
+      "downtime_hours": 45.4,
+      "status": "Closed",
+      "cost_inr": 783325,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0031",
+      "date": "2025-05-30",
+      "equipment_tag": "500-P-507",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0008",
+      "linked_incident_id": null,
+      "downtime_hours": 40.0,
+      "status": "Closed",
+      "cost_inr": 298328,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0032",
+      "date": "2025-04-15",
+      "equipment_tag": "100-D-103",
+      "unit_id": "100",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0043",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 252582,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0033",
+      "date": "2026-03-04",
+      "equipment_tag": "300-CT-304",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0007",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 681149,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0034",
+      "date": "2025-05-13",
+      "equipment_tag": "300-C-303",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0006",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 481805,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0035",
+      "date": "2024-11-04",
+      "equipment_tag": "100-PSV-106",
+      "unit_id": "100",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 28.7,
+      "status": "Closed",
+      "cost_inr": 830013,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0036",
+      "date": "2024-08-07",
+      "equipment_tag": "300-TUR-302",
+      "unit_id": "300",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0009",
+      "linked_incident_id": null,
+      "downtime_hours": 9.8,
+      "status": "In Progress",
+      "cost_inr": 586128,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0037",
+      "date": "2024-11-08",
+      "equipment_tag": "200-E-204",
+      "unit_id": "200",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 11.2,
+      "status": "In Progress",
+      "cost_inr": 831952,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0038",
+      "date": "2025-01-09",
+      "equipment_tag": "400-T-409",
+      "unit_id": "400",
+      "type": "Shutdown/Turnaround",
+      "assigned_emp_id": "EMP-0006",
+      "linked_incident_id": null,
+      "downtime_hours": 6.9,
+      "status": "Closed",
+      "cost_inr": 267829,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0039",
+      "date": "2026-02-06",
+      "equipment_tag": "200-C-202",
+      "unit_id": "200",
+      "type": "Shutdown/Turnaround",
+      "assigned_emp_id": "EMP-0007",
+      "linked_incident_id": null,
+      "downtime_hours": 6.3,
+      "status": "Closed",
+      "cost_inr": 831730,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0040",
+      "date": "2025-02-26",
+      "equipment_tag": "200-F-206",
+      "unit_id": "200",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 137915,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0041",
+      "date": "2025-09-21",
+      "equipment_tag": "500-V-508",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0038",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 475050,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0042",
+      "date": "2025-09-08",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": "INC-2024-014",
+      "downtime_hours": 45.4,
+      "status": "Closed",
+      "cost_inr": 826273,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0043",
+      "date": "2025-02-03",
+      "equipment_tag": "500-V-503",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0040",
+      "linked_incident_id": null,
+      "downtime_hours": 46.3,
+      "status": "Closed",
+      "cost_inr": 507248,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0044",
+      "date": "2026-03-04",
+      "equipment_tag": "300-MTR-306",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0038",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 470108,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0045",
+      "date": "2024-06-22",
+      "equipment_tag": "100-V-105",
+      "unit_id": "100",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0046",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 137321,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0046",
+      "date": "2026-01-09",
+      "equipment_tag": "200-P-208",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 34.2,
+      "status": "Closed",
+      "cost_inr": 631410,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0047",
+      "date": "2025-07-09",
+      "equipment_tag": "400-T-404",
+      "unit_id": "400",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0010",
+      "linked_incident_id": null,
+      "downtime_hours": 20.6,
+      "status": "In Progress",
+      "cost_inr": 124971,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0048",
+      "date": "2026-05-28",
+      "equipment_tag": "500-P-502",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 41.5,
+      "status": "Closed",
+      "cost_inr": 244592,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0049",
+      "date": "2025-07-09",
+      "equipment_tag": "300-V-307",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 332730,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0050",
+      "date": "2026-02-11",
+      "equipment_tag": "300-PSV-308",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 725184,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0051",
+      "date": "2024-07-03",
+      "equipment_tag": "400-T-401",
+      "unit_id": "400",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0007",
+      "linked_incident_id": null,
+      "downtime_hours": 4.5,
+      "status": "Closed",
+      "cost_inr": 779683,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0052",
+      "date": "2024-08-12",
+      "equipment_tag": "300-CT-304",
+      "unit_id": "300",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0044",
+      "linked_incident_id": null,
+      "downtime_hours": 28.2,
+      "status": "Closed",
+      "cost_inr": 350658,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0053",
+      "date": "2025-05-26",
+      "equipment_tag": "500-V-503",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0007",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 791730,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0054",
+      "date": "2026-04-09",
+      "equipment_tag": "300-PSV-308",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 332626,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0055",
+      "date": "2025-11-13",
+      "equipment_tag": "300-C-303",
+      "unit_id": "300",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0007",
+      "linked_incident_id": null,
+      "downtime_hours": 7.4,
+      "status": "Closed",
+      "cost_inr": 118475,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0056",
+      "date": "2025-10-22",
+      "equipment_tag": "300-C-303",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 606987,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0057",
+      "date": "2025-06-14",
+      "equipment_tag": "200-V-205",
+      "unit_id": "200",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0044",
+      "linked_incident_id": null,
+      "downtime_hours": 46.8,
+      "status": "In Progress",
+      "cost_inr": 648378,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0058",
+      "date": "2025-10-23",
+      "equipment_tag": "500-AGT-504",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 732157,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0059",
+      "date": "2024-10-02",
+      "equipment_tag": "200-P-208",
+      "unit_id": "200",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0006",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 361331,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0060",
+      "date": "2024-10-03",
+      "equipment_tag": "300-C-303",
+      "unit_id": "300",
+      "type": "Shutdown/Turnaround",
+      "assigned_emp_id": "EMP-0006",
+      "linked_incident_id": null,
+      "downtime_hours": 27.2,
+      "status": "Closed",
+      "cost_inr": 153766,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0061",
+      "date": "2024-05-02",
+      "equipment_tag": "500-V-508",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 399468,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0062",
+      "date": "2025-03-16",
+      "equipment_tag": "300-V-307",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0039",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 345140,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0063",
+      "date": "2025-12-02",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 170056,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0064",
+      "date": "2024-05-21",
+      "equipment_tag": "500-P-509",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 13.1,
+      "status": "Closed",
+      "cost_inr": 514253,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0065",
+      "date": "2025-05-30",
+      "equipment_tag": "400-T-409",
+      "unit_id": "400",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0039",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "In Progress",
+      "cost_inr": 124346,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2024-0066",
+      "date": "2024-07-23",
+      "equipment_tag": "300-C-303",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0038",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 515271,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0067",
+      "date": "2025-02-10",
+      "equipment_tag": "400-T-404",
+      "unit_id": "400",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0042",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 633437,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0068",
+      "date": "2024-10-27",
+      "equipment_tag": "100-F-104",
+      "unit_id": "100",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0006",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 148901,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0069",
+      "date": "2025-01-22",
+      "equipment_tag": "500-P-509",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0010",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 788301,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0070",
+      "date": "2024-08-11",
+      "equipment_tag": "300-PSV-308",
+      "unit_id": "300",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0008",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 529563,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2026-0071",
+      "date": "2026-02-14",
+      "equipment_tag": "400-P-406",
+      "unit_id": "400",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 3.5,
+      "status": "In Progress",
+      "cost_inr": 49357,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0072",
+      "date": "2025-07-15",
+      "equipment_tag": "300-PSV-308",
+      "unit_id": "300",
+      "type": "Shutdown/Turnaround",
+      "assigned_emp_id": "EMP-0006",
+      "linked_incident_id": null,
+      "downtime_hours": 41.4,
+      "status": "Closed",
+      "cost_inr": 606253,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2026-0073",
+      "date": "2026-01-16",
+      "equipment_tag": "300-MTR-306",
+      "unit_id": "300",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0043",
+      "linked_incident_id": null,
+      "downtime_hours": 5.5,
+      "status": "Closed",
+      "cost_inr": 345544,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0074",
+      "date": "2025-12-24",
+      "equipment_tag": "200-R-201",
+      "unit_id": "200",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0044",
+      "linked_incident_id": null,
+      "downtime_hours": 33.1,
+      "status": "Closed",
+      "cost_inr": 462925,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2025-0075",
+      "date": "2025-06-21",
+      "equipment_tag": "100-P-107",
+      "unit_id": "100",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0009",
+      "linked_incident_id": null,
+      "downtime_hours": 25.2,
+      "status": "Closed",
+      "cost_inr": 330346,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0076",
+      "date": "2024-11-13",
+      "equipment_tag": "500-V-508",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0037",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 540280,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0077",
+      "date": "2025-09-26",
+      "equipment_tag": "500-AGT-501",
+      "unit_id": "500",
+      "type": "Corrective",
+      "assigned_emp_id": "EMP-0007",
+      "linked_incident_id": null,
+      "downtime_hours": 43.5,
+      "status": "Closed",
+      "cost_inr": 767712,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0078",
+      "date": "2024-08-30",
+      "equipment_tag": "500-P-502",
+      "unit_id": "500",
+      "type": "Preventive",
+      "assigned_emp_id": "EMP-0045",
+      "linked_incident_id": null,
+      "downtime_hours": 0.0,
+      "status": "Closed",
+      "cost_inr": 211854,
+      "is_major": false
+    },
+    {
+      "wo_id": "WO-2024-0079",
+      "date": "2024-09-04",
+      "equipment_tag": "200-C-202",
+      "unit_id": "200",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0041",
+      "linked_incident_id": null,
+      "downtime_hours": 31.5,
+      "status": "Closed",
+      "cost_inr": 815389,
+      "is_major": true
+    },
+    {
+      "wo_id": "WO-2025-0080",
+      "date": "2025-07-20",
+      "equipment_tag": "500-AGT-501",
+      "unit_id": "500",
+      "type": "Predictive",
+      "assigned_emp_id": "EMP-0039",
+      "linked_incident_id": null,
+      "downtime_hours": 36.5,
+      "status": "Closed",
+      "cost_inr": 596912,
+      "is_major": true
+    }
+  ],
+  "inspection_reports": [
+    {
+      "ir_id": "IR-300-P-305-2025-001",
+      "date": "2025-11-16",
+      "equipment_tag": "300-P-305",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "External Visual",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2027-11-16",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-300-P-309-2025-002",
+      "date": "2025-02-24",
+      "equipment_tag": "300-P-309",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2027-02-24",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-100-F-104-2024-003",
+      "date": "2024-07-15",
+      "equipment_tag": "100-F-104",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "External Visual",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-07-15",
+      "governing_sop": "SOP-100-001"
+    },
+    {
+      "ir_id": "IR-400-T-403-2024-004",
+      "date": "2024-05-11",
+      "equipment_tag": "400-T-403",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Corrosion Mapping",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2024-11-07",
+      "governing_sop": "SOP-400-010"
+    },
+    {
+      "ir_id": "IR-400-T-404-2025-005",
+      "date": "2025-04-08",
+      "equipment_tag": "400-T-404",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Corrosion Mapping",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2026-04-08",
+      "governing_sop": "SOP-400-012"
+    },
+    {
+      "ir_id": "IR-300-V-307-2026-006",
+      "date": "2026-02-25",
+      "equipment_tag": "300-V-307",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": true,
+      "defect_severity": "Minor",
+      "next_due_date": "2028-02-25",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-300-TUR-302-2025-007",
+      "date": "2025-10-24",
+      "equipment_tag": "300-TUR-302",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2027-10-24",
+      "governing_sop": "SOP-300-008"
+    },
+    {
+      "ir_id": "IR-500-P-507-2025-008",
+      "date": "2025-03-08",
+      "equipment_tag": "500-P-507",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-09-04",
+      "governing_sop": "SOP-500-014"
+    },
+    {
+      "ir_id": "IR-300-C-303-2026-009",
+      "date": "2026-02-01",
+      "equipment_tag": "300-C-303",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-02-01",
+      "governing_sop": "SOP-300-007"
+    },
+    {
+      "ir_id": "IR-400-T-409-2025-010",
+      "date": "2025-02-12",
+      "equipment_tag": "400-T-409",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2027-02-12",
+      "governing_sop": "SOP-400-011"
+    },
+    {
+      "ir_id": "IR-100-V-109-2026-011",
+      "date": "2026-01-22",
+      "equipment_tag": "100-V-109",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-01-22",
+      "governing_sop": "SOP-100-001"
+    },
+    {
+      "ir_id": "IR-100-E-102-2025-012",
+      "date": "2025-02-11",
+      "equipment_tag": "100-E-102",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-08-10",
+      "governing_sop": "SOP-100-003"
+    },
+    {
+      "ir_id": "IR-500-V-510-2024-013",
+      "date": "2024-10-14",
+      "equipment_tag": "500-V-510",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-04-12",
+      "governing_sop": "SOP-500-014"
+    },
+    {
+      "ir_id": "IR-100-V-105-2026-014",
+      "date": "2026-06-17",
+      "equipment_tag": "100-V-105",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2026-12-14",
+      "governing_sop": "SOP-100-001"
+    },
+    {
+      "ir_id": "IR-500-V-508-2026-015",
+      "date": "2026-02-07",
+      "equipment_tag": "500-V-508",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2027-02-07",
+      "governing_sop": "SOP-500-014"
+    },
+    {
+      "ir_id": "IR-100-V-109-2024-016",
+      "date": "2024-09-05",
+      "equipment_tag": "100-V-109",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": true,
+      "defect_severity": "Minor",
+      "next_due_date": "2025-03-04",
+      "governing_sop": "SOP-100-001"
+    },
+    {
+      "ir_id": "IR-500-P-507-2024-017",
+      "date": "2024-05-15",
+      "equipment_tag": "500-P-507",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-05-15",
+      "governing_sop": "SOP-500-014"
+    },
+    {
+      "ir_id": "IR-300-P-309-2026-018",
+      "date": "2026-05-11",
+      "equipment_tag": "300-P-309",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-05-10",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-400-P-405-2025-019",
+      "date": "2025-02-11",
+      "equipment_tag": "400-P-405",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2026-02-11",
+      "governing_sop": "SOP-400-012"
+    },
+    {
+      "ir_id": "IR-300-CT-304-2025-020",
+      "date": "2025-07-17",
+      "equipment_tag": "300-CT-304",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2026-07-17",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-400-T-404-2024-021",
+      "date": "2024-09-13",
+      "equipment_tag": "400-T-404",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-03-12",
+      "governing_sop": "SOP-400-012"
+    },
+    {
+      "ir_id": "IR-200-PSV-207-2026-022",
+      "date": "2026-01-17",
+      "equipment_tag": "200-PSV-207",
+      "unit_id": "200",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2027-01-17",
+      "governing_sop": "SOP-200-006"
+    },
+    {
+      "ir_id": "IR-100-P-107-2025-023",
+      "date": "2025-01-17",
+      "equipment_tag": "100-P-107",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-07-16",
+      "governing_sop": "SOP-100-002"
+    },
+    {
+      "ir_id": "IR-300-P-309-2025-024",
+      "date": "2025-06-22",
+      "equipment_tag": "300-P-309",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-12-19",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-300-P-309-2024-025",
+      "date": "2024-04-28",
+      "equipment_tag": "300-P-309",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": true,
+      "defect_severity": "Moderate",
+      "next_due_date": "2025-04-28",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-200-F-206-2024-026",
+      "date": "2024-06-23",
+      "equipment_tag": "200-F-206",
+      "unit_id": "200",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": true,
+      "defect_severity": "Minor",
+      "next_due_date": "2025-06-23",
+      "governing_sop": "SOP-200-006"
+    },
+    {
+      "ir_id": "IR-500-V-506-2026-027",
+      "date": "2026-06-20",
+      "equipment_tag": "500-V-506",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": true,
+      "defect_severity": "Moderate",
+      "next_due_date": "2026-12-17",
+      "governing_sop": "SOP-500-013"
+    },
+    {
+      "ir_id": "IR-500-P-505-2026-028",
+      "date": "2026-05-18",
+      "equipment_tag": "500-P-505",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-05-17",
+      "governing_sop": "SOP-500-015"
+    },
+    {
+      "ir_id": "IR-100-P-101-2024-029",
+      "date": "2024-04-20",
+      "equipment_tag": "100-P-101",
+      "unit_id": "100",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": true,
+      "defect_severity": "Major",
+      "next_due_date": "2025-04-20",
+      "governing_sop": "SOP-100-001"
+    },
+    {
+      "ir_id": "IR-500-P-507-2024-030",
+      "date": "2024-07-23",
+      "equipment_tag": "500-P-507",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "External Visual",
+      "defect_found": true,
+      "defect_severity": "Minor",
+      "next_due_date": "2025-07-23",
+      "governing_sop": "SOP-500-014"
+    },
+    {
+      "ir_id": "IR-200-F-206-2026-031",
+      "date": "2026-01-15",
+      "equipment_tag": "200-F-206",
+      "unit_id": "200",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "External Visual",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-01-15",
+      "governing_sop": "SOP-200-006"
+    },
+    {
+      "ir_id": "IR-400-T-402-2026-032",
+      "date": "2026-01-08",
+      "equipment_tag": "400-T-402",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Ultrasonic Thickness",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-01-08",
+      "governing_sop": "SOP-400-010"
+    },
+    {
+      "ir_id": "IR-200-C-209-2024-033",
+      "date": "2024-04-02",
+      "equipment_tag": "200-C-209",
+      "unit_id": "200",
+      "inspector_emp_id": "EMP-0017",
+      "inspection_type": "Vibration Analysis",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2026-04-02",
+      "governing_sop": "SOP-200-004"
+    },
+    {
+      "ir_id": "IR-300-V-307-2026-034",
+      "date": "2026-02-10",
+      "equipment_tag": "300-V-307",
+      "unit_id": "300",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": true,
+      "defect_severity": "Minor",
+      "next_due_date": "2028-02-10",
+      "governing_sop": "SOP-300-009"
+    },
+    {
+      "ir_id": "IR-400-T-404-2025-035",
+      "date": "2025-05-05",
+      "equipment_tag": "400-T-404",
+      "unit_id": "400",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "Corrosion Mapping",
+      "defect_found": true,
+      "defect_severity": "Moderate",
+      "next_due_date": "2026-05-05",
+      "governing_sop": "SOP-400-012"
+    },
+    {
+      "ir_id": "IR-200-PSV-207-2025-036",
+      "date": "2025-04-01",
+      "equipment_tag": "200-PSV-207",
+      "unit_id": "200",
+      "inspector_emp_id": "EMP-0014",
+      "inspection_type": "External Visual",
+      "defect_found": true,
+      "defect_severity": "Major",
+      "next_due_date": "2025-09-28",
+      "governing_sop": "SOP-200-006"
+    },
+    {
+      "ir_id": "IR-500-V-508-2024-037",
+      "date": "2024-08-15",
+      "equipment_tag": "500-V-508",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0016",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2025-02-11",
+      "governing_sop": "SOP-500-014"
+    },
+    {
+      "ir_id": "IR-500-P-502-2026-038",
+      "date": "2026-06-07",
+      "equipment_tag": "500-P-502",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Corrosion Mapping",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2028-06-06",
+      "governing_sop": "SOP-500-013"
+    },
+    {
+      "ir_id": "IR-500-AGT-501-2026-039",
+      "date": "2026-07-10",
+      "equipment_tag": "500-AGT-501",
+      "unit_id": "500",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Corrosion Mapping",
+      "defect_found": true,
+      "defect_severity": "Minor",
+      "next_due_date": "2027-01-06",
+      "governing_sop": "SOP-500-015"
+    },
+    {
+      "ir_id": "IR-200-C-209-2024-040",
+      "date": "2024-05-15",
+      "equipment_tag": "200-C-209",
+      "unit_id": "200",
+      "inspector_emp_id": "EMP-0015",
+      "inspection_type": "Internal (Vessel Entry)",
+      "defect_found": false,
+      "defect_severity": null,
+      "next_due_date": "2024-11-11",
+      "governing_sop": "SOP-200-004"
+    }
+  ],
+  "regulatory_submissions": [
+    {
+      "reg_id": "REG-PNGRB-2026-001",
+      "date": "2026-07-14",
+      "agency": "PNGRB",
+      "unit_id": "500",
+      "related_incident_id": "INC-2025-009",
+      "related_inspection_id": "IR-200-F-206-2024-026",
+      "submission_type": "Inspection Certificate Submission"
+    },
+    {
+      "reg_id": "REG-PNGRB-2025-002",
+      "date": "2025-01-18",
+      "agency": "PNGRB",
+      "unit_id": "300",
+      "related_incident_id": "INC-2024-011",
+      "related_inspection_id": "IR-500-V-510-2024-013",
+      "submission_type": "Incident Report Filing"
+    },
+    {
+      "reg_id": "REG-PNGRB-2025-003",
+      "date": "2025-06-22",
+      "agency": "PNGRB",
+      "unit_id": "400",
+      "related_incident_id": "INC-2025-013",
+      "related_inspection_id": "IR-300-P-309-2025-024",
+      "submission_type": "Inspection Certificate Submission"
+    },
+    {
+      "reg_id": "REG-DISH-2026-004",
+      "date": "2026-03-10",
+      "agency": "DISH",
+      "unit_id": "400",
+      "related_incident_id": "INC-2026-003",
+      "related_inspection_id": "IR-400-T-402-2026-032",
+      "submission_type": "Renewal Application"
+    },
+    {
+      "reg_id": "REG-OISD-2024-005",
+      "date": "2024-06-20",
+      "agency": "OISD",
+      "unit_id": "400",
+      "related_incident_id": "INC-2025-002",
+      "related_inspection_id": "IR-500-P-505-2026-028",
+      "submission_type": "Periodic Compliance Return"
+    },
+    {
+      "reg_id": "REG-OISD-2025-006",
+      "date": "2025-03-02",
+      "agency": "OISD",
+      "unit_id": "300",
+      "related_incident_id": "INC-2025-002",
+      "related_inspection_id": "IR-300-V-307-2026-006",
+      "submission_type": "Renewal Application"
+    },
+    {
+      "reg_id": "REG-DISH-2024-007",
+      "date": "2024-09-18",
+      "agency": "DISH",
+      "unit_id": "400",
+      "related_incident_id": null,
+      "related_inspection_id": "IR-500-P-505-2026-028",
+      "submission_type": "Renewal Application"
+    },
+    {
+      "reg_id": "REG-DISH-2025-008",
+      "date": "2025-12-21",
+      "agency": "DISH",
+      "unit_id": "400",
+      "related_incident_id": "INC-2024-014",
+      "related_inspection_id": "IR-100-P-107-2025-023",
+      "submission_type": "Renewal Application"
+    }
+  ],
+  "shift_logs": [
+    {
+      "sl_id": "SL-2026-01-15-A",
+      "date": "2026-01-15",
+      "shift": "A",
+      "supervisor_emp_id": "EMP-0018",
+      "unit_id": "400"
+    },
+    {
+      "sl_id": "SL-2025-04-08-C",
+      "date": "2025-04-08",
+      "shift": "C",
+      "supervisor_emp_id": "EMP-0019",
+      "unit_id": "100"
+    },
+    {
+      "sl_id": "SL-2024-08-25-C",
+      "date": "2024-08-25",
+      "shift": "C",
+      "supervisor_emp_id": "EMP-0021",
+      "unit_id": "100"
+    },
+    {
+      "sl_id": "SL-2024-08-08-A",
+      "date": "2024-08-08",
+      "shift": "A",
+      "supervisor_emp_id": "EMP-0019",
+      "unit_id": "300"
+    },
+    {
+      "sl_id": "SL-2025-04-06-B",
+      "date": "2025-04-06",
+      "shift": "B",
+      "supervisor_emp_id": "EMP-0022",
+      "unit_id": "100"
+    },
+    {
+      "sl_id": "SL-2025-12-11-A",
+      "date": "2025-12-11",
+      "shift": "A",
+      "supervisor_emp_id": "EMP-0021",
+      "unit_id": "300"
+    },
+    {
+      "sl_id": "SL-2025-04-16-B",
+      "date": "2025-04-16",
+      "shift": "B",
+      "supervisor_emp_id": "EMP-0018",
+      "unit_id": "500"
+    },
+    {
+      "sl_id": "SL-2024-08-19-C",
+      "date": "2024-08-19",
+      "shift": "C",
+      "supervisor_emp_id": "EMP-0020",
+      "unit_id": "400"
+    },
+    {
+      "sl_id": "SL-2025-02-16-C",
+      "date": "2025-02-16",
+      "shift": "C",
+      "supervisor_emp_id": "EMP-0020",
+      "unit_id": "200"
+    },
+    {
+      "sl_id": "SL-2024-07-26-A",
+      "date": "2024-07-26",
+      "shift": "A",
+      "supervisor_emp_id": "EMP-0019",
+      "unit_id": "400"
+    },
+    {
+      "sl_id": "SL-2025-09-13-B",
+      "date": "2025-09-13",
+      "shift": "B",
+      "supervisor_emp_id": "EMP-0022",
+      "unit_id": "100"
+    },
+    {
+      "sl_id": "SL-2024-12-25-B",
+      "date": "2024-12-25",
+      "shift": "B",
+      "supervisor_emp_id": "EMP-0021",
+      "unit_id": "200"
+    },
+    {
+      "sl_id": "SL-2025-12-18-B",
+      "date": "2025-12-18",
+      "shift": "B",
+      "supervisor_emp_id": "EMP-0021",
+      "unit_id": "200"
+    },
+    {
+      "sl_id": "SL-2024-08-04-A",
+      "date": "2024-08-04",
+      "shift": "A",
+      "supervisor_emp_id": "EMP-0018",
+      "unit_id": "400"
+    },
+    {
+      "sl_id": "SL-2024-09-24-C",
+      "date": "2024-09-24",
+      "shift": "C",
+      "supervisor_emp_id": "EMP-0021",
+      "unit_id": "100"
+    }
+  ],
+  "emails": [
+    {
+      "eml_id": "EML-2026-001",
+      "date": "2026-07-09",
+      "sender_emp_id": "EMP-0044",
+      "recipient_emp_id": "EMP-0021",
+      "topic_type": "inspection",
+      "ref_id": "IR-400-T-404-2025-005"
+    },
+    {
+      "eml_id": "EML-2025-002",
+      "date": "2025-10-16",
+      "sender_emp_id": "EMP-0035",
+      "recipient_emp_id": "EMP-0019",
+      "topic_type": "inspection",
+      "ref_id": "IR-100-V-109-2026-011"
+    },
+    {
+      "eml_id": "EML-2026-003",
+      "date": "2026-03-30",
+      "sender_emp_id": "EMP-0046",
+      "recipient_emp_id": "EMP-0045",
+      "topic_type": "incident",
+      "ref_id": "INC-2025-013"
+    },
+    {
+      "eml_id": "EML-2025-004",
+      "date": "2025-04-06",
+      "sender_emp_id": "EMP-0033",
+      "recipient_emp_id": "EMP-0015",
+      "topic_type": "work_order",
+      "ref_id": "WO-2024-0026"
+    },
+    {
+      "eml_id": "EML-2026-005",
+      "date": "2026-06-21",
+      "sender_emp_id": "EMP-0009",
+      "recipient_emp_id": "EMP-0016",
+      "topic_type": "general",
+      "ref_id": null
+    },
+    {
+      "eml_id": "EML-2024-006",
+      "date": "2024-04-27",
+      "sender_emp_id": "EMP-0024",
+      "recipient_emp_id": "EMP-0036",
+      "topic_type": "inspection",
+      "ref_id": "IR-500-P-507-2024-030"
+    },
+    {
+      "eml_id": "EML-2026-007",
+      "date": "2026-07-02",
+      "sender_emp_id": "EMP-0036",
+      "recipient_emp_id": "EMP-0009",
+      "topic_type": "work_order",
+      "ref_id": "WO-2026-0009"
+    },
+    {
+      "eml_id": "EML-2025-008",
+      "date": "2025-02-11",
+      "sender_emp_id": "EMP-0026",
+      "recipient_emp_id": "EMP-0046",
+      "topic_type": "general",
+      "ref_id": null
+    },
+    {
+      "eml_id": "EML-2025-009",
+      "date": "2025-09-21",
+      "sender_emp_id": "EMP-0027",
+      "recipient_emp_id": "EMP-0037",
+      "topic_type": "work_order",
+      "ref_id": "WO-2024-0017"
+    },
+    {
+      "eml_id": "EML-2025-010",
+      "date": "2025-02-19",
+      "sender_emp_id": "EMP-0042",
+      "recipient_emp_id": "EMP-0005",
+      "topic_type": "general",
+      "ref_id": null
+    },
+    {
+      "eml_id": "EML-2025-011",
+      "date": "2025-07-22",
+      "sender_emp_id": "EMP-0044",
+      "recipient_emp_id": "EMP-0034",
+      "topic_type": "inspection",
+      "ref_id": "IR-300-C-303-2026-009"
+    },
+    {
+      "eml_id": "EML-2026-012",
+      "date": "2026-06-08",
+      "sender_emp_id": "EMP-0036",
+      "recipient_emp_id": "EMP-0041",
+      "topic_type": "incident",
+      "ref_id": "INC-2025-013"
+    },
+    {
+      "eml_id": "EML-2024-013",
+      "date": "2024-08-11",
+      "sender_emp_id": "EMP-0028",
+      "recipient_emp_id": "EMP-0033",
+      "topic_type": "work_order",
+      "ref_id": "WO-2024-0016"
+    },
+    {
+      "eml_id": "EML-2025-014",
+      "date": "2025-09-13",
+      "sender_emp_id": "EMP-0010",
+      "recipient_emp_id": "EMP-0020",
+      "topic_type": "incident",
+      "ref_id": "INC-2026-003"
+    },
+    {
+      "eml_id": "EML-2025-015",
+      "date": "2025-02-25",
+      "sender_emp_id": "EMP-0046",
+      "recipient_emp_id": "EMP-0015",
+      "topic_type": "inspection",
+      "ref_id": "IR-300-V-307-2026-034"
+    },
+    {
+      "eml_id": "EML-2025-016",
+      "date": "2025-01-16",
+      "sender_emp_id": "EMP-0006",
+      "recipient_emp_id": "EMP-0017",
+      "topic_type": "incident",
+      "ref_id": "INC-2024-011"
+    },
+    {
+      "eml_id": "EML-2025-017",
+      "date": "2025-10-17",
+      "sender_emp_id": "EMP-0018",
+      "recipient_emp_id": "EMP-0009",
+      "topic_type": "inspection",
+      "ref_id": "IR-200-C-209-2024-040"
+    },
+    {
+      "eml_id": "EML-2025-018",
+      "date": "2025-09-29",
+      "sender_emp_id": "EMP-0006",
+      "recipient_emp_id": "EMP-0033",
+      "topic_type": "incident",
+      "ref_id": "INC-2024-010"
+    },
+    {
+      "eml_id": "EML-2025-019",
+      "date": "2025-11-16",
+      "sender_emp_id": "EMP-0010",
+      "recipient_emp_id": "EMP-0011",
+      "topic_type": "inspection",
+      "ref_id": "IR-500-V-508-2024-037"
+    },
+    {
+      "eml_id": "EML-2024-020",
+      "date": "2024-05-13",
+      "sender_emp_id": "EMP-0002",
+      "recipient_emp_id": "EMP-0006",
+      "topic_type": "work_order",
+      "ref_id": "WO-2025-0074"
+    }
+  ],
+  "sensor_logs": [
+    {
+      "pl_id": "PL-200-PSV-207-2025-11",
+      "equipment_tag": "200-PSV-207",
+      "month": "2025-11"
+    },
+    {
+      "pl_id": "PL-500-P-502-2026-01",
+      "equipment_tag": "500-P-502",
+      "month": "2026-01"
+    },
+    {
+      "pl_id": "PL-200-E-204-2026-06",
+      "equipment_tag": "200-E-204",
+      "month": "2026-06"
+    },
+    {
+      "pl_id": "PL-400-PSV-407-2026-05",
+      "equipment_tag": "400-PSV-407",
+      "month": "2026-05"
+    },
+    {
+      "pl_id": "PL-300-V-307-2026-06",
+      "equipment_tag": "300-V-307",
+      "month": "2026-06"
+    },
+    {
+      "pl_id": "PL-400-P-410-2026-06",
+      "equipment_tag": "400-P-410",
+      "month": "2026-06"
+    },
+    {
+      "pl_id": "PL-500-AGT-501-2026-02",
+      "equipment_tag": "500-AGT-501",
+      "month": "2026-02"
+    },
+    {
+      "pl_id": "PL-100-E-102-2026-04",
+      "equipment_tag": "100-E-102",
+      "month": "2026-04"
+    },
+    {
+      "pl_id": "PL-400-T-402-2026-01",
+      "equipment_tag": "400-T-402",
+      "month": "2026-01"
+    },
+    {
+      "pl_id": "PL-500-AGT-504-2026-04",
+      "equipment_tag": "500-AGT-504",
+      "month": "2026-04"
+    },
+    {
+      "pl_id": "PL-400-P-405-2026-04",
+      "equipment_tag": "400-P-405",
+      "month": "2026-04"
+    },
+    {
+      "pl_id": "PL-200-C-209-2026-04",
+      "equipment_tag": "200-C-209",
+      "month": "2026-04"
+    },
+    {
+      "pl_id": "PL-200-V-210-2026-05",
+      "equipment_tag": "200-V-210",
+      "month": "2026-05"
+    },
+    {
+      "pl_id": "PL-400-T-401-2026-01",
+      "equipment_tag": "400-T-401",
+      "month": "2026-01"
+    },
+    {
+      "pl_id": "PL-200-F-206-2026-04",
+      "equipment_tag": "200-F-206",
+      "month": "2026-04"
+    },
+    {
+      "pl_id": "PL-300-MTR-306-2025-12",
+      "equipment_tag": "300-MTR-306",
+      "month": "2025-12"
+    },
+    {
+      "pl_id": "PL-400-T-408-2026-04",
+      "equipment_tag": "400-T-408",
+      "month": "2026-04"
+    },
+    {
+      "pl_id": "PL-300-C-310-2026-02",
+      "equipment_tag": "300-C-310",
+      "month": "2026-02"
+    },
+    {
+      "pl_id": "PL-100-V-105-2026-06",
+      "equipment_tag": "100-V-105",
+      "month": "2026-06"
+    },
+    {
+      "pl_id": "PL-300-C-303-2025-12",
+      "equipment_tag": "300-C-303",
+      "month": "2025-12"
+    }
+  ],
+  "vendors": [
+    "Kirloskar Brothers Ltd",
+    "BHEL",
+    "Thermax Ltd",
+    "Forbes Marshall",
+    "L&T Valves",
+    "Cummins India",
+    "Grundfos India",
+    "Ingersoll Rand",
+    "Sulzer India",
+    "Emerson Process Management",
+    "Fluor Daniel India",
+    "Godrej & Boyce",
+    "Triveni Turbines",
+    "Mather+Platt",
+    "Cameron (Schlumberger)"
+  ]
+}
