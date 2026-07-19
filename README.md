@@ -81,11 +81,6 @@ regardless.
 FastAPI, Groq API, NetworkX, numpy — deployed on Vercel. No database, no build step for the
 frontend (vanilla HTML/CSS/JS), no external JS libraries.
 
-## Setup, local development, and deployment
-
-See **[Instructions.md](Instructions.md)** for step-by-step setup, running locally, rebuilding
-the vector store, redeploying to Vercel, and pushing this repo to GitHub.
-
 ## Data
 
 All data is synthetic, generated for this project — no real refinery, real people, or real
