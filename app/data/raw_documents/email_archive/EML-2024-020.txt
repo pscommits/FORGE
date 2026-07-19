@@ -1,0 +1,15 @@
+From: Arun Menon <arun.menon@prpc-refinery.co.in>
+To: Ashok Menon <ashok.menon@prpc-refinery.co.in>
+Date: 2024-05-13
+Subject: Update on WO-2025-0074 — 200-R-201
+Message-ID: <EML-2024-020@prpc-refinery.co.in>
+
+Hi Ashok,
+
+Following up on work order WO-2025-0074 for 200-R-201 (Hydrocracking Reactor) in Hydrocracker Unit. Current status is 'Closed'. Downtime logged so far is 33.1 hours. Please confirm if we need to extend the permit or if we can close this out at the next shift handover.
+
+Let me know if you need the RBI history before we sign off.
+
+Regards,
+Arun Menon
+Process Engineer, PRPC

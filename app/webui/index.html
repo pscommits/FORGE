@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1319" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafbfc" media="(prefers-color-scheme: light)">
+<meta name="description" content="FORGE Industrial Knowledge Copilot — a HybridRAG prototype over a synthetic refinery data twin, with vector/graph/hybrid retrieval and an interactive knowledge-graph viewer.">
+<title>FORGE — Industrial Knowledge Copilot</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <span class="brand">FORGE</span>
+    <span class="subtitle">Panchganga Refinery &amp; Petrochemicals Complex</span>
+  </div>
+</header>
+
+<main class="app-main">
+
+  <section class="controls-row">
+    <div class="mode-toggle" id="modeToggle" role="radiogroup" aria-label="Retrieval mode">
+      <button type="button" class="mode-btn" data-mode="vector" aria-pressed="false" title="Semantic chunk search">Vector</button>
+      <button type="button" class="mode-btn" data-mode="graph" aria-pressed="false" title="Knowledge-graph traversal">Graph</button>
+      <button type="button" class="mode-btn" data-mode="hybrid" aria-pressed="false" title="Vector + graph combined">Hybrid</button>
+    </div>
+  </section>
+
+  <section class="query-panel">
+    <div class="entity-select-row">
+      <select id="categorySelect" class="entity-select" title="Category" aria-label="Category">
+        <option value="equipment">Equipment</option>
+        <option value="unit">Process Unit</option>
+      </select>
+      <select id="itemSelect" class="entity-select" title="Select equipment or unit" aria-label="Select equipment or unit">
+        <option value="">Select…</option>
+      </select>
+    </div>
+    <div class="query-row">
+      <textarea id="questionInput" rows="1"
+        placeholder="Ask about equipment, incidents, work orders, inspections…"></textarea>
+      <button id="askBtn" class="ask-btn" type="button" aria-label="Ask">
+        <svg id="askIcon" class="ask-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span id="askSpinner" class="spinner hidden"></span>
+      </button>
+    </div>
+    <div class="suggestions-row" id="exampleChips"></div>
+  </section>
+
+  <div id="errorBanner" class="error-banner hidden" role="alert"></div>
+
+  <section id="resultsArea" class="results-grid hidden">
+    <article class="panel result-panel answer-panel">
+      <h2 class="panel-title">Answer</h2>
+      <div id="answerMeta" class="answer-meta"></div>
+      <p id="answerText" class="answer-text"></p>
+    </article>
+
+    <article class="panel result-panel sources-panel">
+      <h2 class="panel-title">Sources</h2>
+      <ul id="sourcesList" class="sources-list"></ul>
+    </article>
+
+    <article class="panel result-panel graph-panel">
+      <h2 class="panel-title">Knowledge graph</h2>
+      <div id="kgContainer" class="kg-container"></div>
+    </article>
+
+    <article class="panel result-panel confidence-panel">
+      <h2 class="panel-title">Confidence</h2>
+      <div class="confidence-score-row">
+        <span id="confidenceScore" class="confidence-score">—</span>
+        <span id="confidenceBand" class="confidence-band"></span>
+      </div>
+      <p id="confidenceExplanation" class="confidence-explanation"></p>
+      <p class="confidence-disclaimer">Heuristic retrieval-based estimate, not a calibrated probability.</p>
+    </article>
+  </section>
+
+  <details id="debugDetails" class="debug-details hidden">
+    <summary>Retrieval &amp; timing details</summary>
+    <pre id="debugContent"></pre>
+  </details>
+
+</main>
+
+<footer class="app-footer">
+  <p>Local prototype &middot; retrieval runs on-disk (ChromaDB + NetworkX) &middot; generation via the Groq API</p>
+</footer>
+
+<script src="/static/graph.js"></script>
+<script src="/static/script.js"></script>
+</body>
+</html>

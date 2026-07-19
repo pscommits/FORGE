@@ -1,0 +1,3689 @@
+{
+  "meta": {
+    "description": "HybridRAG evaluation set for the PRPC industrial data twin. Grounded in real, computed relationships -- expected answers were derived programmatically from world_model.json, not hand-guessed.",
+    "as_of_date": "2026-07-17",
+    "total_questions": 134,
+    "category_counts": {
+      "entity_extraction": 44,
+      "single_hop_factual": 25,
+      "multi_hop_relational": 20,
+      "temporal_reasoning": 9,
+      "compliance_gap_detection": 9,
+      "cross_functional_discovery": 19,
+      "unanswerable": 8
+    },
+    "ideal_strategy_counts": {
+      "vector": 69,
+      "graph": 47,
+      "hybrid": 18
+    },
+    "usage": "Run each question through VectorRAG-only, GraphRAG-only, and HybridRAG pipelines. Score against expected_answer / expected_entities. naive_keyword_hit_count shows how many raw documents a traditional keyword search would return for the primary entity -- use it to quantify time-to-answer / review burden versus a direct RAG answer."
+  },
+  "questions": [
+    {
+      "test_id": "Q-001",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'DS-100-P-101' (EquipmentDatasheet).",
+      "expected_answer": "5 entities: DOC-DS-100-P-101, EQ-100-P-101, SOP-SOP-100-001, SP-SP-005, UNIT-100",
+      "expected_entities": [
+        "DOC-DS-100-P-101",
+        "EQ-100-P-101",
+        "SOP-SOP-100-001",
+        "SP-SP-005",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "DS-100-P-101"
+      ],
+      "supporting_chunk_ids": [
+        "DS-100-P-101-CH01",
+        "DS-100-P-101-CH02",
+        "DS-100-P-101-CH03",
+        "DS-100-P-101-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "DS-100-P-101",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-002",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'DS-300-P-305' (EquipmentDatasheet).",
+      "expected_answer": "5 entities: DOC-DS-300-P-305, EQ-300-P-305, SOP-SOP-300-009, SP-SP-007, UNIT-300",
+      "expected_entities": [
+        "DOC-DS-300-P-305",
+        "EQ-300-P-305",
+        "SOP-SOP-300-009",
+        "SP-SP-007",
+        "UNIT-300"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-P-305"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-P-305-CH01",
+        "DS-300-P-305-CH02",
+        "DS-300-P-305-CH03",
+        "DS-300-P-305-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "DS-300-P-305",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-003",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'DS-100-E-108' (EquipmentDatasheet).",
+      "expected_answer": "5 entities: DOC-DS-100-E-108, EQ-100-E-108, SOP-SOP-100-002, SP-SP-005, UNIT-100",
+      "expected_entities": [
+        "DOC-DS-100-E-108",
+        "EQ-100-E-108",
+        "SOP-SOP-100-002",
+        "SP-SP-005",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "DS-100-E-108"
+      ],
+      "supporting_chunk_ids": [
+        "DS-100-E-108-CH01",
+        "DS-100-E-108-CH02",
+        "DS-100-E-108-CH03",
+        "DS-100-E-108-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "DS-100-E-108",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-004",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'DS-400-T-404' (EquipmentDatasheet).",
+      "expected_answer": "5 entities: DOC-DS-400-T-404, EQ-400-T-404, SOP-SOP-400-012, SP-SP-001, UNIT-400",
+      "expected_entities": [
+        "DOC-DS-400-T-404",
+        "EQ-400-T-404",
+        "SOP-SOP-400-012",
+        "SP-SP-001",
+        "UNIT-400"
+      ],
+      "supporting_doc_ids": [
+        "DS-400-T-404"
+      ],
+      "supporting_chunk_ids": [
+        "DS-400-T-404-CH01",
+        "DS-400-T-404-CH02",
+        "DS-400-T-404-CH03",
+        "DS-400-T-404-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "DS-400-T-404",
+      "naive_keyword_hit_count": 37,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-005",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PID-500-010' (PIDReference).",
+      "expected_answer": "6 entities: EQ-500-P-507, EQ-500-P-509, EQ-500-V-506, EQ-500-V-508, EQ-500-V-510, UNIT-500",
+      "expected_entities": [
+        "EQ-500-P-507",
+        "EQ-500-P-509",
+        "EQ-500-V-506",
+        "EQ-500-V-508",
+        "EQ-500-V-510",
+        "UNIT-500"
+      ],
+      "supporting_doc_ids": [
+        "PID-500-010"
+      ],
+      "supporting_chunk_ids": [
+        "PID-500-010-CH01",
+        "PID-500-010-CH02"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PID-500-010",
+      "naive_keyword_hit_count": 41,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-006",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PID-200-004' (PIDReference).",
+      "expected_answer": "6 entities: EQ-200-C-209, EQ-200-F-206, EQ-200-P-208, EQ-200-PSV-207, EQ-200-V-210, UNIT-200",
+      "expected_entities": [
+        "EQ-200-C-209",
+        "EQ-200-F-206",
+        "EQ-200-P-208",
+        "EQ-200-PSV-207",
+        "EQ-200-V-210",
+        "UNIT-200"
+      ],
+      "supporting_doc_ids": [
+        "PID-200-004"
+      ],
+      "supporting_chunk_ids": [
+        "PID-200-004-CH01",
+        "PID-200-004-CH02"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PID-200-004",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-007",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PID-200-003' (PIDReference).",
+      "expected_answer": "6 entities: EQ-200-C-202, EQ-200-E-204, EQ-200-P-203, EQ-200-R-201, EQ-200-V-205, UNIT-200",
+      "expected_entities": [
+        "EQ-200-C-202",
+        "EQ-200-E-204",
+        "EQ-200-P-203",
+        "EQ-200-R-201",
+        "EQ-200-V-205",
+        "UNIT-200"
+      ],
+      "supporting_doc_ids": [
+        "PID-200-003"
+      ],
+      "supporting_chunk_ids": [
+        "PID-200-003-CH01",
+        "PID-200-003-CH02"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PID-200-003",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-008",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PID-300-005' (PIDReference).",
+      "expected_answer": "6 entities: EQ-300-BLR-301, EQ-300-C-303, EQ-300-CT-304, EQ-300-P-305, EQ-300-TUR-302, UNIT-300",
+      "expected_entities": [
+        "EQ-300-BLR-301",
+        "EQ-300-C-303",
+        "EQ-300-CT-304",
+        "EQ-300-P-305",
+        "EQ-300-TUR-302",
+        "UNIT-300"
+      ],
+      "supporting_doc_ids": [
+        "PID-300-005"
+      ],
+      "supporting_chunk_ids": [
+        "PID-300-005-CH01",
+        "PID-300-005-CH02"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PID-300-005",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-009",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'WO-2025-0056' (MajorWorkOrder).",
+      "expected_answer": "6 entities: EQ-300-C-303, PERS-EMP-0045, SOP-SOP-300-007, SP-SP-008, UNIT-300, WO-WO-2025-0056",
+      "expected_entities": [
+        "EQ-300-C-303",
+        "PERS-EMP-0045",
+        "SOP-SOP-300-007",
+        "SP-SP-008",
+        "UNIT-300",
+        "WO-WO-2025-0056"
+      ],
+      "supporting_doc_ids": [
+        "WO-2025-0056"
+      ],
+      "supporting_chunk_ids": [
+        "WO-2025-0056-CH01",
+        "WO-2025-0056-CH02",
+        "WO-2025-0056-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "WO-2025-0056",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-010",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'WO-2026-0020' (MajorWorkOrder).",
+      "expected_answer": "6 entities: EQ-200-C-209, PERS-EMP-0037, SOP-SOP-200-004, SP-SP-001, UNIT-200, WO-WO-2026-0020",
+      "expected_entities": [
+        "EQ-200-C-209",
+        "PERS-EMP-0037",
+        "SOP-SOP-200-004",
+        "SP-SP-001",
+        "UNIT-200",
+        "WO-WO-2026-0020"
+      ],
+      "supporting_doc_ids": [
+        "WO-2026-0020"
+      ],
+      "supporting_chunk_ids": [
+        "WO-2026-0020-CH01",
+        "WO-2026-0020-CH02",
+        "WO-2026-0020-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "WO-2026-0020",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-011",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'WO-2024-0006' (MajorWorkOrder).",
+      "expected_answer": "6 entities: EQ-200-V-205, PERS-EMP-0043, SOP-SOP-200-005, SP-SP-002, UNIT-200, WO-WO-2024-0006",
+      "expected_entities": [
+        "EQ-200-V-205",
+        "PERS-EMP-0043",
+        "SOP-SOP-200-005",
+        "SP-SP-002",
+        "UNIT-200",
+        "WO-WO-2024-0006"
+      ],
+      "supporting_doc_ids": [
+        "WO-2024-0006"
+      ],
+      "supporting_chunk_ids": [
+        "WO-2024-0006-CH01",
+        "WO-2024-0006-CH02",
+        "WO-2024-0006-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "WO-2024-0006",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-012",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'WO-2024-0005' (MajorWorkOrder).",
+      "expected_answer": "6 entities: EQ-100-D-103, PERS-EMP-0041, SOP-SOP-100-001, SP-SP-004, UNIT-100, WO-WO-2024-0005",
+      "expected_entities": [
+        "EQ-100-D-103",
+        "PERS-EMP-0041",
+        "SOP-SOP-100-001",
+        "SP-SP-004",
+        "UNIT-100",
+        "WO-WO-2024-0005"
+      ],
+      "supporting_doc_ids": [
+        "WO-2024-0005"
+      ],
+      "supporting_chunk_ids": [
+        "WO-2024-0005-CH01",
+        "WO-2024-0005-CH02",
+        "WO-2024-0005-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "WO-2024-0005",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-013",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'IR-100-V-105-2026-014' (InspectionReport).",
+      "expected_answer": "5 entities: EQ-100-V-105, IR-IR-100-V-105-2026-014, PERS-EMP-0016, SOP-SOP-100-001, UNIT-100",
+      "expected_entities": [
+        "EQ-100-V-105",
+        "IR-IR-100-V-105-2026-014",
+        "PERS-EMP-0016",
+        "SOP-SOP-100-001",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-V-105-2026-014"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-V-105-2026-014-CH01",
+        "IR-100-V-105-2026-014-CH02",
+        "IR-100-V-105-2026-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-100-V-105-2026-014",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-014",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'IR-300-TUR-302-2025-007' (InspectionReport).",
+      "expected_answer": "5 entities: EQ-300-TUR-302, IR-IR-300-TUR-302-2025-007, PERS-EMP-0014, SOP-SOP-300-008, UNIT-300",
+      "expected_entities": [
+        "EQ-300-TUR-302",
+        "IR-IR-300-TUR-302-2025-007",
+        "PERS-EMP-0014",
+        "SOP-SOP-300-008",
+        "UNIT-300"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-TUR-302-2025-007"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-TUR-302-2025-007-CH01",
+        "IR-300-TUR-302-2025-007-CH02",
+        "IR-300-TUR-302-2025-007-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-300-TUR-302-2025-007",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-015",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'IR-100-P-107-2025-023' (InspectionReport).",
+      "expected_answer": "5 entities: EQ-100-P-107, IR-IR-100-P-107-2025-023, PERS-EMP-0014, SOP-SOP-100-002, UNIT-100",
+      "expected_entities": [
+        "EQ-100-P-107",
+        "IR-IR-100-P-107-2025-023",
+        "PERS-EMP-0014",
+        "SOP-SOP-100-002",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-P-107-2025-023"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-P-107-2025-023-CH01",
+        "IR-100-P-107-2025-023-CH02",
+        "IR-100-P-107-2025-023-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-100-P-107-2025-023",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-016",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'IR-100-F-104-2024-003' (InspectionReport).",
+      "expected_answer": "5 entities: EQ-100-F-104, IR-IR-100-F-104-2024-003, PERS-EMP-0017, SOP-SOP-100-001, UNIT-100",
+      "expected_entities": [
+        "EQ-100-F-104",
+        "IR-IR-100-F-104-2024-003",
+        "PERS-EMP-0017",
+        "SOP-SOP-100-001",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-F-104-2024-003"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-F-104-2024-003-CH01",
+        "IR-100-F-104-2024-003-CH02",
+        "IR-100-F-104-2024-003-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-100-F-104-2024-003",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-017",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'INC-2024-007' (IncidentReport).",
+      "expected_answer": "6 entities: EQ-100-E-108, INC-INC-2024-007, PERS-EMP-0034, SOP-SOP-100-002, SP-SP-005, UNIT-100",
+      "expected_entities": [
+        "EQ-100-E-108",
+        "INC-INC-2024-007",
+        "PERS-EMP-0034",
+        "SOP-SOP-100-002",
+        "SP-SP-005",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-007"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-007-CH01",
+        "INC-2024-007-CH02",
+        "INC-2024-007-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "INC-2024-007",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-018",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'INC-2025-004' (IncidentReport).",
+      "expected_answer": "6 entities: EQ-200-E-204, INC-INC-2025-004, PERS-EMP-0015, SOP-SOP-200-006, SP-SP-004, UNIT-200",
+      "expected_entities": [
+        "EQ-200-E-204",
+        "INC-INC-2025-004",
+        "PERS-EMP-0015",
+        "SOP-SOP-200-006",
+        "SP-SP-004",
+        "UNIT-200"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-004"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-004-CH01",
+        "INC-2025-004-CH02",
+        "INC-2025-004-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "INC-2025-004",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-019",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'INC-2024-011' (IncidentReport).",
+      "expected_answer": "6 entities: EQ-400-T-403, INC-INC-2024-011, PERS-EMP-0015, SOP-SOP-400-010, SP-SP-010, UNIT-400",
+      "expected_entities": [
+        "EQ-400-T-403",
+        "INC-INC-2024-011",
+        "PERS-EMP-0015",
+        "SOP-SOP-400-010",
+        "SP-SP-010",
+        "UNIT-400"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-011"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-011-CH01",
+        "INC-2024-011-CH02",
+        "INC-2024-011-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "INC-2024-011",
+      "naive_keyword_hit_count": 37,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-020",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'INC-2025-015' (IncidentReport).",
+      "expected_answer": "6 entities: EQ-300-P-305, INC-INC-2025-015, PERS-EMP-0013, SOP-SOP-300-009, SP-SP-007, UNIT-300",
+      "expected_entities": [
+        "EQ-300-P-305",
+        "INC-INC-2025-015",
+        "PERS-EMP-0013",
+        "SOP-SOP-300-009",
+        "SP-SP-007",
+        "UNIT-300"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-015"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-015-CH01",
+        "INC-2025-015-CH02",
+        "INC-2025-015-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "INC-2025-015",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-021",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'REG-PNGRB-2025-002' (RegulatorySubmission).",
+      "expected_answer": "5 entities: EQ-500-V-510, INC-INC-2024-011, IR-IR-500-V-510-2024-013, REG-REG-PNGRB-2025-002, UNIT-300",
+      "expected_entities": [
+        "EQ-500-V-510",
+        "INC-INC-2024-011",
+        "IR-IR-500-V-510-2024-013",
+        "REG-REG-PNGRB-2025-002",
+        "UNIT-300"
+      ],
+      "supporting_doc_ids": [
+        "REG-PNGRB-2025-002"
+      ],
+      "supporting_chunk_ids": [
+        "REG-PNGRB-2025-002-CH01",
+        "REG-PNGRB-2025-002-CH02",
+        "REG-PNGRB-2025-002-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "REG-PNGRB-2025-002",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-022",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'REG-PNGRB-2026-001' (RegulatorySubmission).",
+      "expected_answer": "5 entities: EQ-200-F-206, INC-INC-2025-009, IR-IR-200-F-206-2024-026, REG-REG-PNGRB-2026-001, UNIT-500",
+      "expected_entities": [
+        "EQ-200-F-206",
+        "INC-INC-2025-009",
+        "IR-IR-200-F-206-2024-026",
+        "REG-REG-PNGRB-2026-001",
+        "UNIT-500"
+      ],
+      "supporting_doc_ids": [
+        "REG-PNGRB-2026-001"
+      ],
+      "supporting_chunk_ids": [
+        "REG-PNGRB-2026-001-CH01",
+        "REG-PNGRB-2026-001-CH02",
+        "REG-PNGRB-2026-001-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "REG-PNGRB-2026-001",
+      "naive_keyword_hit_count": 41,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-023",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'REG-DISH-2024-007' (RegulatorySubmission).",
+      "expected_answer": "4 entities: EQ-500-P-505, IR-IR-500-P-505-2026-028, REG-REG-DISH-2024-007, UNIT-400",
+      "expected_entities": [
+        "EQ-500-P-505",
+        "IR-IR-500-P-505-2026-028",
+        "REG-REG-DISH-2024-007",
+        "UNIT-400"
+      ],
+      "supporting_doc_ids": [
+        "REG-DISH-2024-007"
+      ],
+      "supporting_chunk_ids": [
+        "REG-DISH-2024-007-CH01",
+        "REG-DISH-2024-007-CH02",
+        "REG-DISH-2024-007-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "REG-DISH-2024-007",
+      "naive_keyword_hit_count": 37,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-024",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'REG-OISD-2024-005' (RegulatorySubmission).",
+      "expected_answer": "5 entities: EQ-500-P-505, INC-INC-2025-002, IR-IR-500-P-505-2026-028, REG-REG-OISD-2024-005, UNIT-400",
+      "expected_entities": [
+        "EQ-500-P-505",
+        "INC-INC-2025-002",
+        "IR-IR-500-P-505-2026-028",
+        "REG-REG-OISD-2024-005",
+        "UNIT-400"
+      ],
+      "supporting_doc_ids": [
+        "REG-OISD-2024-005"
+      ],
+      "supporting_chunk_ids": [
+        "REG-OISD-2024-005-CH01",
+        "REG-OISD-2024-005-CH02",
+        "REG-OISD-2024-005-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "REG-OISD-2024-005",
+      "naive_keyword_hit_count": 37,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-025",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SOP-400-012' (SOP).",
+      "expected_answer": "6 entities: EQ-400-T-401, EQ-400-T-402, EQ-400-T-403, EQ-400-T-404, SOP-SOP-400-012, UNIT-400",
+      "expected_entities": [
+        "EQ-400-T-401",
+        "EQ-400-T-402",
+        "EQ-400-T-403",
+        "EQ-400-T-404",
+        "SOP-SOP-400-012",
+        "UNIT-400"
+      ],
+      "supporting_doc_ids": [
+        "SOP-400-012"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-400-012-CH01",
+        "SOP-400-012-CH02",
+        "SOP-400-012-CH03",
+        "SOP-400-012-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SOP-400-012",
+      "naive_keyword_hit_count": 37,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-026",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SOP-300-008' (SOP).",
+      "expected_answer": "6 entities: EQ-300-BLR-301, EQ-300-C-303, EQ-300-CT-304, EQ-300-TUR-302, SOP-SOP-300-008, UNIT-300",
+      "expected_entities": [
+        "EQ-300-BLR-301",
+        "EQ-300-C-303",
+        "EQ-300-CT-304",
+        "EQ-300-TUR-302",
+        "SOP-SOP-300-008",
+        "UNIT-300"
+      ],
+      "supporting_doc_ids": [
+        "SOP-300-008"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-300-008-CH01",
+        "SOP-300-008-CH02",
+        "SOP-300-008-CH03",
+        "SOP-300-008-CH04",
+        "SOP-300-008-CH05"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SOP-300-008",
+      "naive_keyword_hit_count": 43,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-027",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SOP-200-006' (SOP).",
+      "expected_answer": "6 entities: EQ-200-C-202, EQ-200-E-204, EQ-200-P-203, EQ-200-R-201, SOP-SOP-200-006, UNIT-200",
+      "expected_entities": [
+        "EQ-200-C-202",
+        "EQ-200-E-204",
+        "EQ-200-P-203",
+        "EQ-200-R-201",
+        "SOP-SOP-200-006",
+        "UNIT-200"
+      ],
+      "supporting_doc_ids": [
+        "SOP-200-006"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-200-006-CH01",
+        "SOP-200-006-CH02",
+        "SOP-200-006-CH03",
+        "SOP-200-006-CH04",
+        "SOP-200-006-CH05"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SOP-200-006",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-028",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SOP-100-003' (SOP).",
+      "expected_answer": "6 entities: EQ-100-D-103, EQ-100-E-102, EQ-100-F-104, EQ-100-P-101, SOP-SOP-100-003, UNIT-100",
+      "expected_entities": [
+        "EQ-100-D-103",
+        "EQ-100-E-102",
+        "EQ-100-F-104",
+        "EQ-100-P-101",
+        "SOP-SOP-100-003",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "SOP-100-003"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-100-003-CH01",
+        "SOP-100-003-CH02",
+        "SOP-100-003-CH03",
+        "SOP-100-003-CH04",
+        "SOP-100-003-CH05"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SOP-100-003",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-029",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SP-008' (SafetyProcedure).",
+      "expected_answer": "7 entities: EQ-200-R-201, EQ-300-C-303, EQ-300-TUR-302, EQ-300-V-307, EQ-400-PSV-407, EQ-400-T-408, SP-SP-008",
+      "expected_entities": [
+        "EQ-200-R-201",
+        "EQ-300-C-303",
+        "EQ-300-TUR-302",
+        "EQ-300-V-307",
+        "EQ-400-PSV-407",
+        "EQ-400-T-408",
+        "SP-SP-008"
+      ],
+      "supporting_doc_ids": [
+        "SP-008"
+      ],
+      "supporting_chunk_ids": [
+        "SP-008-CH01",
+        "SP-008-CH02",
+        "SP-008-CH03",
+        "SP-008-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SP-008",
+      "naive_keyword_hit_count": 17,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-030",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SP-010' (SafetyProcedure).",
+      "expected_answer": "5 entities: EQ-100-P-107, EQ-200-P-203, EQ-300-BLR-301, EQ-400-T-403, SP-SP-010",
+      "expected_entities": [
+        "EQ-100-P-107",
+        "EQ-200-P-203",
+        "EQ-300-BLR-301",
+        "EQ-400-T-403",
+        "SP-SP-010"
+      ],
+      "supporting_doc_ids": [
+        "SP-010"
+      ],
+      "supporting_chunk_ids": [
+        "SP-010-CH01",
+        "SP-010-CH02",
+        "SP-010-CH03",
+        "SP-010-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SP-010",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-031",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SP-002' (SafetyProcedure).",
+      "expected_answer": "7 entities: EQ-100-E-102, EQ-200-V-205, EQ-300-PSV-308, EQ-400-T-402, EQ-500-P-505, EQ-500-V-510, SP-SP-002",
+      "expected_entities": [
+        "EQ-100-E-102",
+        "EQ-200-V-205",
+        "EQ-300-PSV-308",
+        "EQ-400-T-402",
+        "EQ-500-P-505",
+        "EQ-500-V-510",
+        "SP-SP-002"
+      ],
+      "supporting_doc_ids": [
+        "SP-002"
+      ],
+      "supporting_chunk_ids": [
+        "SP-002-CH01",
+        "SP-002-CH02",
+        "SP-002-CH03",
+        "SP-002-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SP-002",
+      "naive_keyword_hit_count": 14,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-032",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SP-004' (SafetyProcedure).",
+      "expected_answer": "6 entities: EQ-100-D-103, EQ-100-V-109, EQ-200-C-202, EQ-200-E-204, EQ-200-F-206, SP-SP-004",
+      "expected_entities": [
+        "EQ-100-D-103",
+        "EQ-100-V-109",
+        "EQ-200-C-202",
+        "EQ-200-E-204",
+        "EQ-200-F-206",
+        "SP-SP-004"
+      ],
+      "supporting_doc_ids": [
+        "SP-004"
+      ],
+      "supporting_chunk_ids": [
+        "SP-004-CH01",
+        "SP-004-CH02",
+        "SP-004-CH03",
+        "SP-004-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SP-004",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-033",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'EML-2026-005' (Email).",
+      "expected_answer": "4 entities: EML-EML-2026-005, PERS-EMP-0009, PERS-EMP-0016, UNIT-400",
+      "expected_entities": [
+        "EML-EML-2026-005",
+        "PERS-EMP-0009",
+        "PERS-EMP-0016",
+        "UNIT-400"
+      ],
+      "supporting_doc_ids": [
+        "EML-2026-005"
+      ],
+      "supporting_chunk_ids": [
+        "EML-2026-005-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "EML-2026-005",
+      "naive_keyword_hit_count": 37,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-034",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'EML-2025-002' (Email).",
+      "expected_answer": "5 entities: EML-EML-2025-002, EQ-100-V-109, IR-IR-100-V-109-2026-011, PERS-EMP-0019, PERS-EMP-0035",
+      "expected_entities": [
+        "EML-EML-2025-002",
+        "EQ-100-V-109",
+        "IR-IR-100-V-109-2026-011",
+        "PERS-EMP-0019",
+        "PERS-EMP-0035"
+      ],
+      "supporting_doc_ids": [
+        "EML-2025-002"
+      ],
+      "supporting_chunk_ids": [
+        "EML-2025-002-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "EML-2025-002",
+      "naive_keyword_hit_count": 7,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-035",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'EML-2025-018' (Email).",
+      "expected_answer": "5 entities: EML-EML-2025-018, EQ-500-V-508, INC-INC-2024-010, PERS-EMP-0006, PERS-EMP-0033",
+      "expected_entities": [
+        "EML-EML-2025-018",
+        "EQ-500-V-508",
+        "INC-INC-2024-010",
+        "PERS-EMP-0006",
+        "PERS-EMP-0033"
+      ],
+      "supporting_doc_ids": [
+        "EML-2025-018"
+      ],
+      "supporting_chunk_ids": [
+        "EML-2025-018-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "EML-2025-018",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-036",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'EML-2025-010' (Email).",
+      "expected_answer": "4 entities: EML-EML-2025-010, PERS-EMP-0005, PERS-EMP-0042, UNIT-500",
+      "expected_entities": [
+        "EML-EML-2025-010",
+        "PERS-EMP-0005",
+        "PERS-EMP-0042",
+        "UNIT-500"
+      ],
+      "supporting_doc_ids": [
+        "EML-2025-010"
+      ],
+      "supporting_chunk_ids": [
+        "EML-2025-010-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "EML-2025-010",
+      "naive_keyword_hit_count": 41,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-037",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SL-2024-09-24-C' (ShiftLog).",
+      "expected_answer": "6 entities: EQ-100-E-102, EQ-100-PSV-110, EQ-100-V-105, PERS-EMP-0021, SL-SL-2024-09-24-C, UNIT-100",
+      "expected_entities": [
+        "EQ-100-E-102",
+        "EQ-100-PSV-110",
+        "EQ-100-V-105",
+        "PERS-EMP-0021",
+        "SL-SL-2024-09-24-C",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "SL-2024-09-24-C"
+      ],
+      "supporting_chunk_ids": [
+        "SL-2024-09-24-C-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SL-2024-09-24-C",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-038",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SL-2025-04-06-B' (ShiftLog).",
+      "expected_answer": "6 entities: EQ-100-E-102, EQ-100-PSV-110, EQ-100-V-105, PERS-EMP-0022, SL-SL-2025-04-06-B, UNIT-100",
+      "expected_entities": [
+        "EQ-100-E-102",
+        "EQ-100-PSV-110",
+        "EQ-100-V-105",
+        "PERS-EMP-0022",
+        "SL-SL-2025-04-06-B",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "SL-2025-04-06-B"
+      ],
+      "supporting_chunk_ids": [
+        "SL-2025-04-06-B-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SL-2025-04-06-B",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-039",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SL-2025-02-16-C' (ShiftLog).",
+      "expected_answer": "6 entities: EQ-200-C-209, EQ-200-P-203, EQ-200-P-208, PERS-EMP-0020, SL-SL-2025-02-16-C, UNIT-200",
+      "expected_entities": [
+        "EQ-200-C-209",
+        "EQ-200-P-203",
+        "EQ-200-P-208",
+        "PERS-EMP-0020",
+        "SL-SL-2025-02-16-C",
+        "UNIT-200"
+      ],
+      "supporting_doc_ids": [
+        "SL-2025-02-16-C"
+      ],
+      "supporting_chunk_ids": [
+        "SL-2025-02-16-C-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SL-2025-02-16-C",
+      "naive_keyword_hit_count": 36,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-040",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'SL-2025-09-13-B' (ShiftLog).",
+      "expected_answer": "5 entities: EQ-100-P-101, EQ-100-V-105, PERS-EMP-0022, SL-SL-2025-09-13-B, UNIT-100",
+      "expected_entities": [
+        "EQ-100-P-101",
+        "EQ-100-V-105",
+        "PERS-EMP-0022",
+        "SL-SL-2025-09-13-B",
+        "UNIT-100"
+      ],
+      "supporting_doc_ids": [
+        "SL-2025-09-13-B"
+      ],
+      "supporting_chunk_ids": [
+        "SL-2025-09-13-B-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "SL-2025-09-13-B",
+      "naive_keyword_hit_count": 34,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-041",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PL-300-C-310-2026-02' (SensorLogSummary).",
+      "expected_answer": "2 entities: EQ-300-C-310, PL-PL-300-C-310-2026-02",
+      "expected_entities": [
+        "EQ-300-C-310",
+        "PL-PL-300-C-310-2026-02"
+      ],
+      "supporting_doc_ids": [
+        "PL-300-C-310-2026-02"
+      ],
+      "supporting_chunk_ids": [
+        "PL-300-C-310-2026-02-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PL-300-C-310-2026-02",
+      "naive_keyword_hit_count": 4,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-042",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PL-200-F-206-2026-04' (SensorLogSummary).",
+      "expected_answer": "2 entities: EQ-200-F-206, PL-PL-200-F-206-2026-04",
+      "expected_entities": [
+        "EQ-200-F-206",
+        "PL-PL-200-F-206-2026-04"
+      ],
+      "supporting_doc_ids": [
+        "PL-200-F-206-2026-04"
+      ],
+      "supporting_chunk_ids": [
+        "PL-200-F-206-2026-04-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PL-200-F-206-2026-04",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-043",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PL-200-E-204-2026-06' (SensorLogSummary).",
+      "expected_answer": "2 entities: EQ-200-E-204, PL-PL-200-E-204-2026-06",
+      "expected_entities": [
+        "EQ-200-E-204",
+        "PL-PL-200-E-204-2026-06"
+      ],
+      "supporting_doc_ids": [
+        "PL-200-E-204-2026-06"
+      ],
+      "supporting_chunk_ids": [
+        "PL-200-E-204-2026-06-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PL-200-E-204-2026-06",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-044",
+      "category": "entity_extraction",
+      "eval_dimension": "entity_extraction_accuracy",
+      "question": "Extract all named entities (equipment, personnel, procedures, work orders, incidents, units) referenced in document 'PL-400-P-405-2026-04' (SensorLogSummary).",
+      "expected_answer": "2 entities: EQ-400-P-405, PL-PL-400-P-405-2026-04",
+      "expected_entities": [
+        "EQ-400-P-405",
+        "PL-PL-400-P-405-2026-04"
+      ],
+      "supporting_doc_ids": [
+        "PL-400-P-405-2026-04"
+      ],
+      "supporting_chunk_ids": [
+        "PL-400-P-405-2026-04-CH01"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "PL-400-P-405-2026-04",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-045",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 100-V-105?",
+      "expected_answer": "66.9 barg / 191.3 degC",
+      "expected_entities": [
+        "EQ-100-V-105"
+      ],
+      "supporting_doc_ids": [
+        "DS-100-V-105"
+      ],
+      "supporting_chunk_ids": [
+        "DS-100-V-105-CH01",
+        "DS-100-V-105-CH02",
+        "DS-100-V-105-CH03",
+        "DS-100-V-105-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "100-V-105",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-046",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 400-T-409?",
+      "expected_answer": "39.6 barg / 355.1 degC",
+      "expected_entities": [
+        "EQ-400-T-409"
+      ],
+      "supporting_doc_ids": [
+        "DS-400-T-409"
+      ],
+      "supporting_chunk_ids": [
+        "DS-400-T-409-CH01",
+        "DS-400-T-409-CH02",
+        "DS-400-T-409-CH03",
+        "DS-400-T-409-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "400-T-409",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-047",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 300-TUR-302?",
+      "expected_answer": "170.6 barg / 77.7 degC",
+      "expected_entities": [
+        "EQ-300-TUR-302"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-TUR-302"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-TUR-302-CH01",
+        "DS-300-TUR-302-CH02",
+        "DS-300-TUR-302-CH03",
+        "DS-300-TUR-302-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "300-TUR-302",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-048",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 300-C-310?",
+      "expected_answer": "14.2 barg / 360.4 degC",
+      "expected_entities": [
+        "EQ-300-C-310"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-C-310"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-C-310-CH01",
+        "DS-300-C-310-CH02",
+        "DS-300-C-310-CH03",
+        "DS-300-C-310-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "300-C-310",
+      "naive_keyword_hit_count": 4,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-049",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 300-MTR-306?",
+      "expected_answer": "44.1 barg / 136.9 degC",
+      "expected_entities": [
+        "EQ-300-MTR-306"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-MTR-306"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-MTR-306-CH01",
+        "DS-300-MTR-306-CH02",
+        "DS-300-MTR-306-CH03",
+        "DS-300-MTR-306-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "300-MTR-306",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-050",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 200-C-202?",
+      "expected_answer": "164.7 barg / 289.6 degC",
+      "expected_entities": [
+        "EQ-200-C-202"
+      ],
+      "supporting_doc_ids": [
+        "DS-200-C-202"
+      ],
+      "supporting_chunk_ids": [
+        "DS-200-C-202-CH01",
+        "DS-200-C-202-CH02",
+        "DS-200-C-202-CH03",
+        "DS-200-C-202-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "200-C-202",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-051",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 300-P-305?",
+      "expected_answer": "162.3 barg / 238.7 degC",
+      "expected_entities": [
+        "EQ-300-P-305"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-P-305"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-P-305-CH01",
+        "DS-300-P-305-CH02",
+        "DS-300-P-305-CH03",
+        "DS-300-P-305-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "300-P-305",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-052",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 200-V-210?",
+      "expected_answer": "138.1 barg / 277.3 degC",
+      "expected_entities": [
+        "EQ-200-V-210"
+      ],
+      "supporting_doc_ids": [
+        "DS-200-V-210"
+      ],
+      "supporting_chunk_ids": [
+        "DS-200-V-210-CH01",
+        "DS-200-V-210-CH02",
+        "DS-200-V-210-CH03",
+        "DS-200-V-210-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "200-V-210",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-053",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 300-C-303?",
+      "expected_answer": "119.9 barg / 456.6 degC",
+      "expected_entities": [
+        "EQ-300-C-303"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-C-303"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-C-303-CH01",
+        "DS-300-C-303-CH02",
+        "DS-300-C-303-CH03",
+        "DS-300-C-303-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "300-C-303",
+      "naive_keyword_hit_count": 14,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-054",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 200-E-204?",
+      "expected_answer": "79.1 barg / 296.8 degC",
+      "expected_entities": [
+        "EQ-200-E-204"
+      ],
+      "supporting_doc_ids": [
+        "DS-200-E-204"
+      ],
+      "supporting_chunk_ids": [
+        "DS-200-E-204-CH01",
+        "DS-200-E-204-CH02",
+        "DS-200-E-204-CH03",
+        "DS-200-E-204-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "200-E-204",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-055",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 100-E-108?",
+      "expected_answer": "52.6 barg / 319.7 degC",
+      "expected_entities": [
+        "EQ-100-E-108"
+      ],
+      "supporting_doc_ids": [
+        "DS-100-E-108"
+      ],
+      "supporting_chunk_ids": [
+        "DS-100-E-108-CH01",
+        "DS-100-E-108-CH02",
+        "DS-100-E-108-CH03",
+        "DS-100-E-108-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "100-E-108",
+      "naive_keyword_hit_count": 4,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-056",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 400-T-408?",
+      "expected_answer": "105.7 barg / 57.5 degC",
+      "expected_entities": [
+        "EQ-400-T-408"
+      ],
+      "supporting_doc_ids": [
+        "DS-400-T-408"
+      ],
+      "supporting_chunk_ids": [
+        "DS-400-T-408-CH01",
+        "DS-400-T-408-CH02",
+        "DS-400-T-408-CH03",
+        "DS-400-T-408-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "400-T-408",
+      "naive_keyword_hit_count": 4,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-057",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 200-F-206?",
+      "expected_answer": "108.7 barg / 245.9 degC",
+      "expected_entities": [
+        "EQ-200-F-206"
+      ],
+      "supporting_doc_ids": [
+        "DS-200-F-206"
+      ],
+      "supporting_chunk_ids": [
+        "DS-200-F-206-CH01",
+        "DS-200-F-206-CH02",
+        "DS-200-F-206-CH03",
+        "DS-200-F-206-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "200-F-206",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-058",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 300-BLR-301?",
+      "expected_answer": "6.9 barg / 448.8 degC",
+      "expected_entities": [
+        "EQ-300-BLR-301"
+      ],
+      "supporting_doc_ids": [
+        "DS-300-BLR-301"
+      ],
+      "supporting_chunk_ids": [
+        "DS-300-BLR-301-CH01",
+        "DS-300-BLR-301-CH02",
+        "DS-300-BLR-301-CH03",
+        "DS-300-BLR-301-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "300-BLR-301",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-059",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What is the design pressure and design temperature of equipment 500-V-510?",
+      "expected_answer": "166.9 barg / 144.2 degC",
+      "expected_entities": [
+        "EQ-500-V-510"
+      ],
+      "supporting_doc_ids": [
+        "DS-500-V-510"
+      ],
+      "supporting_chunk_ids": [
+        "DS-500-V-510-CH01",
+        "DS-500-V-510-CH02",
+        "DS-500-V-510-CH03",
+        "DS-500-V-510-CH04"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "500-V-510",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-060",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-400-P-405-2025-019, and was a defect found?",
+      "expected_answer": "Ultrasonic Thickness; defect found: No",
+      "expected_entities": [
+        "IR-IR-400-P-405-2025-019",
+        "EQ-400-P-405"
+      ],
+      "supporting_doc_ids": [
+        "IR-400-P-405-2025-019"
+      ],
+      "supporting_chunk_ids": [
+        "IR-400-P-405-2025-019-CH01",
+        "IR-400-P-405-2025-019-CH02",
+        "IR-400-P-405-2025-019-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-400-P-405-2025-019",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-061",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-500-P-507-2025-008, and was a defect found?",
+      "expected_answer": "Ultrasonic Thickness; defect found: No",
+      "expected_entities": [
+        "IR-IR-500-P-507-2025-008",
+        "EQ-500-P-507"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-P-507-2025-008"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-P-507-2025-008-CH01",
+        "IR-500-P-507-2025-008-CH02",
+        "IR-500-P-507-2025-008-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-500-P-507-2025-008",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-062",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-300-P-309-2025-024, and was a defect found?",
+      "expected_answer": "Ultrasonic Thickness; defect found: No",
+      "expected_entities": [
+        "IR-IR-300-P-309-2025-024",
+        "EQ-300-P-309"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-P-309-2025-024"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-P-309-2025-024-CH01",
+        "IR-300-P-309-2025-024-CH02",
+        "IR-300-P-309-2025-024-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-300-P-309-2025-024",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-063",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-200-PSV-207-2025-036, and was a defect found?",
+      "expected_answer": "External Visual; defect found: Yes (Major)",
+      "expected_entities": [
+        "IR-IR-200-PSV-207-2025-036",
+        "EQ-200-PSV-207"
+      ],
+      "supporting_doc_ids": [
+        "IR-200-PSV-207-2025-036"
+      ],
+      "supporting_chunk_ids": [
+        "IR-200-PSV-207-2025-036-CH01",
+        "IR-200-PSV-207-2025-036-CH02",
+        "IR-200-PSV-207-2025-036-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-200-PSV-207-2025-036",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-064",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-100-E-102-2025-012, and was a defect found?",
+      "expected_answer": "Internal (Vessel Entry); defect found: No",
+      "expected_entities": [
+        "IR-IR-100-E-102-2025-012",
+        "EQ-100-E-102"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-E-102-2025-012"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-E-102-2025-012-CH01",
+        "IR-100-E-102-2025-012-CH02",
+        "IR-100-E-102-2025-012-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-100-E-102-2025-012",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-065",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-500-P-502-2026-038, and was a defect found?",
+      "expected_answer": "Corrosion Mapping; defect found: No",
+      "expected_entities": [
+        "IR-IR-500-P-502-2026-038",
+        "EQ-500-P-502"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-P-502-2026-038"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-P-502-2026-038-CH01",
+        "IR-500-P-502-2026-038-CH02",
+        "IR-500-P-502-2026-038-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-500-P-502-2026-038",
+      "naive_keyword_hit_count": 7,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-066",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-300-V-307-2026-034, and was a defect found?",
+      "expected_answer": "Internal (Vessel Entry); defect found: Yes (Minor)",
+      "expected_entities": [
+        "IR-IR-300-V-307-2026-034",
+        "EQ-300-V-307"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-V-307-2026-034"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-V-307-2026-034-CH01",
+        "IR-300-V-307-2026-034-CH02",
+        "IR-300-V-307-2026-034-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-300-V-307-2026-034",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-067",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-100-V-109-2026-011, and was a defect found?",
+      "expected_answer": "Internal (Vessel Entry); defect found: No",
+      "expected_entities": [
+        "IR-IR-100-V-109-2026-011",
+        "EQ-100-V-109"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-V-109-2026-011"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-V-109-2026-011-CH01",
+        "IR-100-V-109-2026-011-CH02",
+        "IR-100-V-109-2026-011-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-100-V-109-2026-011",
+      "naive_keyword_hit_count": 7,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-068",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-500-V-510-2024-013, and was a defect found?",
+      "expected_answer": "Ultrasonic Thickness; defect found: No",
+      "expected_entities": [
+        "IR-IR-500-V-510-2024-013",
+        "EQ-500-V-510"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-V-510-2024-013"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-V-510-2024-013-CH01",
+        "IR-500-V-510-2024-013-CH02",
+        "IR-500-V-510-2024-013-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-500-V-510-2024-013",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-069",
+      "category": "single_hop_factual",
+      "eval_dimension": "answer_quality",
+      "question": "What type of inspection was performed under report IR-100-F-104-2024-003, and was a defect found?",
+      "expected_answer": "External Visual; defect found: No",
+      "expected_entities": [
+        "IR-IR-100-F-104-2024-003",
+        "EQ-100-F-104"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-F-104-2024-003"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-F-104-2024-003-CH01",
+        "IR-100-F-104-2024-003-CH02",
+        "IR-100-F-104-2024-003-CH03"
+      ],
+      "ideal_retrieval_strategy": "vector",
+      "difficulty": "easy",
+      "naive_keyword_query": "IR-100-F-104-2024-003",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-070",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Which work order was triggered by incident INC-2024-006, who was it assigned to, and what equipment did it involve?",
+      "expected_answer": "WO-2025-0013, assigned to Pooja Chavan (EMP-0042), on equipment 200-V-210 (Low Pressure Separator).",
+      "expected_entities": [
+        "INC-INC-2024-006",
+        "WO-WO-2025-0013",
+        "PERS-EMP-0042",
+        "EQ-200-V-210"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-006"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-006-CH01",
+        "INC-2024-006-CH02",
+        "INC-2024-006-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "INC-2024-006",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-071",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Which work order was triggered by incident INC-2024-014, who was it assigned to, and what equipment did it involve?",
+      "expected_answer": "WO-2024-0017, assigned to Vivek Patil (EMP-0044), on equipment 500-V-510 (Sludge Thickener).",
+      "expected_entities": [
+        "INC-INC-2024-014",
+        "WO-WO-2024-0017",
+        "PERS-EMP-0044",
+        "EQ-500-V-510"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-014"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "INC-2024-014",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-072",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Which work order was triggered by incident INC-2024-014, who was it assigned to, and what equipment did it involve?",
+      "expected_answer": "WO-2025-0042, assigned to Ravi Shaikh (EMP-0037), on equipment 500-V-510 (Sludge Thickener).",
+      "expected_entities": [
+        "INC-INC-2024-014",
+        "WO-WO-2025-0042",
+        "PERS-EMP-0037",
+        "EQ-500-V-510"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-014",
+        "WO-2025-0042"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03",
+        "WO-2025-0042-CH01",
+        "WO-2025-0042-CH02",
+        "WO-2025-0042-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "INC-2024-014",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-073",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2025-009, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-PNGRB-2026-001 submitted to PNGRB concerning unit 500 (Effluent Treatment Plant); incident occurred on 200-F-206.",
+      "expected_entities": [
+        "REG-REG-PNGRB-2026-001",
+        "INC-INC-2025-009",
+        "EQ-200-F-206",
+        "REGBODY-PNGRB"
+      ],
+      "supporting_doc_ids": [
+        "REG-PNGRB-2026-001",
+        "INC-2025-009"
+      ],
+      "supporting_chunk_ids": [
+        "REG-PNGRB-2026-001-CH01",
+        "REG-PNGRB-2026-001-CH02",
+        "REG-PNGRB-2026-001-CH03",
+        "INC-2025-009-CH01",
+        "INC-2025-009-CH02",
+        "INC-2025-009-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-PNGRB-2026-001",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-074",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2024-011, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-PNGRB-2025-002 submitted to PNGRB concerning unit 300 (Utilities & Offsites); incident occurred on 400-T-403.",
+      "expected_entities": [
+        "REG-REG-PNGRB-2025-002",
+        "INC-INC-2024-011",
+        "EQ-400-T-403",
+        "REGBODY-PNGRB"
+      ],
+      "supporting_doc_ids": [
+        "REG-PNGRB-2025-002",
+        "INC-2024-011"
+      ],
+      "supporting_chunk_ids": [
+        "REG-PNGRB-2025-002-CH01",
+        "REG-PNGRB-2025-002-CH02",
+        "REG-PNGRB-2025-002-CH03",
+        "INC-2024-011-CH01",
+        "INC-2024-011-CH02",
+        "INC-2024-011-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-PNGRB-2025-002",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-075",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2025-013, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-PNGRB-2025-003 submitted to PNGRB concerning unit 400 (Tank Farm / Storage); incident occurred on 300-P-305.",
+      "expected_entities": [
+        "REG-REG-PNGRB-2025-003",
+        "INC-INC-2025-013",
+        "EQ-300-P-305",
+        "REGBODY-PNGRB"
+      ],
+      "supporting_doc_ids": [
+        "REG-PNGRB-2025-003",
+        "INC-2025-013"
+      ],
+      "supporting_chunk_ids": [
+        "REG-PNGRB-2025-003-CH01",
+        "REG-PNGRB-2025-003-CH02",
+        "REG-PNGRB-2025-003-CH03",
+        "INC-2025-013-CH01",
+        "INC-2025-013-CH02",
+        "INC-2025-013-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-PNGRB-2025-003",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-076",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2026-003, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-DISH-2026-004 submitted to DISH concerning unit 400 (Tank Farm / Storage); incident occurred on 300-CT-304.",
+      "expected_entities": [
+        "REG-REG-DISH-2026-004",
+        "INC-INC-2026-003",
+        "EQ-300-CT-304",
+        "REGBODY-DISH"
+      ],
+      "supporting_doc_ids": [
+        "REG-DISH-2026-004",
+        "INC-2026-003"
+      ],
+      "supporting_chunk_ids": [
+        "REG-DISH-2026-004-CH01",
+        "REG-DISH-2026-004-CH02",
+        "REG-DISH-2026-004-CH03",
+        "INC-2026-003-CH01",
+        "INC-2026-003-CH02",
+        "INC-2026-003-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-DISH-2026-004",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-077",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2025-002, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-OISD-2024-005 submitted to OISD concerning unit 400 (Tank Farm / Storage); incident occurred on 100-P-101.",
+      "expected_entities": [
+        "REG-REG-OISD-2024-005",
+        "INC-INC-2025-002",
+        "EQ-100-P-101",
+        "REGBODY-OISD"
+      ],
+      "supporting_doc_ids": [
+        "REG-OISD-2024-005",
+        "INC-2025-002"
+      ],
+      "supporting_chunk_ids": [
+        "REG-OISD-2024-005-CH01",
+        "REG-OISD-2024-005-CH02",
+        "REG-OISD-2024-005-CH03",
+        "INC-2025-002-CH01",
+        "INC-2025-002-CH02",
+        "INC-2025-002-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-OISD-2024-005",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-078",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2025-002, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-OISD-2025-006 submitted to OISD concerning unit 300 (Utilities & Offsites); incident occurred on 100-P-101.",
+      "expected_entities": [
+        "REG-REG-OISD-2025-006",
+        "INC-INC-2025-002",
+        "EQ-100-P-101",
+        "REGBODY-OISD"
+      ],
+      "supporting_doc_ids": [
+        "REG-OISD-2025-006",
+        "INC-2025-002"
+      ],
+      "supporting_chunk_ids": [
+        "REG-OISD-2025-006-CH01",
+        "REG-OISD-2025-006-CH02",
+        "REG-OISD-2025-006-CH03",
+        "INC-2025-002-CH01",
+        "INC-2025-002-CH02",
+        "INC-2025-002-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-OISD-2025-006",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-079",
+      "category": "multi_hop_relational",
+      "eval_dimension": "kg_linkage_completeness",
+      "question": "Which regulatory submission references incident INC-2024-014, which agency was it submitted to, and which equipment/unit does it concern?",
+      "expected_answer": "REG-DISH-2025-008 submitted to DISH concerning unit 400 (Tank Farm / Storage); incident occurred on 500-V-510.",
+      "expected_entities": [
+        "REG-REG-DISH-2025-008",
+        "INC-INC-2024-014",
+        "EQ-500-V-510",
+        "REGBODY-DISH"
+      ],
+      "supporting_doc_ids": [
+        "REG-DISH-2025-008",
+        "INC-2024-014"
+      ],
+      "supporting_chunk_ids": [
+        "REG-DISH-2025-008-CH01",
+        "REG-DISH-2025-008-CH02",
+        "REG-DISH-2025-008-CH03",
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "REG-DISH-2025-008",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-080",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 200-F-206 in report IR-200-F-206-2024-026, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Pooja Bhosale (EMP-0017); governing safety procedure is SP-004 (H2S Detection and Emergency Response).",
+      "expected_entities": [
+        "IR-IR-200-F-206-2024-026",
+        "PERS-EMP-0017",
+        "EQ-200-F-206",
+        "SP-SP-004"
+      ],
+      "supporting_doc_ids": [
+        "IR-200-F-206-2024-026",
+        "DS-200-F-206"
+      ],
+      "supporting_chunk_ids": [
+        "IR-200-F-206-2024-026-CH01",
+        "IR-200-F-206-2024-026-CH02",
+        "IR-200-F-206-2024-026-CH03",
+        "DS-200-F-206-CH01",
+        "DS-200-F-206-CH02",
+        "DS-200-F-206-CH03",
+        "DS-200-F-206-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-200-F-206-2024-026",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-081",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 300-TUR-302 in report IR-300-TUR-302-2025-007, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Shalini Naik (EMP-0014); governing safety procedure is SP-008 (Chemical Handling and Spill Response - ETP).",
+      "expected_entities": [
+        "IR-IR-300-TUR-302-2025-007",
+        "PERS-EMP-0014",
+        "EQ-300-TUR-302",
+        "SP-SP-008"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-TUR-302-2025-007",
+        "DS-300-TUR-302"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-TUR-302-2025-007-CH01",
+        "IR-300-TUR-302-2025-007-CH02",
+        "IR-300-TUR-302-2025-007-CH03",
+        "DS-300-TUR-302-CH01",
+        "DS-300-TUR-302-CH02",
+        "DS-300-TUR-302-CH03",
+        "DS-300-TUR-302-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-300-TUR-302-2025-007",
+      "naive_keyword_hit_count": 17,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-082",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 200-PSV-207 in report IR-200-PSV-207-2026-022, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Shalini Naik (EMP-0014); governing safety procedure is SP-003 (Confined Space Entry - Vessels and Tanks).",
+      "expected_entities": [
+        "IR-IR-200-PSV-207-2026-022",
+        "PERS-EMP-0014",
+        "EQ-200-PSV-207",
+        "SP-SP-003"
+      ],
+      "supporting_doc_ids": [
+        "IR-200-PSV-207-2026-022",
+        "DS-200-PSV-207"
+      ],
+      "supporting_chunk_ids": [
+        "IR-200-PSV-207-2026-022-CH01",
+        "IR-200-PSV-207-2026-022-CH02",
+        "IR-200-PSV-207-2026-022-CH03",
+        "DS-200-PSV-207-CH01",
+        "DS-200-PSV-207-CH02",
+        "DS-200-PSV-207-CH03",
+        "DS-200-PSV-207-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-200-PSV-207-2026-022",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-083",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 100-E-102 in report IR-100-E-102-2025-012, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Anil Nair (EMP-0016); governing safety procedure is SP-002 (Hot Work Permit and Fire Watch).",
+      "expected_entities": [
+        "IR-IR-100-E-102-2025-012",
+        "PERS-EMP-0016",
+        "EQ-100-E-102",
+        "SP-SP-002"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-E-102-2025-012",
+        "DS-100-E-102"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-E-102-2025-012-CH01",
+        "IR-100-E-102-2025-012-CH02",
+        "IR-100-E-102-2025-012-CH03",
+        "DS-100-E-102-CH01",
+        "DS-100-E-102-CH02",
+        "DS-100-E-102-CH03",
+        "DS-100-E-102-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-100-E-102-2025-012",
+      "naive_keyword_hit_count": 14,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-084",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 300-P-305 in report IR-300-P-305-2025-001, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Pooja Bhosale (EMP-0017); governing safety procedure is SP-007 (Emergency Shutdown (ESD) Activation Protocol).",
+      "expected_entities": [
+        "IR-IR-300-P-305-2025-001",
+        "PERS-EMP-0017",
+        "EQ-300-P-305",
+        "SP-SP-007"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-P-305-2025-001",
+        "DS-300-P-305"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-P-305-2025-001-CH01",
+        "IR-300-P-305-2025-001-CH02",
+        "IR-300-P-305-2025-001-CH03",
+        "DS-300-P-305-CH01",
+        "DS-300-P-305-CH02",
+        "DS-300-P-305-CH03",
+        "DS-300-P-305-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-300-P-305-2025-001",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-085",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 500-V-508 in report IR-500-V-508-2024-037, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Anil Nair (EMP-0016); governing safety procedure is SP-007 (Emergency Shutdown (ESD) Activation Protocol).",
+      "expected_entities": [
+        "IR-IR-500-V-508-2024-037",
+        "PERS-EMP-0016",
+        "EQ-500-V-508",
+        "SP-SP-007"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-V-508-2024-037",
+        "DS-500-V-508"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-V-508-2024-037-CH01",
+        "IR-500-V-508-2024-037-CH02",
+        "IR-500-V-508-2024-037-CH03",
+        "DS-500-V-508-CH01",
+        "DS-500-V-508-CH02",
+        "DS-500-V-508-CH03",
+        "DS-500-V-508-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-500-V-508-2024-037",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-086",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 300-CT-304 in report IR-300-CT-304-2025-020, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Pooja Bhosale (EMP-0017); governing safety procedure is SP-005 (Working at Height on Structures and Columns).",
+      "expected_entities": [
+        "IR-IR-300-CT-304-2025-020",
+        "PERS-EMP-0017",
+        "EQ-300-CT-304",
+        "SP-SP-005"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-CT-304-2025-020",
+        "DS-300-CT-304"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-CT-304-2025-020-CH01",
+        "IR-300-CT-304-2025-020-CH02",
+        "IR-300-CT-304-2025-020-CH03",
+        "DS-300-CT-304-CH01",
+        "DS-300-CT-304-CH02",
+        "DS-300-CT-304-CH03",
+        "DS-300-CT-304-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-300-CT-304-2025-020",
+      "naive_keyword_hit_count": 15,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-087",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 200-C-209 in report IR-200-C-209-2024-040, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Sunita Patil (EMP-0015); governing safety procedure is SP-001 (Lockout-Tagout (LOTO) for Rotating Equipment).",
+      "expected_entities": [
+        "IR-IR-200-C-209-2024-040",
+        "PERS-EMP-0015",
+        "EQ-200-C-209",
+        "SP-SP-001"
+      ],
+      "supporting_doc_ids": [
+        "IR-200-C-209-2024-040",
+        "DS-200-C-209"
+      ],
+      "supporting_chunk_ids": [
+        "IR-200-C-209-2024-040-CH01",
+        "IR-200-C-209-2024-040-CH02",
+        "IR-200-C-209-2024-040-CH03",
+        "DS-200-C-209-CH01",
+        "DS-200-C-209-CH02",
+        "DS-200-C-209-CH03",
+        "DS-200-C-209-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-200-C-209-2024-040",
+      "naive_keyword_hit_count": 17,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-088",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 300-P-309 in report IR-300-P-309-2025-002, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Sunita Patil (EMP-0015); governing safety procedure is SP-001 (Lockout-Tagout (LOTO) for Rotating Equipment).",
+      "expected_entities": [
+        "IR-IR-300-P-309-2025-002",
+        "PERS-EMP-0015",
+        "EQ-300-P-309",
+        "SP-SP-001"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-P-309-2025-002",
+        "DS-300-P-309"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-P-309-2025-002-CH01",
+        "IR-300-P-309-2025-002-CH02",
+        "IR-300-P-309-2025-002-CH03",
+        "DS-300-P-309-CH01",
+        "DS-300-P-309-CH02",
+        "DS-300-P-309-CH03",
+        "DS-300-P-309-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-300-P-309-2025-002",
+      "naive_keyword_hit_count": 17,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-089",
+      "category": "multi_hop_relational",
+      "eval_dimension": "answer_quality",
+      "question": "Who inspected equipment 500-P-507 in report IR-500-P-507-2024-017, and which safety procedure governs that equipment during maintenance?",
+      "expected_answer": "Inspected by Pooja Bhosale (EMP-0017); governing safety procedure is SP-008 (Chemical Handling and Spill Response - ETP).",
+      "expected_entities": [
+        "IR-IR-500-P-507-2024-017",
+        "PERS-EMP-0017",
+        "EQ-500-P-507",
+        "SP-SP-008"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-P-507-2024-017",
+        "DS-500-P-507"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-P-507-2024-017-CH01",
+        "IR-500-P-507-2024-017-CH02",
+        "IR-500-P-507-2024-017-CH03",
+        "DS-500-P-507-CH01",
+        "DS-500-P-507-CH02",
+        "DS-500-P-507-CH03",
+        "DS-500-P-507-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "IR-500-P-507-2024-017",
+      "naive_keyword_hit_count": 17,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-090",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "How many days after incident INC-2024-014 (on 2024-05-15) was the follow-up work order WO-2025-0042 raised?",
+      "expected_answer": "481 days (2024-05-15 -> 2025-09-08).",
+      "expected_entities": [
+        "INC-INC-2024-014",
+        "WO-WO-2025-0042"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-014",
+        "WO-2025-0042"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03",
+        "WO-2025-0042-CH01",
+        "WO-2025-0042-CH02",
+        "WO-2025-0042-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "INC-2024-014",
+      "naive_keyword_hit_count": 3,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-091",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "How many days after incident INC-2024-006 (on 2024-04-15) was the follow-up work order WO-2025-0013 raised?",
+      "expected_answer": "420 days (2024-04-15 -> 2025-06-09).",
+      "expected_entities": [
+        "INC-INC-2024-006",
+        "WO-WO-2025-0013"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-006"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-006-CH01",
+        "INC-2024-006-CH02",
+        "INC-2024-006-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "INC-2024-006",
+      "naive_keyword_hit_count": 1,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-092",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "How many days after incident INC-2024-014 (on 2024-05-15) was the follow-up work order WO-2024-0017 raised?",
+      "expected_answer": "191 days (2024-05-15 -> 2024-11-22).",
+      "expected_entities": [
+        "INC-INC-2024-014",
+        "WO-WO-2024-0017"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-014"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "INC-2024-014",
+      "naive_keyword_hit_count": 3,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-093",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "What was the most recent inspection performed on 500-V-510, and when is the next one due?",
+      "expected_answer": "IR-500-V-510-2024-013 on 2024-10-14 (Ultrasonic Thickness); next due 2025-04-12.",
+      "expected_entities": [
+        "EQ-500-V-510",
+        "IR-IR-500-V-510-2024-013"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-V-510-2024-013"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-V-510-2024-013-CH01",
+        "IR-500-V-510-2024-013-CH02",
+        "IR-500-V-510-2024-013-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "500-V-510",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-094",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "What was the most recent inspection performed on 200-F-206, and when is the next one due?",
+      "expected_answer": "IR-200-F-206-2026-031 on 2026-01-15 (External Visual); next due 2028-01-15.",
+      "expected_entities": [
+        "EQ-200-F-206",
+        "IR-IR-200-F-206-2026-031"
+      ],
+      "supporting_doc_ids": [
+        "IR-200-F-206-2026-031"
+      ],
+      "supporting_chunk_ids": [
+        "IR-200-F-206-2026-031-CH01",
+        "IR-200-F-206-2026-031-CH02",
+        "IR-200-F-206-2026-031-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "200-F-206",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-095",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "What was the most recent inspection performed on 300-CT-304, and when is the next one due?",
+      "expected_answer": "IR-300-CT-304-2025-020 on 2025-07-17 (Vibration Analysis); next due 2026-07-17.",
+      "expected_entities": [
+        "EQ-300-CT-304",
+        "IR-IR-300-CT-304-2025-020"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-CT-304-2025-020"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-CT-304-2025-020-CH01",
+        "IR-300-CT-304-2025-020-CH02",
+        "IR-300-CT-304-2025-020-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "300-CT-304",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-096",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "What was the most recent inspection performed on 100-V-105, and when is the next one due?",
+      "expected_answer": "IR-100-V-105-2026-014 on 2026-06-17 (Vibration Analysis); next due 2026-12-14.",
+      "expected_entities": [
+        "EQ-100-V-105",
+        "IR-IR-100-V-105-2026-014"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-V-105-2026-014"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-V-105-2026-014-CH01",
+        "IR-100-V-105-2026-014-CH02",
+        "IR-100-V-105-2026-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "100-V-105",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-097",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "What was the most recent inspection performed on 300-P-309, and when is the next one due?",
+      "expected_answer": "IR-300-P-309-2026-018 on 2026-05-11 (Ultrasonic Thickness); next due 2028-05-10.",
+      "expected_entities": [
+        "EQ-300-P-309",
+        "IR-IR-300-P-309-2026-018"
+      ],
+      "supporting_doc_ids": [
+        "IR-300-P-309-2026-018"
+      ],
+      "supporting_chunk_ids": [
+        "IR-300-P-309-2026-018-CH01",
+        "IR-300-P-309-2026-018-CH02",
+        "IR-300-P-309-2026-018-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "300-P-309",
+      "naive_keyword_hit_count": 8,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-098",
+      "category": "temporal_reasoning",
+      "eval_dimension": "answer_quality",
+      "question": "What was the most recent inspection performed on 500-P-502, and when is the next one due?",
+      "expected_answer": "IR-500-P-502-2026-038 on 2026-06-07 (Corrosion Mapping); next due 2028-06-06.",
+      "expected_entities": [
+        "EQ-500-P-502",
+        "IR-IR-500-P-502-2026-038"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-P-502-2026-038"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-P-502-2026-038-CH01",
+        "IR-500-P-502-2026-038-CH02",
+        "IR-500-P-502-2026-038-CH03"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "500-P-502",
+      "naive_keyword_hit_count": 7,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-099",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "As of 2026-07-17, which equipment items have an overdue RBI inspection (next_due_date in the past), and by how many days?",
+      "expected_answer": "400-T-403 overdue by 617d (was due 2024-11-07, report IR-400-T-403-2024-004); 200-C-209 overdue by 613d (was due 2024-11-11, report IR-200-C-209-2024-040); 500-V-508 overdue by 521d (was due 2025-02-11, report IR-500-V-508-2024-037); 100-V-109 overdue by 500d (was due 2025-03-04, report IR-100-V-109-2024-016); 400-T-404 overdue by 492d (was due 2025-03-12, report IR-400-T-404-2024-021); 500-V-510 overdue by 461d (was due 2025-04-12, report IR-500-V-510-2024-013); 100-P-101 overdue by 453d (was due 2025-04-20, report IR-100-P-101-2024-029); 300-P-309 overdue by 445d (was due 2025-04-28, report IR-300-P-309-2024-025); 500-P-507 overdue by 428d (was due 2025-05-15, report IR-500-P-507-2024-017); 200-F-206 overdue by 389d (was due 2025-06-23, report IR-200-F-206-2024-026); 100-F-104 overdue by 367d (was due 2025-07-15, report IR-100-F-104-2024-003); 100-P-107 overdue by 366d (was due 2025-07-16, report IR-100-P-107-2025-023); 500-P-507 overdue by 359d (was due 2025-07-23, report IR-500-P-507-2024-030); 100-E-102 overdue by 341d (was due 2025-08-10, report IR-100-E-102-2025-012); 500-P-507 overdue by 316d (was due 2025-09-04, report IR-500-P-507-2025-008); 200-PSV-207 overdue by 292d (was due 2025-09-28, report IR-200-PSV-207-2025-036); 300-P-309 overdue by 210d (was due 2025-12-19, report IR-300-P-309-2025-024); 400-P-405 overdue by 156d (was due 2026-02-11, report IR-400-P-405-2025-019); 200-C-209 overdue by 106d (was due 2026-04-02, report IR-200-C-209-2024-033); 400-T-404 overdue by 100d (was due 2026-04-08, report IR-400-T-404-2025-005); 400-T-404 overdue by 73d (was due 2026-05-05, report IR-400-T-404-2025-035)",
+      "expected_entities": [
+        "EQ-100-F-104",
+        "EQ-400-T-403",
+        "EQ-400-T-404",
+        "EQ-500-P-507",
+        "EQ-100-E-102",
+        "EQ-500-V-510",
+        "EQ-100-V-109",
+        "EQ-500-P-507",
+        "EQ-400-P-405",
+        "EQ-400-T-404",
+        "EQ-100-P-107",
+        "EQ-300-P-309",
+        "EQ-300-P-309",
+        "EQ-200-F-206",
+        "EQ-100-P-101",
+        "EQ-500-P-507",
+        "EQ-200-C-209",
+        "EQ-400-T-404",
+        "EQ-200-PSV-207",
+        "EQ-500-V-508",
+        "EQ-200-C-209",
+        "IR-IR-100-F-104-2024-003",
+        "IR-IR-400-T-403-2024-004",
+        "IR-IR-400-T-404-2025-005",
+        "IR-IR-500-P-507-2025-008",
+        "IR-IR-100-E-102-2025-012",
+        "IR-IR-500-V-510-2024-013",
+        "IR-IR-100-V-109-2024-016",
+        "IR-IR-500-P-507-2024-017",
+        "IR-IR-400-P-405-2025-019",
+        "IR-IR-400-T-404-2024-021",
+        "IR-IR-100-P-107-2025-023",
+        "IR-IR-300-P-309-2025-024",
+        "IR-IR-300-P-309-2024-025",
+        "IR-IR-200-F-206-2024-026",
+        "IR-IR-100-P-101-2024-029",
+        "IR-IR-500-P-507-2024-030",
+        "IR-IR-200-C-209-2024-033",
+        "IR-IR-400-T-404-2025-035",
+        "IR-IR-200-PSV-207-2025-036",
+        "IR-IR-500-V-508-2024-037",
+        "IR-IR-200-C-209-2024-040"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-F-104-2024-003",
+        "IR-400-T-403-2024-004",
+        "IR-400-T-404-2025-005",
+        "IR-500-P-507-2025-008",
+        "IR-100-E-102-2025-012",
+        "IR-500-V-510-2024-013",
+        "IR-100-V-109-2024-016",
+        "IR-500-P-507-2024-017",
+        "IR-400-P-405-2025-019",
+        "IR-400-T-404-2024-021",
+        "IR-100-P-107-2025-023",
+        "IR-300-P-309-2025-024",
+        "IR-300-P-309-2024-025",
+        "IR-200-F-206-2024-026",
+        "IR-100-P-101-2024-029",
+        "IR-500-P-507-2024-030",
+        "IR-200-C-209-2024-033",
+        "IR-400-T-404-2025-035",
+        "IR-200-PSV-207-2025-036",
+        "IR-500-V-508-2024-037",
+        "IR-200-C-209-2024-040"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-F-104-2024-003-CH01",
+        "IR-100-F-104-2024-003-CH02",
+        "IR-100-F-104-2024-003-CH03",
+        "IR-400-T-403-2024-004-CH01",
+        "IR-400-T-403-2024-004-CH02",
+        "IR-400-T-403-2024-004-CH03",
+        "IR-400-T-404-2025-005-CH01",
+        "IR-400-T-404-2025-005-CH02",
+        "IR-400-T-404-2025-005-CH03",
+        "IR-500-P-507-2025-008-CH01",
+        "IR-500-P-507-2025-008-CH02",
+        "IR-500-P-507-2025-008-CH03",
+        "IR-100-E-102-2025-012-CH01",
+        "IR-100-E-102-2025-012-CH02",
+        "IR-100-E-102-2025-012-CH03",
+        "IR-500-V-510-2024-013-CH01",
+        "IR-500-V-510-2024-013-CH02",
+        "IR-500-V-510-2024-013-CH03",
+        "IR-100-V-109-2024-016-CH01",
+        "IR-100-V-109-2024-016-CH02",
+        "IR-100-V-109-2024-016-CH03",
+        "IR-500-P-507-2024-017-CH01",
+        "IR-500-P-507-2024-017-CH02",
+        "IR-500-P-507-2024-017-CH03",
+        "IR-400-P-405-2025-019-CH01",
+        "IR-400-P-405-2025-019-CH02",
+        "IR-400-P-405-2025-019-CH03",
+        "IR-400-T-404-2024-021-CH01",
+        "IR-400-T-404-2024-021-CH02",
+        "IR-400-T-404-2024-021-CH03",
+        "IR-100-P-107-2025-023-CH01",
+        "IR-100-P-107-2025-023-CH02",
+        "IR-100-P-107-2025-023-CH03",
+        "IR-300-P-309-2025-024-CH01",
+        "IR-300-P-309-2025-024-CH02",
+        "IR-300-P-309-2025-024-CH03",
+        "IR-300-P-309-2024-025-CH01",
+        "IR-300-P-309-2024-025-CH02",
+        "IR-300-P-309-2024-025-CH03",
+        "IR-200-F-206-2024-026-CH01",
+        "IR-200-F-206-2024-026-CH02",
+        "IR-200-F-206-2024-026-CH03",
+        "IR-100-P-101-2024-029-CH01",
+        "IR-100-P-101-2024-029-CH02",
+        "IR-100-P-101-2024-029-CH03",
+        "IR-500-P-507-2024-030-CH01",
+        "IR-500-P-507-2024-030-CH02",
+        "IR-500-P-507-2024-030-CH03",
+        "IR-200-C-209-2024-033-CH01",
+        "IR-200-C-209-2024-033-CH02",
+        "IR-200-C-209-2024-033-CH03",
+        "IR-400-T-404-2025-035-CH01",
+        "IR-400-T-404-2025-035-CH02",
+        "IR-400-T-404-2025-035-CH03",
+        "IR-200-PSV-207-2025-036-CH01",
+        "IR-200-PSV-207-2025-036-CH02",
+        "IR-200-PSV-207-2025-036-CH03",
+        "IR-500-V-508-2024-037-CH01",
+        "IR-500-V-508-2024-037-CH02",
+        "IR-500-V-508-2024-037-CH03",
+        "IR-200-C-209-2024-040-CH01",
+        "IR-200-C-209-2024-040-CH02",
+        "IR-200-C-209-2024-040-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "overdue inspection",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-100",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Is equipment 100-F-104 (criticality: High) currently due or overdue for its next RBI inspection as of 2026-07-17?",
+      "expected_answer": "Overdue by 367 days. Last inspection IR-100-F-104-2024-003 on 2024-07-15, was due 2025-07-15.",
+      "expected_entities": [
+        "EQ-100-F-104",
+        "IR-IR-100-F-104-2024-003"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-F-104-2024-003"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-F-104-2024-003-CH01",
+        "IR-100-F-104-2024-003-CH02",
+        "IR-100-F-104-2024-003-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "100-F-104",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-101",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Is equipment 400-T-403 (criticality: Low) currently due or overdue for its next RBI inspection as of 2026-07-17?",
+      "expected_answer": "Overdue by 617 days. Last inspection IR-400-T-403-2024-004 on 2024-05-11, was due 2024-11-07.",
+      "expected_entities": [
+        "EQ-400-T-403",
+        "IR-IR-400-T-403-2024-004"
+      ],
+      "supporting_doc_ids": [
+        "IR-400-T-403-2024-004"
+      ],
+      "supporting_chunk_ids": [
+        "IR-400-T-403-2024-004-CH01",
+        "IR-400-T-403-2024-004-CH02",
+        "IR-400-T-403-2024-004-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "400-T-403",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-102",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Is equipment 400-T-404 (criticality: High) currently due or overdue for its next RBI inspection as of 2026-07-17?",
+      "expected_answer": "Overdue by 492 days. Last inspection IR-400-T-404-2024-021 on 2024-09-13, was due 2025-03-12.",
+      "expected_entities": [
+        "EQ-400-T-404",
+        "IR-IR-400-T-404-2024-021"
+      ],
+      "supporting_doc_ids": [
+        "IR-400-T-404-2024-021"
+      ],
+      "supporting_chunk_ids": [
+        "IR-400-T-404-2024-021-CH01",
+        "IR-400-T-404-2024-021-CH02",
+        "IR-400-T-404-2024-021-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "400-T-404",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-103",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Is equipment 500-P-507 (criticality: High) currently due or overdue for its next RBI inspection as of 2026-07-17?",
+      "expected_answer": "Overdue by 428 days. Last inspection IR-500-P-507-2024-017 on 2024-05-15, was due 2025-05-15.",
+      "expected_entities": [
+        "EQ-500-P-507",
+        "IR-IR-500-P-507-2024-017"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-P-507-2024-017"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-P-507-2024-017-CH01",
+        "IR-500-P-507-2024-017-CH02",
+        "IR-500-P-507-2024-017-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "500-P-507",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-104",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Is equipment 100-E-102 (criticality: Medium) currently due or overdue for its next RBI inspection as of 2026-07-17?",
+      "expected_answer": "Overdue by 341 days. Last inspection IR-100-E-102-2025-012 on 2025-02-11, was due 2025-08-10.",
+      "expected_entities": [
+        "EQ-100-E-102",
+        "IR-IR-100-E-102-2025-012"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-E-102-2025-012"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-E-102-2025-012-CH01",
+        "IR-100-E-102-2025-012-CH02",
+        "IR-100-E-102-2025-012-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "100-E-102",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-105",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Is equipment 500-V-510 (criticality: High) currently due or overdue for its next RBI inspection as of 2026-07-17?",
+      "expected_answer": "Overdue by 461 days. Last inspection IR-500-V-510-2024-013 on 2024-10-14, was due 2025-04-12.",
+      "expected_entities": [
+        "EQ-500-V-510",
+        "IR-IR-500-V-510-2024-013"
+      ],
+      "supporting_doc_ids": [
+        "IR-500-V-510-2024-013"
+      ],
+      "supporting_chunk_ids": [
+        "IR-500-V-510-2024-013-CH01",
+        "IR-500-V-510-2024-013-CH02",
+        "IR-500-V-510-2024-013-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "medium",
+      "naive_keyword_query": "500-V-510",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-106",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Identify any High or Critical severity incidents that were flagged as regulatory-reportable but have no corresponding regulatory submission on file.",
+      "expected_answer": "No gap found: every regulatory-reportable incident has a matching submission on file.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "unreported regulatory incident",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-107",
+      "category": "compliance_gap_detection",
+      "eval_dimension": "compliance_gap_detection",
+      "question": "Which High-criticality equipment items have BOTH an open/unresolved defect finding AND an overdue inspection as of 2026-07-17? These represent compound operational risk.",
+      "expected_answer": "100-V-109 (Flash Drum): Minor defect per IR-100-V-109-2024-016, inspection overdue by 500d; 200-F-206 (Reactor Feed Heater): Minor defect per IR-200-F-206-2024-026, inspection overdue by 389d; 500-P-507 (Dosing Pump - Chemical): Minor defect per IR-500-P-507-2024-030, inspection overdue by 359d; 400-T-404 (LPG Bullet): Moderate defect per IR-400-T-404-2025-035, inspection overdue by 73d; 200-PSV-207 (Reactor Relief Valve): Major defect per IR-200-PSV-207-2025-036, inspection overdue by 292d",
+      "expected_entities": [
+        "EQ-100-V-109",
+        "EQ-200-F-206",
+        "EQ-500-P-507",
+        "EQ-400-T-404",
+        "EQ-200-PSV-207",
+        "IR-IR-100-V-109-2024-016",
+        "IR-IR-200-F-206-2024-026",
+        "IR-IR-500-P-507-2024-030",
+        "IR-IR-400-T-404-2025-035",
+        "IR-IR-200-PSV-207-2025-036"
+      ],
+      "supporting_doc_ids": [
+        "IR-100-V-109-2024-016",
+        "IR-200-F-206-2024-026",
+        "IR-500-P-507-2024-030",
+        "IR-400-T-404-2025-035",
+        "IR-200-PSV-207-2025-036"
+      ],
+      "supporting_chunk_ids": [
+        "IR-100-V-109-2024-016-CH01",
+        "IR-100-V-109-2024-016-CH02",
+        "IR-100-V-109-2024-016-CH03",
+        "IR-200-F-206-2024-026-CH01",
+        "IR-200-F-206-2024-026-CH02",
+        "IR-200-F-206-2024-026-CH03",
+        "IR-500-P-507-2024-030-CH01",
+        "IR-500-P-507-2024-030-CH02",
+        "IR-500-P-507-2024-030-CH03",
+        "IR-400-T-404-2025-035-CH01",
+        "IR-400-T-404-2025-035-CH02",
+        "IR-400-T-404-2025-035-CH03",
+        "IR-200-PSV-207-2025-036-CH01",
+        "IR-200-PSV-207-2025-036-CH02",
+        "IR-200-PSV-207-2025-036-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "100-V-109",
+      "naive_keyword_hit_count": 10,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-108",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Has Sunita Patil (EMP-0015) both investigated an incident and performed a routine inspection on the same piece of equipment? If so, which equipment and events?",
+      "expected_answer": "Yes \u2014 equipment 400-T-403.",
+      "expected_entities": [
+        "PERS-EMP-0015",
+        "EQ-400-T-403"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-011",
+        "IR-400-T-403-2024-004"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-011-CH01",
+        "INC-2024-011-CH02",
+        "INC-2024-011-CH03",
+        "IR-400-T-403-2024-004-CH01",
+        "IR-400-T-403-2024-004-CH02",
+        "IR-400-T-403-2024-004-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "EMP-0015",
+      "naive_keyword_hit_count": 17,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-109",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Has Pooja Bhosale (EMP-0017) both investigated an incident and performed a routine inspection on the same piece of equipment? If so, which equipment and events?",
+      "expected_answer": "Yes \u2014 equipment 500-V-510.",
+      "expected_entities": [
+        "PERS-EMP-0017",
+        "EQ-500-V-510"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-014",
+        "IR-500-V-510-2024-013"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03",
+        "IR-500-V-510-2024-013-CH01",
+        "IR-500-V-510-2024-013-CH02",
+        "IR-500-V-510-2024-013-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "EMP-0017",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-110",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "For equipment 200-F-206, connect the dots across maintenance, inspection, and safety records: what incident has occurred on it, what SOP governs its inspection, and what safety procedure applies during maintenance?",
+      "expected_answer": "Incident INC-2025-009 (Minor Leak, Low); governing SOP SOP-200-006; governing safety procedure SP-004.",
+      "expected_entities": [
+        "EQ-200-F-206",
+        "INC-INC-2025-009",
+        "SOP-SOP-200-006",
+        "SP-SP-004"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-009",
+        "IR-200-F-206-2026-031",
+        "DS-200-F-206"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-009-CH01",
+        "INC-2025-009-CH02",
+        "INC-2025-009-CH03",
+        "IR-200-F-206-2026-031-CH01",
+        "IR-200-F-206-2026-031-CH02",
+        "IR-200-F-206-2026-031-CH03",
+        "DS-200-F-206-CH01",
+        "DS-200-F-206-CH02",
+        "DS-200-F-206-CH03",
+        "DS-200-F-206-CH04"
+      ],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "hard",
+      "naive_keyword_query": "200-F-206",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-111",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by BHEL, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "5 equipment items from BHEL; 2 incident(s) (INC-2025-002, INC-2025-009); 1 corrective work order(s).",
+      "expected_entities": [
+        "EQ-100-P-101",
+        "EQ-100-V-105",
+        "EQ-200-F-206",
+        "EQ-300-V-307",
+        "EQ-400-T-408",
+        "INC-INC-2025-002",
+        "INC-INC-2025-009"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-002",
+        "INC-2025-009"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-002-CH01",
+        "INC-2025-002-CH02",
+        "INC-2025-002-CH03",
+        "INC-2025-009-CH01",
+        "INC-2025-009-CH02",
+        "INC-2025-009-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "BHEL",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-112",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Emerson Process Management, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "4 equipment items from Emerson Process Management; 2 incident(s) (INC-2025-001, INC-2024-014); 3 corrective work order(s).",
+      "expected_entities": [
+        "EQ-100-E-102",
+        "EQ-300-BLR-301",
+        "EQ-500-AGT-501",
+        "EQ-500-V-510",
+        "INC-INC-2025-001",
+        "INC-INC-2024-014"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-001",
+        "INC-2024-014"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-001-CH01",
+        "INC-2025-001-CH02",
+        "INC-2025-001-CH03",
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Emerson Process Management",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-113",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Forbes Marshall, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "6 equipment items from Forbes Marshall; 1 incident(s) (INC-2024-006); 5 corrective work order(s).",
+      "expected_entities": [
+        "EQ-100-D-103",
+        "EQ-100-P-107",
+        "EQ-100-V-109",
+        "EQ-200-V-210",
+        "EQ-300-P-309",
+        "EQ-400-T-401",
+        "INC-INC-2024-006"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-006"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-006-CH01",
+        "INC-2024-006-CH02",
+        "INC-2024-006-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Forbes Marshall",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-114",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Triveni Turbines, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "4 equipment items from Triveni Turbines; 0 incident(s) (none); 3 corrective work order(s).",
+      "expected_entities": [
+        "EQ-100-F-104",
+        "EQ-200-C-209",
+        "EQ-300-C-303",
+        "EQ-500-V-503"
+      ],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Triveni Turbines",
+      "naive_keyword_hit_count": 14,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-115",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Sulzer India, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "3 equipment items from Sulzer India; 0 incident(s) (none); 1 corrective work order(s).",
+      "expected_entities": [
+        "EQ-100-PSV-106",
+        "EQ-300-PSV-308",
+        "EQ-400-T-409"
+      ],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Sulzer India",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-116",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Godrej & Boyce, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "4 equipment items from Godrej & Boyce; 1 incident(s) (INC-2025-012); 2 corrective work order(s).",
+      "expected_entities": [
+        "EQ-100-PSV-110",
+        "EQ-400-P-405",
+        "EQ-400-P-406",
+        "EQ-500-P-507",
+        "INC-INC-2025-012"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-012"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-012-CH01",
+        "INC-2025-012-CH02",
+        "INC-2025-012-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Godrej & Boyce",
+      "naive_keyword_hit_count": 6,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-117",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Fluor Daniel India, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "6 equipment items from Fluor Daniel India; 3 incident(s) (INC-2025-008, INC-2025-013, INC-2025-015); 5 corrective work order(s).",
+      "expected_entities": [
+        "EQ-200-R-201",
+        "EQ-200-PSV-207",
+        "EQ-300-P-305",
+        "EQ-300-C-310",
+        "EQ-400-P-410",
+        "EQ-500-V-506",
+        "INC-INC-2025-008",
+        "INC-INC-2025-013",
+        "INC-INC-2025-015"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-008",
+        "INC-2025-013",
+        "INC-2025-015"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-008-CH01",
+        "INC-2025-008-CH02",
+        "INC-2025-008-CH03",
+        "INC-2025-013-CH01",
+        "INC-2025-013-CH02",
+        "INC-2025-013-CH03",
+        "INC-2025-015-CH01",
+        "INC-2025-015-CH02",
+        "INC-2025-015-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Fluor Daniel India",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-118",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by L&T Valves, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "4 equipment items from L&T Valves; 1 incident(s) (INC-2025-004); 1 corrective work order(s).",
+      "expected_entities": [
+        "EQ-200-C-202",
+        "EQ-200-E-204",
+        "EQ-200-P-208",
+        "EQ-500-AGT-504",
+        "INC-INC-2025-004"
+      ],
+      "supporting_doc_ids": [
+        "INC-2025-004"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2025-004-CH01",
+        "INC-2025-004-CH02",
+        "INC-2025-004-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "L&T Valves",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-119",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Ingersoll Rand, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "3 equipment items from Ingersoll Rand; 0 incident(s) (none); 1 corrective work order(s).",
+      "expected_entities": [
+        "EQ-200-P-203",
+        "EQ-200-V-205",
+        "EQ-400-T-402"
+      ],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Ingersoll Rand",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-120",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "Across the fleet of equipment supplied by Kirloskar Brothers Ltd, how many incidents and corrective work orders have been recorded in total? This spans procurement, maintenance, and safety records that normally live in separate systems.",
+      "expected_answer": "5 equipment items from Kirloskar Brothers Ltd; 1 incident(s) (INC-2024-010); 2 corrective work order(s).",
+      "expected_entities": [
+        "EQ-300-TUR-302",
+        "EQ-300-MTR-306",
+        "EQ-400-T-404",
+        "EQ-400-PSV-407",
+        "EQ-500-V-508",
+        "INC-INC-2024-010"
+      ],
+      "supporting_doc_ids": [
+        "INC-2024-010"
+      ],
+      "supporting_chunk_ids": [
+        "INC-2024-010-CH01",
+        "INC-2024-010-CH02",
+        "INC-2024-010-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "Kirloskar Brothers Ltd",
+      "naive_keyword_hit_count": 11,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-121",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "SOP SOP-100-001 (Crude Charge Pump Startup and Shutdown) governs which equipment, and have any of those equipment items experienced a recorded incident? This links an engineering procedure document to real-world operational/safety outcomes.",
+      "expected_answer": "Governs 100-D-103, 100-F-104, 100-P-101, 100-PSV-106, 100-V-105, 100-V-109. Incidents recorded: INC-2025-002 on 100-P-101.",
+      "expected_entities": [
+        "SOP-SOP-100-001",
+        "EQ-100-F-104",
+        "EQ-100-V-109",
+        "EQ-100-PSV-106",
+        "EQ-100-D-103",
+        "EQ-100-V-105",
+        "EQ-100-P-101",
+        "INC-INC-2025-002"
+      ],
+      "supporting_doc_ids": [
+        "SOP-100-001",
+        "INC-2025-002"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-100-001-CH01",
+        "SOP-100-001-CH02",
+        "SOP-100-001-CH03",
+        "SOP-100-001-CH04",
+        "SOP-100-001-CH05",
+        "INC-2025-002-CH01",
+        "INC-2025-002-CH02",
+        "INC-2025-002-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "SOP-100-001",
+      "naive_keyword_hit_count": 16,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-122",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "SOP SOP-400-012 (LPG Bullet Pressure Monitoring) governs which equipment, and have any of those equipment items experienced a recorded incident? This links an engineering procedure document to real-world operational/safety outcomes.",
+      "expected_answer": "Governs 400-P-405, 400-P-406, 400-P-410, 400-T-401, 400-T-404, 400-T-408. No incidents recorded on any governed equipment.",
+      "expected_entities": [
+        "SOP-SOP-400-012",
+        "EQ-400-T-404",
+        "EQ-400-P-410",
+        "EQ-400-T-408",
+        "EQ-400-P-405",
+        "EQ-400-P-406",
+        "EQ-400-T-401"
+      ],
+      "supporting_doc_ids": [
+        "SOP-400-012"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-400-012-CH01",
+        "SOP-400-012-CH02",
+        "SOP-400-012-CH03",
+        "SOP-400-012-CH04"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "SOP-400-012",
+      "naive_keyword_hit_count": 14,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-123",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "SOP SOP-300-009 (Cooling Tower Water Chemistry Control) governs which equipment, and have any of those equipment items experienced a recorded incident? This links an engineering procedure document to real-world operational/safety outcomes.",
+      "expected_answer": "Governs 300-BLR-301, 300-CT-304, 300-P-305, 300-P-309, 300-V-307. Incidents recorded: INC-2025-001 on 300-BLR-301, INC-2026-003 on 300-CT-304, INC-2025-013 on 300-P-305, INC-2025-015 on 300-P-305.",
+      "expected_entities": [
+        "SOP-SOP-300-009",
+        "EQ-300-P-309",
+        "EQ-300-BLR-301",
+        "EQ-300-V-307",
+        "EQ-300-CT-304",
+        "EQ-300-P-305",
+        "INC-INC-2025-001",
+        "INC-INC-2026-003",
+        "INC-INC-2025-013",
+        "INC-INC-2025-015"
+      ],
+      "supporting_doc_ids": [
+        "SOP-300-009",
+        "INC-2025-001",
+        "INC-2026-003",
+        "INC-2025-013",
+        "INC-2025-015"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-300-009-CH01",
+        "SOP-300-009-CH02",
+        "SOP-300-009-CH03",
+        "SOP-300-009-CH04",
+        "SOP-300-009-CH05",
+        "INC-2025-001-CH01",
+        "INC-2025-001-CH02",
+        "INC-2025-001-CH03",
+        "INC-2026-003-CH01",
+        "INC-2026-003-CH02",
+        "INC-2026-003-CH03",
+        "INC-2025-013-CH01",
+        "INC-2025-013-CH02",
+        "INC-2025-013-CH03",
+        "INC-2025-015-CH01",
+        "INC-2025-015-CH02",
+        "INC-2025-015-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "SOP-300-009",
+      "naive_keyword_hit_count": 20,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-124",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "SOP SOP-500-014 (Oil-Water Separator Skimming Procedure) governs which equipment, and have any of those equipment items experienced a recorded incident? This links an engineering procedure document to real-world operational/safety outcomes.",
+      "expected_answer": "Governs 500-AGT-504, 500-P-507, 500-V-503, 500-V-508, 500-V-510. Incidents recorded: INC-2024-010 on 500-V-508, INC-2024-014 on 500-V-510.",
+      "expected_entities": [
+        "SOP-SOP-500-014",
+        "EQ-500-V-510",
+        "EQ-500-AGT-504",
+        "EQ-500-V-503",
+        "EQ-500-V-508",
+        "EQ-500-P-507",
+        "INC-INC-2024-010",
+        "INC-INC-2024-014"
+      ],
+      "supporting_doc_ids": [
+        "SOP-500-014",
+        "INC-2024-010",
+        "INC-2024-014"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-500-014-CH01",
+        "SOP-500-014-CH02",
+        "SOP-500-014-CH03",
+        "SOP-500-014-CH04",
+        "SOP-500-014-CH05",
+        "INC-2024-010-CH01",
+        "INC-2024-010-CH02",
+        "INC-2024-010-CH03",
+        "INC-2024-014-CH01",
+        "INC-2024-014-CH02",
+        "INC-2024-014-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "SOP-500-014",
+      "naive_keyword_hit_count": 19,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-125",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "SOP SOP-200-006 (High Pressure Separator Level Control) governs which equipment, and have any of those equipment items experienced a recorded incident? This links an engineering procedure document to real-world operational/safety outcomes.",
+      "expected_answer": "Governs 200-E-204, 200-F-206, 200-PSV-207, 200-R-201. Incidents recorded: INC-2025-004 on 200-E-204, INC-2025-009 on 200-F-206.",
+      "expected_entities": [
+        "SOP-SOP-200-006",
+        "EQ-200-E-204",
+        "EQ-200-R-201",
+        "EQ-200-F-206",
+        "EQ-200-PSV-207",
+        "INC-INC-2025-004",
+        "INC-INC-2025-009"
+      ],
+      "supporting_doc_ids": [
+        "SOP-200-006",
+        "INC-2025-004",
+        "INC-2025-009"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-200-006-CH01",
+        "SOP-200-006-CH02",
+        "SOP-200-006-CH03",
+        "SOP-200-006-CH04",
+        "SOP-200-006-CH05",
+        "INC-2025-004-CH01",
+        "INC-2025-004-CH02",
+        "INC-2025-004-CH03",
+        "INC-2025-009-CH01",
+        "INC-2025-009-CH02",
+        "INC-2025-009-CH03"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "SOP-200-006",
+      "naive_keyword_hit_count": 13,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-126",
+      "category": "cross_functional_discovery",
+      "eval_dimension": "cross_functional_discovery",
+      "question": "SOP SOP-300-008 (Steam Turbine Generator Synchronization) governs which equipment, and have any of those equipment items experienced a recorded incident? This links an engineering procedure document to real-world operational/safety outcomes.",
+      "expected_answer": "Governs 300-C-310, 300-MTR-306, 300-PSV-308, 300-TUR-302. No incidents recorded on any governed equipment.",
+      "expected_entities": [
+        "SOP-SOP-300-008",
+        "EQ-300-MTR-306",
+        "EQ-300-TUR-302",
+        "EQ-300-PSV-308",
+        "EQ-300-C-310"
+      ],
+      "supporting_doc_ids": [
+        "SOP-300-008"
+      ],
+      "supporting_chunk_ids": [
+        "SOP-300-008-CH01",
+        "SOP-300-008-CH02",
+        "SOP-300-008-CH03",
+        "SOP-300-008-CH04",
+        "SOP-300-008-CH05"
+      ],
+      "ideal_retrieval_strategy": "graph",
+      "difficulty": "hard",
+      "naive_keyword_query": "SOP-300-008",
+      "naive_keyword_hit_count": 9,
+      "unanswerable": false
+    },
+    {
+      "test_id": "Q-127",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "What is PRPC's ISO 55000 asset management certification status?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "status?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-128",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "Who is the current Chief Financial Officer of PRPC?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "PRPC?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-129",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "What was the crude oil throughput on 1 January 2020?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "2020?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-130",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "Which vendor supplied equipment tag 600-P-601?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "600-P-601?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-131",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "What is the annual carbon offset credit purchased by PRPC in 2023?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "2023?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-132",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "What was the outcome of the union wage negotiation in 2025?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "2025?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-133",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "Which equipment was decommissioned in 2010?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "2010?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    },
+    {
+      "test_id": "Q-134",
+      "category": "unanswerable",
+      "eval_dimension": "hallucination_resistance",
+      "question": "What is the current market price of the crude processed at PRPC?",
+      "expected_answer": "Not present in corpus \u2014 a correct system should decline or state it cannot find this information.",
+      "expected_entities": [],
+      "supporting_doc_ids": [],
+      "supporting_chunk_ids": [],
+      "ideal_retrieval_strategy": "hybrid",
+      "difficulty": "medium",
+      "naive_keyword_query": "PRPC?",
+      "naive_keyword_hit_count": 0,
+      "unanswerable": true
+    }
+  ]
+}

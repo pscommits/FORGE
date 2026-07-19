@@ -1,0 +1,11 @@
+SHIFT LOG — SL-2025-09-13-B
+Unit: Crude Distillation Unit (100)
+Date: 2025-09-13 | Shift: B (14:00-22:00)
+Shift Supervisor: Sanjay Ansari (EMP-0022)
+
+LOG ENTRIES:
+- Handover note: 100-P-101 under maintenance per N/A, isolation confirmed in place.
+- All safety walkarounds completed for CDU without incident.
+- Minor fluctuation noted on 100-V-105 parameters, logged for engineering review.
+
+End of shift handover completed to incoming supervisor.
