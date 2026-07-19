@@ -1,0 +1,13 @@
+# FORGE_Deployment -- lean, Vercel-serverless-friendly dependency set.
+# No chromadb / onnxruntime: vector search uses a precomputed flat file + numpy
+# (see app/retrievers/vector_retriever.py and scripts/build_vectors.py).
+
+fastapi>=0.110
+pydantic>=2
+networkx>=3.4
+numpy>=2.0
+groq>=1.5
+
+# Only used for local `uvicorn app.main:app --reload` dev runs -- Vercel's Python runtime
+# serves the FastAPI app directly and does not need this.
+uvicorn[standard]>=0.29
