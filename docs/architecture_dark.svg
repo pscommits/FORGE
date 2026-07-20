@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" font-family="Segoe UI, -apple-system, Roboto, Helvetica, Arial, sans-serif">
+<title>FORGE - HybridRAG architecture</title>
+<defs>
+<marker id="mDim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6f7891"/></marker>
+<marker id="mBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b9dff"/></marker>
+<marker id="mPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b980f0"/></marker>
+<marker id="mAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#35c9c1"/></marker>
+<linearGradient id="gMerge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5b9dff"/><stop offset="1" stop-color="#b980f0"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1920" height="1080" fill="#0f1319"/>
+<text x="60" y="82" font-size="34" fill="#35c9c1" font-weight="700" letter-spacing="3">FORGE</text>
+<line x1="188" y1="52" x2="188" y2="90" stroke="#2a3242" stroke-width="1.5"/>
+<text x="212" y="70" font-size="23" fill="#e6e9ef" font-weight="600">HybridRAG Architecture - Industrial Knowledge Copilot</text>
+<text x="212" y="98" font-size="14" fill="#9aa3b5">from raw plant documents to grounded answers over a digital-twin knowledge graph - Panchganga Refinery &amp; Petrochemicals Complex</text>
+<rect x="1530" y="120" width="350" height="52" rx="26" fill="#151a22" stroke="#2a3242" stroke-width="1.4"/>
+<circle cx="1556" cy="139" r="6.5" fill="none" stroke="#9aa3b5" stroke-width="2"/>
+<path d="M1545,158 a11,9 0 0 1 22,0" fill="none" stroke="#9aa3b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1584" y="141" font-size="12.5" fill="#e6e9ef" font-weight="600">User question</text>
+<text x="1584" y="160" font-size="11.5" fill="#6f7891">“What is the design pressure of 100-V-105?”</text>
+<path d="M1530,146 L1146,146 L1146,164" fill="none" stroke="#6f7891" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mDim)"/>
+<path d="M1705,174 L1705,422" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#mDim)"/>
+<text x="1717" y="302" font-size="11" fill="#6f7891">question</text>
+<rect x="60" y="170" width="340" height="390" rx="14" fill="#151a22" stroke="#232a36" stroke-width="1.4"/>
+<text x="84" y="206" font-size="18" fill="#e6e9ef" font-weight="600">Raw industrial data</text>
+<text x="84" y="228" font-size="12" fill="#9aa3b5">multi-format scan &amp; capture</text>
+<rect x="84" y="248" width="292" height="30" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<path d="M100,255 h7 l5,5 v11 h-12 z" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M107,255 v5 h5" fill="none" stroke="#6f7891" stroke-width="1.2"/>
+<text x="122" y="267.5" font-size="12.5" fill="#9aa3b5">Equipment datasheets</text>
+<rect x="84" y="284" width="292" height="30" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<path d="M100,291 h7 l5,5 v11 h-12 z" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M107,291 v5 h5" fill="none" stroke="#6f7891" stroke-width="1.2"/>
+<text x="122" y="303.5" font-size="12.5" fill="#9aa3b5">Inspection reports</text>
+<rect x="84" y="320" width="292" height="30" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<path d="M100,327 h7 l5,5 v11 h-12 z" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M107,327 v5 h5" fill="none" stroke="#6f7891" stroke-width="1.2"/>
+<text x="122" y="339.5" font-size="12.5" fill="#9aa3b5">Work orders &amp; permits</text>
+<rect x="84" y="356" width="292" height="30" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<path d="M100,363 h7 l5,5 v11 h-12 z" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M107,363 v5 h5" fill="none" stroke="#6f7891" stroke-width="1.2"/>
+<text x="122" y="375.5" font-size="12.5" fill="#9aa3b5">Incident reports</text>
+<rect x="84" y="392" width="292" height="30" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<path d="M100,399 h7 l5,5 v11 h-12 z" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M107,399 v5 h5" fill="none" stroke="#6f7891" stroke-width="1.2"/>
+<text x="122" y="411.5" font-size="12.5" fill="#9aa3b5">Shift &amp; sensor logs</text>
+<rect x="84" y="428" width="292" height="30" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<path d="M100,435 h7 l5,5 v11 h-12 z" fill="none" stroke="#6f7891" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M107,435 v5 h5" fill="none" stroke="#6f7891" stroke-width="1.2"/>
+<text x="122" y="447.5" font-size="12.5" fill="#9aa3b5">SOPs · emails · filings</text>
+<text x="84" y="512" font-size="11.5" fill="#6f7891">formats: PDF · CSV · XLSX · MD · TXT</text>
+<text x="84" y="534" font-size="11.5" fill="#6f7891">OCR / parsers → normalized document store</text>
+<rect x="60" y="600" width="340" height="350" rx="14" fill="#151a22" stroke="#232a36" stroke-width="1.4"/>
+<text x="84" y="636" font-size="18" fill="#e6e9ef" font-weight="600">Digital twin layout</text>
+<text x="84" y="658" font-size="12" fill="#9aa3b5">plant schema backbone</text>
+<rect x="84" y="678" width="52" height="62" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="110" y="703" font-size="10.5" fill="#e6e9ef" font-weight="600" text-anchor="middle">CDU</text>
+<circle cx="98" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="110" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="122" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<rect x="143" y="678" width="52" height="62" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="169" y="703" font-size="10.5" fill="#e6e9ef" font-weight="600" text-anchor="middle">HCU</text>
+<circle cx="157" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="169" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="181" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<rect x="202" y="678" width="52" height="62" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="228" y="703" font-size="10.5" fill="#e6e9ef" font-weight="600" text-anchor="middle">UTIL</text>
+<circle cx="216" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="228" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="240" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<rect x="261" y="678" width="52" height="62" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="287" y="703" font-size="10.5" fill="#e6e9ef" font-weight="600" text-anchor="middle">TF</text>
+<circle cx="275" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="287" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="299" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<rect x="320" y="678" width="52" height="62" rx="8" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="346" y="703" font-size="10.5" fill="#e6e9ef" font-weight="600" text-anchor="middle">ETP</text>
+<circle cx="334" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="346" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<circle cx="358" cy="722" r="2.5" fill="#35c9c1" fill-opacity="0.75"/>
+<rect x="84" y="758" width="141" height="30" rx="15" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="154" y="777.5" font-size="11.5" fill="#9aa3b5" text-anchor="middle">5 process units</text>
+<rect x="235" y="758" width="141" height="30" rx="15" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="305" y="777.5" font-size="11.5" fill="#9aa3b5" text-anchor="middle">50 equipment</text>
+<rect x="84" y="798" width="141" height="30" rx="15" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="154" y="817.5" font-size="11.5" fill="#9aa3b5" text-anchor="middle">46 personnel</text>
+<rect x="235" y="798" width="141" height="30" rx="15" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="305" y="817.5" font-size="11.5" fill="#9aa3b5" text-anchor="middle">docs · SOPs · WOs</text>
+<text x="84" y="862" font-size="11.5" fill="#6f7891">every document, work order &amp; report anchors</text>
+<text x="84" y="880" font-size="11.5" fill="#6f7891">to a unit, equipment item or person</text>
+<rect x="470" y="330" width="290" height="460" rx="14" fill="#151a22" stroke="#232a36" stroke-width="1.4"/>
+<text x="494" y="366" font-size="18" fill="#e6e9ef" font-weight="600">LLM structuring</text>
+<text x="494" y="388" font-size="12" fill="#9aa3b5">extraction &amp; chunking pass</text>
+<rect x="494" y="412" width="242" height="44" rx="10" fill="#35c9c1" fill-opacity="0.12" stroke="#35c9c1" stroke-width="1.4"/>
+<rect x="512" y="426" width="20" height="16" rx="3" fill="none" stroke="#35c9c1" stroke-width="1.8"/>
+<line x1="508" y1="430" x2="512" y2="430" stroke="#35c9c1" stroke-width="1.5"/>
+<line x1="532" y1="430" x2="536" y2="430" stroke="#35c9c1" stroke-width="1.5"/>
+<line x1="508" y1="438" x2="512" y2="438" stroke="#35c9c1" stroke-width="1.5"/>
+<line x1="532" y1="438" x2="536" y2="438" stroke="#35c9c1" stroke-width="1.5"/>
+<text x="546" y="439" font-size="13.5" fill="#35c9c1" font-weight="600">LLM (Groq)</text>
+<rect x="494" y="480" width="242" height="96" rx="10" fill="#5b9dff" fill-opacity="0.08" stroke="#5b9dff" stroke-width="1.2"/>
+<text x="510" y="508" font-size="13.5" fill="#5b9dff" font-weight="600">Semantic chunking</text>
+<text x="510" y="530" font-size="12" fill="#9aa3b5">documents → retrieval chunks</text>
+<text x="510" y="548" font-size="12" fill="#9aa3b5">doc-linked chunk IDs</text>
+<rect x="494" y="600" width="242" height="96" rx="10" fill="#b980f0" fill-opacity="0.08" stroke="#b980f0" stroke-width="1.2"/>
+<text x="510" y="628" font-size="13.5" fill="#b980f0" font-weight="600">Entity &amp; relation extraction</text>
+<text x="510" y="650" font-size="12" fill="#9aa3b5">docs ↔ twin entities</text>
+<text x="510" y="668" font-size="12" fill="#9aa3b5">typed edges across documents</text>
+<text x="494" y="740" font-size="11.5" fill="#6f7891">cross-document links follow</text>
+<text x="494" y="758" font-size="11.5" fill="#6f7891">the digital-twin layout</text>
+<path d="M400,340 C435.0,340 435.0,505 470,505" fill="none" stroke="#6f7891" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mDim)"/>
+<text x="435" y="402" font-size="11.5" fill="#6f7891" text-anchor="middle">documents</text>
+<path d="M400,755 C435.0,755 435.0,645 470,645" fill="none" stroke="#6f7891" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#mDim)"/>
+<text x="466" y="733" font-size="11.5" fill="#6f7891" text-anchor="end">plant schema</text>
+<path d="M760,520 C817.0,520 817.0,395 874,395" fill="none" stroke="#5b9dff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mBlue)"/>
+<text x="766" y="545" font-size="11.5" fill="#5b9dff">chunks</text>
+<path d="M760,640 C817.0,640 817.0,758 874,758" fill="none" stroke="#b980f0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mPurple)"/>
+<text x="766" y="618" font-size="11.5" fill="#b980f0">entities +</text>
+<text x="766" y="634" font-size="11.5" fill="#b980f0">relations</text>
+<rect x="830" y="170" width="610" height="780" rx="16" fill="none" stroke="#35c9c1" stroke-width="1.6" stroke-dasharray="7 6"/>
+<rect x="884" y="162" width="152" height="18" fill="#0f1319"/>
+<text x="892" y="176" font-size="13" fill="#35c9c1" font-weight="700" letter-spacing="1.5">HYBRIDRAG CORE</text>
+<text x="1416" y="202" font-size="12" fill="#9aa3b5" text-anchor="end">retrieval modes: vector · graph · hybrid</text>
+<rect x="854" y="224" width="562" height="298" rx="12" fill="#5b9dff" fill-opacity="0.08"/>
+<text x="878" y="250" font-size="11" fill="#5b9dff" font-weight="700" letter-spacing="1.5">VECTOR PATH</text>
+<rect x="878" y="272" width="244" height="224" rx="12" fill="#151a22" stroke="#2a3242" stroke-width="1.2"/>
+<rect x="898" y="292" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="898" y="302" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="898" y="312" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="912" y="292" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="912" y="302" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="912" y="312" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="926" y="292" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="926" y="302" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="926" y="312" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="940" y="292" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="940" y="302" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="940" y="312" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="954" y="292" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="954" y="302" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="954" y="312" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="968" y="292" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="968" y="302" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="968" y="312" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="982" y="292" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="982" y="302" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="982" y="312" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="996" y="292" width="11" height="7" rx="1.5" fill="#5b9dff" fill-opacity="0.85"/>
+<rect x="996" y="302" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<rect x="996" y="312" width="11" height="7" rx="1.5" fill="#1a2029" stroke="#232a36" stroke-width="0.8"/>
+<text x="898" y="352" font-size="17" fill="#e6e9ef" font-weight="600">Vector index</text>
+<text x="898" y="376" font-size="12.5" fill="#9aa3b5">chunk embeddings</text>
+<text x="898" y="394" font-size="12.5" fill="#9aa3b5">sparse · int-quantized</text>
+<rect x="898" y="412" width="126" height="26" rx="13" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="961" y="429" font-size="11" fill="#6f7891" text-anchor="middle">hashing encoder</text>
+<rect x="1160" y="272" width="232" height="224" rx="12" fill="#151a22" stroke="#2a3242" stroke-width="1.2"/>
+<circle cx="1192" cy="298" r="9" fill="none" stroke="#5b9dff" stroke-width="2"/>
+<path d="M1199,305 L1210,316" fill="none" stroke="#5b9dff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1180" y="352" font-size="17" fill="#e6e9ef" font-weight="600">Semantic search</text>
+<text x="1180" y="376" font-size="12.5" fill="#9aa3b5">top-k cosine similarity</text>
+<text x="1180" y="394" font-size="12.5" fill="#9aa3b5">+ lexical boost</text>
+<path d="M1122,384 L1156,384" fill="none" stroke="#5b9dff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mBlue)"/>
+<rect x="854" y="598" width="562" height="298" rx="12" fill="#b980f0" fill-opacity="0.08"/>
+<text x="878" y="624" font-size="11" fill="#b980f0" font-weight="700" letter-spacing="1.5">GRAPH PATH</text>
+<rect x="878" y="646" width="244" height="224" rx="12" fill="#151a22" stroke="#2a3242" stroke-width="1.2"/>
+<line x1="910" y1="690" x2="940" y2="672" stroke="#6f7891" stroke-width="1.3"/>
+<line x1="940" y1="672" x2="968" y2="692" stroke="#6f7891" stroke-width="1.3"/>
+<line x1="940" y1="672" x2="938" y2="706" stroke="#6f7891" stroke-width="1.3"/>
+<line x1="968" y1="692" x2="990" y2="676" stroke="#6f7891" stroke-width="1.3"/>
+<line x1="910" y1="690" x2="938" y2="706" stroke="#6f7891" stroke-width="1.3"/>
+<circle cx="910" cy="690" r="5" fill="#b980f0" fill-opacity="0.5"/>
+<circle cx="940" cy="672" r="6" fill="#b980f0" fill-opacity="1"/>
+<circle cx="968" cy="692" r="4.5" fill="#b980f0" fill-opacity="0.5"/>
+<circle cx="938" cy="706" r="4" fill="#b980f0" fill-opacity="0.5"/>
+<circle cx="990" cy="676" r="3.5" fill="#b980f0" fill-opacity="0.5"/>
+<text x="898" y="752" font-size="17" fill="#e6e9ef" font-weight="600">Knowledge graph</text>
+<text x="898" y="776" font-size="12.5" fill="#9aa3b5">405 nodes · 14 entity types</text>
+<text x="898" y="794" font-size="12.5" fill="#9aa3b5">doc ↔ entity ↔ unit links</text>
+<rect x="898" y="812" width="126" height="26" rx="13" fill="#1a2029" stroke="#232a36" stroke-width="1"/>
+<text x="961" y="829" font-size="11" fill="#6f7891" text-anchor="middle">NetworkX</text>
+<rect x="1160" y="646" width="232" height="224" rx="12" fill="#151a22" stroke="#2a3242" stroke-width="1.2"/>
+<line x1="1186" y1="678" x2="1208" y2="692" stroke="#6f7891" stroke-width="1.3"/>
+<line x1="1208" y1="692" x2="1230" y2="678" stroke="#6f7891" stroke-width="1.3"/>
+<circle cx="1186" cy="678" r="5" fill="#35c9c1"/>
+<circle cx="1208" cy="692" r="4.5" fill="#b980f0" fill-opacity="0.6"/>
+<circle cx="1230" cy="678" r="4.5" fill="#b980f0" fill-opacity="0.6"/>
+<text x="1180" y="752" font-size="17" fill="#e6e9ef" font-weight="600">Graph traversal</text>
+<text x="1180" y="776" font-size="12.5" fill="#9aa3b5">entity linking</text>
+<text x="1180" y="794" font-size="12.5" fill="#9aa3b5">→ 2-hop subgraph</text>
+<path d="M1122,758 L1156,758" fill="none" stroke="#b980f0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mPurple)"/>
+<rect x="1200" y="532" width="204" height="56" rx="28" fill="#1a2029" stroke="url(#gMerge)" stroke-width="1.8"/>
+<text x="1302" y="556" font-size="14" fill="#e6e9ef" font-weight="600" text-anchor="middle">Merged context</text>
+<text x="1302" y="574" font-size="10.5" fill="#9aa3b5" text-anchor="middle">deduped · ranked</text>
+<path d="M1276,496 C1276,514 1282,520 1290,530" fill="none" stroke="#5b9dff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mBlue)"/>
+<path d="M1276,646 C1276,628 1282,622 1290,590" fill="none" stroke="#b980f0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mPurple)"/>
+<path d="M1404,560 C1455.0,560 1455.0,542 1506,542" fill="none" stroke="#35c9c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mAccent)"/>
+<rect x="1510" y="430" width="350" height="220" rx="14" fill="#151a22" stroke="#232a36" stroke-width="1.4"/>
+<text x="1534" y="466" font-size="18" fill="#e6e9ef" font-weight="600">Grounded generation</text>
+<rect x="1534" y="482" width="248" height="30" rx="15" fill="#35c9c1" fill-opacity="0.12" stroke="#35c9c1" stroke-width="1.3"/>
+<text x="1658" y="501" font-size="12.5" fill="#35c9c1" font-weight="600" text-anchor="middle">Groq · llama-3.1-8b-instant</text>
+<text x="1534" y="546" font-size="12.5" fill="#9aa3b5">• answers only from retrieved context</text>
+<text x="1534" y="570" font-size="12.5" fill="#9aa3b5">• cites source document IDs</text>
+<text x="1534" y="594" font-size="12.5" fill="#9aa3b5">• refuses when context is insufficient</text>
+<rect x="1510" y="720" width="350" height="230" rx="14" fill="#151a22" stroke="#232a36" stroke-width="1.4"/>
+<text x="1534" y="756" font-size="18" fill="#e6e9ef" font-weight="600">Web application</text>
+<rect x="1534" y="776" width="302" height="130" rx="10" fill="#1a2029" stroke="#2a3242" stroke-width="1.2"/>
+<line x1="1534" y1="802" x2="1836" y2="802" stroke="#2a3242" stroke-width="1"/>
+<circle cx="1550" cy="789" r="3" fill="#6f7891" fill-opacity="0.7"/>
+<circle cx="1562" cy="789" r="3" fill="#6f7891" fill-opacity="0.7"/>
+<circle cx="1574" cy="789" r="3" fill="#6f7891" fill-opacity="0.7"/>
+<rect x="1590" y="781" width="180" height="16" rx="8" fill="#151a22"/>
+<text x="1680" y="792.5" font-size="9.5" fill="#6f7891" text-anchor="middle">forge.vercel.app</text>
+<rect x="1546" y="812" width="137" height="38" rx="8" fill="#151a22" stroke="#232a36" stroke-width="1"/>
+<text x="1614.5" y="835.5" font-size="10.5" fill="#9aa3b5" text-anchor="middle">Download sources</text>
+<rect x="1691" y="812" width="137" height="38" rx="8" fill="#151a22" stroke="#232a36" stroke-width="1"/>
+<text x="1759.5" y="835.5" font-size="10.5" fill="#9aa3b5" text-anchor="middle">Interactive KG viewer</text>
+<rect x="1546" y="858" width="137" height="38" rx="8" fill="#151a22" stroke="#232a36" stroke-width="1"/>
+<text x="1614.5" y="881.5" font-size="10.5" fill="#9aa3b5" text-anchor="middle">Confidence score</text>
+<rect x="1691" y="858" width="137" height="38" rx="8" fill="#151a22" stroke="#232a36" stroke-width="1"/>
+<rect x="1782" y="862" width="42" height="30" rx="6" fill="#35c9c1" fill-opacity="0.12"/>
+<text x="1714" y="881" font-size="9.5" fill="#6f7891" text-anchor="middle">Vector</text>
+<text x="1759" y="881" font-size="9.5" fill="#6f7891" text-anchor="middle">Graph</text>
+<text x="1803" y="881" font-size="9.5" fill="#35c9c1" font-weight="600" text-anchor="middle">Hybrid</text>
+<text x="1534" y="936" font-size="11.5" fill="#6f7891">FastAPI · deployed on Vercel</text>
+<path d="M1685,650 L1685,714" fill="none" stroke="#6f7891" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mDim)"/>
+<text x="1673" y="690" font-size="11" fill="#6f7891" text-anchor="end">answer · sources · confidence · subgraph</text>
+<circle cx="66" cy="1017" r="5" fill="#5b9dff"/>
+<text x="78" y="1022" font-size="12" fill="#9aa3b5">vector path</text>
+<circle cx="168" cy="1017" r="5" fill="#b980f0"/>
+<text x="180" y="1022" font-size="12" fill="#9aa3b5">graph path</text>
+<rect x="262" y="1011" width="11" height="11" rx="3" fill="#35c9c1"/>
+<text x="281" y="1022" font-size="12" fill="#9aa3b5">LLM stage</text>
+<text x="1860" y="1022" font-size="12" fill="#6f7891" text-anchor="end">FastAPI · Vercel · Groq API · NetworkX · sparse hashed embeddings · 134-question eval set</text>
+<circle cx="374" cy="200" r="14" fill="#0f1319"/>
+<circle cx="374" cy="200" r="14" fill="#35c9c1" fill-opacity="0.15" stroke="#35c9c1" stroke-width="1.6"/>
+<text x="374" y="205" font-size="14" fill="#35c9c1" font-weight="700" text-anchor="middle">1</text>
+<circle cx="374" cy="630" r="14" fill="#0f1319"/>
+<circle cx="374" cy="630" r="14" fill="#35c9c1" fill-opacity="0.15" stroke="#35c9c1" stroke-width="1.6"/>
+<text x="374" y="635" font-size="14" fill="#35c9c1" font-weight="700" text-anchor="middle">2</text>
+<circle cx="734" cy="360" r="14" fill="#0f1319"/>
+<circle cx="734" cy="360" r="14" fill="#35c9c1" fill-opacity="0.15" stroke="#35c9c1" stroke-width="1.6"/>
+<text x="734" y="365" font-size="14" fill="#35c9c1" font-weight="700" text-anchor="middle">3</text>
+<circle cx="866" cy="170" r="14" fill="#0f1319"/>
+<circle cx="866" cy="170" r="14" fill="#35c9c1" fill-opacity="0.15" stroke="#35c9c1" stroke-width="1.6"/>
+<text x="866" y="175" font-size="14" fill="#35c9c1" font-weight="700" text-anchor="middle">4</text>
+<circle cx="1834" cy="460" r="14" fill="#0f1319"/>
+<circle cx="1834" cy="460" r="14" fill="#35c9c1" fill-opacity="0.15" stroke="#35c9c1" stroke-width="1.6"/>
+<text x="1834" y="465" font-size="14" fill="#35c9c1" font-weight="700" text-anchor="middle">5</text>
+<circle cx="1834" cy="750" r="14" fill="#0f1319"/>
+<circle cx="1834" cy="750" r="14" fill="#35c9c1" fill-opacity="0.15" stroke="#35c9c1" stroke-width="1.6"/>
+<text x="1834" y="755" font-size="14" fill="#35c9c1" font-weight="700" text-anchor="middle">6</text>
+</svg>
